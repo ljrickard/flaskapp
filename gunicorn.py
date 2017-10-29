@@ -1,11 +1,8 @@
 bind = 'localhost:8000'
-#pid = 'gunicorn'
-proc_name = 'website_scraper'
-workers = 4
+workers = 6
 worker_class = 'sync'
 worker_connections = 1000
 timeout = 30
-#keepalive = 2
 daemon = True
 user = None
 errorlog = '-'

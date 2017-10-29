@@ -1,0 +1,16 @@
+version: 1.0.0
+os: linux
+files:
+  - source: /website_scraper
+    destination: /deploy/website_scraper
+hooks:
+  ApplicationStop:
+    - location: stop.sh
+      timeout: 300
+
+  BeforeInstall:
+    - location: install.sh
+
+  ApplicationStart:
+    - location: start.sh
+      timeout: 300
