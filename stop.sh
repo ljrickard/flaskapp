@@ -1,7 +1,5 @@
 #!/bin/bash
 
-NAME="website_scraper"         
-
 echo "Enviroment details"
 echo
 echo "HOME DIR is $HOME"
@@ -11,7 +9,7 @@ echo
 echo "USER DIR is $USER"
 echo
 
-echo "Stopping $NAME app as `whoami`"
+echo "Stopping app as `whoami`"
 
 pid=$(cat gunicorn.pid)
 
