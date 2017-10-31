@@ -11,6 +11,8 @@ echo
 
 echo "Stopping app as `whoami`"
 
+. ./pyenv/bin/activate
+
 pid=$(cat gunicorn.pid)
 
 if [ -z "$pid" ]
