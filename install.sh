@@ -3,7 +3,7 @@
 #yum install python-pip
 
 #test -d '/etc/init.d' || mkdir -p '/etc/init.d'
-
+pwd
 #mkdir deploy
 cd deploy
 wget https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.8.tar.gz
