@@ -17,6 +17,7 @@ hooks:
 
   BeforeInstall:
     - location: install.sh
+      timeout: 300
       runas: root
 
   ApplicationStart:
