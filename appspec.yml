@@ -7,18 +7,20 @@ files:
     destination: /home/ec2-user/deploy
   - source: /config.py
     destination: /home/ec2-user/deploy
+  - source: /scripts
+    destination: /home/ec2-user/deploy
 hooks:
   ApplicationStop:
-    - location: /stop.sh
+    - location: /scripts/stop.sh
       timeout: 300
       runas: root
 
-  BeforeInstall:
-    - location: /install.sh
+  AfterInstall:
+    - location: /scripts/install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: /start.sh
+    - location: /scripts/start.sh
       timeout: 300
       runas: root
