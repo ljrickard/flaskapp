@@ -11,7 +11,7 @@ echo
 
 echo "Stopping app as `whoami`"
 
-. ./pyenv/bin/activate
+#. ./pyenv/bin/activate
 
 #exec gunicorn -p gunicorn.pid -c ./gunicorn.py app:app
      

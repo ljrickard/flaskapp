@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Installing virtualenv as `whoami`"
+
 #wget https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.8.tar.gz
 #tar xzvf virtualenv-1.8.tar.gz
 
