@@ -9,16 +9,16 @@ files:
     destination: /home/ec2-user/deploy
 hooks:
   ApplicationStop:
-    - location: stop.sh
+    - location: /stop.sh
       timeout: 300
       runas: root
 
   BeforeInstall:
-    - location: install.sh
+    - location: /install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: start.sh
+    - location: /start.sh
       timeout: 300
       runas: root
