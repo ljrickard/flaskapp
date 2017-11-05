@@ -1,11 +1,7 @@
-version: 0.1
+version: 0.0
 os: linux
 files:
-  - source: /requirements.txt
-    destination: /home/ec2-user/deploy
-  - source: /app.py
-    destination: /home/ec2-user/deploy
-  - source: /config.py
+  - source: /
     destination: /home/ec2-user/deploy
 hooks:
   ApplicationStop:
