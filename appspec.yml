@@ -13,6 +13,11 @@ hooks:
       timeout: 300
       runas: root
 
+  BeforeInstall:
+    - location: /clean.sh
+      timeout: 300
+      runas: root
+
   AfterInstall:
     - location: /install.sh
       timeout: 300

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing virtualenv as `whoami`"
+echo "Installing as `whoami`"
 yum -y install python36
 wget -O virtualenv-15.1.0.tar.gz https://github.com/pypa/virtualenv/archive/15.1.0.tar.gz
 tar xzvf virtualenv-15.1.0.tar.gz
