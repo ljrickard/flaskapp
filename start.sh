@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Starting as `whoami`"
 . /home/ec2-user/deploy/virtual_env/bin/activate
 exec gunicorn -p gunicorn.pid -c /home/ec2-user/deploy/gunicorn.py app:app
      

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Stopping as `whoami`"
-
 #. ./pyenv/bin/activate
 
 #pid=$(cat gunicorn.pid)
