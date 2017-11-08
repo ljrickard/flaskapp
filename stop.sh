@@ -2,7 +2,7 @@
 
 #. ./pyenv/bin/activate
 
-#pid=$(cat gunicorn.pid)
+#pid=$(cat GFILE)
 
 #if [ -z "$pid" ]
 #then
