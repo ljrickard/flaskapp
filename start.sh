@@ -1,6 +1,6 @@
 #!/bin/bash
 . /home/ec2-user/deploy/virtual_env/bin/activate
-exec gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
+gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
      
 #set -e
 
