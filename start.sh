@@ -1,6 +1,7 @@
 #!/bin/bash
 . /home/ec2-user/deploy/virtual_env/bin/activate
-gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
+#gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
+gunicorn -p GFILE -w 4 --daemon --error-logfile ./logs/gunicorn_error app:app
      
 #set -e
 
