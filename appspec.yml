@@ -13,19 +13,19 @@ hooks:
   ApplicationStop:
     - location: /stop.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   BeforeInstall:
     - location: /clean.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   AfterInstall:
     - location: /install.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   ApplicationStart:
     - location: /start.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
