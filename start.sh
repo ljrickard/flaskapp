@@ -1,6 +1,6 @@
 #!/bin/bash
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
-exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -w 4 --daemon --error-logfile /home/ec2-user/deploy/logs/gunicorn_error /home/ec2-user/deploy/app:app
+exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -w 4 --daemon --error-logfile /home/ec2-user/deploy/logs/gunicorn_error /home/ec2-user/deploy/app:/home/ec2-user/deploy/app
      
 #set -e
 
