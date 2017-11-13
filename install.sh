@@ -9,4 +9,4 @@ x=$(pwd)
 echo $x
 y=$(ls -la)
 echo $y
-/home/ec2-user/deploy/virtual_env/bin/pip install -r requirements.txt
+/home/ec2-user/deploy/virtual_env/bin/pip install -r /home/ec2-user/deploy/requirements.txt
