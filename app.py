@@ -1,3 +1,4 @@
+#!/usr/bin/env python36
 import os
 import logging
 from celery import Celery
