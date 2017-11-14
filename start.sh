@@ -1,6 +1,6 @@
 #!/bin/bash
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
-exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
+exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
      
 #set -e
 
