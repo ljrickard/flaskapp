@@ -2,9 +2,9 @@
 VIRTUAL_ENV_DIRECTORY='/home/ec2-user/deploy/virtual_env'
 PY_CACHE_DIRECTORY='/home/ec2-user/deploy/__pycache__'
 
-if [ -d $DIRECTORY ]; then
+if [ -d $VIRTUAL_ENV_DIRECTORY ]; then
   	echo 'removing virtual_env'
-	rm -rf $DIRECTORY
+	rm -rf $VIRTUAL_ENV_DIRECTORY
 fi
 
 if [ -d $PY_CACHE_DIRECTORY ]; then
