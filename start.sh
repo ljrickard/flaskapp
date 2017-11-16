@@ -2,9 +2,8 @@
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
 #export FLASK_APP=/home/ec2-user/deploy/app.py
 
-echo "pwd is `pwd`"
-app='/home/deploy/app'
-/home/ec2-user/deploy/virtual_env/bin/gunicorn -p "/home/ec2-user/deploy/GFILE" -w 4 $app:app
+
+/home/ec2-user/deploy/virtual_env/bin/gunicorn -p "/home/ec2-user/deploy/GFILE" -w 4 app:app
 
 #set -e
 
