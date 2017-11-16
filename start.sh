@@ -2,9 +2,8 @@
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
 #export FLASK_APP=/home/ec2-user/deploy/app.py
 
-dir='~ec2-user/deploy/'
-cd $dir
-/virtual_env/bin/gunicorn -p GFILE -w 4 app:app
+
+/home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE --chdir /home/ec2-user/deploy -w 4 app:app
 
 #set -e
 
@@ -26,3 +25,6 @@ cd $dir
 
 #. /home/ec2-user/deploy/virtual_env/bin/activate
 #pip install -r /home/ec2-user/deploy/requirements.txt
+
+#gunicorn -w 2 -b 0.0.0.0:8000 --chdir /home/telessaude/telessaude_branch_master telessaude.wsgi_dev:application --reload --timeout 900
+
