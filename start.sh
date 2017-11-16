@@ -2,8 +2,9 @@
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
 #export FLASK_APP=/home/ec2-user/deploy/app.py
 
-
-/home/ec2-user/deploy/virtual_env/bin/gunicorn -p "/home/ec2-user/deploy/GFILE" -w 4 app:app
+dir='~ec2-user/deploy/'
+cd $dir
+/virtual_env/bin/gunicorn -p GFILE -w 4 app:app
 
 #set -e
 
@@ -20,6 +21,8 @@
 #exec chown root: /etc/init.d/celeryd
 #exec /etc/init.d/celeryd start
 
+
+#gunicorn -p GFILE -w 4 app:app
 
 #. /home/ec2-user/deploy/virtual_env/bin/activate
 #pip install -r /home/ec2-user/deploy/requirements.txt
