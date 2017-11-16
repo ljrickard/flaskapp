@@ -32,3 +32,7 @@ def do_something_async(t):
     logger.info('starting to do something for {0}'.format(t))
     sleep(t)
     logger.info('finished doing something for {0}'.format(t))
+
+
+if __name__ == "__main__":
+    app.run()
