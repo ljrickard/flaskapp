@@ -4,6 +4,7 @@ import logging
 from celery import Celery
 from flask import Flask
 from time import sleep
+from werkzeug.exceptions import NotFound
 
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
@@ -22,7 +23,8 @@ celery.conf.update(app.config)
 
 @app.route('/status', methods=['GET'])
 def status():
-    return 'Feeling good!'
+    #return 'Feeling good!'
+    raise NotFound
 
 
 @app.route('/', methods=['POST'])
