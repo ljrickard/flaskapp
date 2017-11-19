@@ -1,5 +1,5 @@
 #!/bin/bash
--set -euo pipefail
+set -euo pipefail
 http_status=$(curl -sL -w "%{http_code}" "localhost:8000/status" -o /dev/null)
 if [ $http_status = "200" ]; then
    	echo "Endpoint point running successfully"

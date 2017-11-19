@@ -1,5 +1,5 @@
 #!/bin/bash
--set -euo pipefail
+set -euo pipefail
 GFILE="/home/ec2-user/deploy/GFILE"
 
 if [ -e $GFILE ]; then
