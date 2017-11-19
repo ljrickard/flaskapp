@@ -38,8 +38,3 @@ class DevelopmentConfig(Config):
     RAILS_PORT = 3000
     CELERY_BROKER_URL = 'redis://localhost:6379'
     CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-
-# commands
-#./../python_virtual_evn/reporting_service/bin/gunicorn --workers 4 reporting:app --daemon --pid FILE --error-logfile ./logs/gunicorn_error
-# kill - s TERM 84350
-# ps aux | grep gunicorn

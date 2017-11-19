@@ -8,18 +8,12 @@ from time import sleep
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
-    with app.app_context():
-        app.config.from_object(
-            'config.{0}'.format(
-                os.getenv(
-                    'FLASK_CONFIGURATION',
-                    'DevelopmentConfig')))
-
 
 celery = Celery(
     app.name,
     backend=app.config['CELERY_RESULT_BACKEND'],
     broker=app.config['CELERY_BROKER_URL'])
+
 celery.conf.update(app.config)
 
 
