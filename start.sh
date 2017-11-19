@@ -18,10 +18,3 @@ set -euo pipefail
 #exec /etc/init.d/celeryd start
 
 
-#gunicorn -p GFILE -w 4 app:app
-
-#. /home/ec2-user/deploy/virtual_env/bin/activate
-#pip install -r /home/ec2-user/deploy/requirements.txt
-
-#gunicorn -w 2 -b 0.0.0.0:8000 --chdir /home/telessaude/telessaude_branch_master telessaude.wsgi_dev:application --reload --timeout 900
-
