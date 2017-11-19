@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -euo pipefail
 pid=$(cat /home/ec2-user/deploy/GFILE)
 
 if [ -z "$pid" ]

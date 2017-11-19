@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 yum -y install python36
 wget -O virtualenv-15.1.0.tar.gz https://github.com/pypa/virtualenv/archive/15.1.0.tar.gz
 tar xzvf virtualenv-15.1.0.tar.gz
