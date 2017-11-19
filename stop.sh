@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
-if [ ! -f "/home/ec2-user/deploy/GFILE" ]
+VALUE=${"/home/ec2-user/deploy/GFILE":-}
+if [ ! -f VALUE ];
 then
 	echo "No pid found. No application to stop"
 else
