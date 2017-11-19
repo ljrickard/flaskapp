@@ -1,8 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: /__init__.py
-    destination: /home/ec2-user/deploy
   - source: /requirements.txt
     destination: /home/ec2-user/deploy
   - source: /app.py
