@@ -1,11 +1,10 @@
 #!/bin/bash
 set -euo pipefail
-pid=$(cat /home/ec2-user/deploy/GFILE)
-
-if [ -z "$pid" ]
+if [ ! -f "/home/ec2-user/deploy/GFILE" ]
 then
-      echo "No pid found. No application to stop"
+	echo "No pid found. No application to stop"
 else
-      echo "Sending TERM signal to $pid"
-      exec kill -s TERM $pid
+	pid=$(cat /home/ec2-user/deploy/GFILE)
+	echo "Sending TERM signal to $pid"
+	exec kill -s TERM $pid
 fi
