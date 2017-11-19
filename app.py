@@ -23,8 +23,7 @@ celery.conf.update(app.config)
 
 @app.route('/status', methods=['GET'])
 def status():
-    #return 'Feeling good!'
-    raise NotFound
+    return str()
 
 
 @app.route('/', methods=['POST'])
