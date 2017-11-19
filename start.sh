@@ -1,9 +1,8 @@
 #!/bin/bash
 #exec /home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE -c /home/ec2-user/deploy/gunicorn.py /home/ec2-user/deploy/app:app
-#export FLASK_APP=/home/ec2-user/deploy/app.py
 
 
-/home/ec2-user/deploy/virtual_env/bin/gunicorn -p GFILE --chdir /home/ec2-user/deploy -w 4 app:app
+/home/ec2-user/deploy/virtual_env/bin/gunicorn --chdir /home/ec2-user/deploy -p GFILE -c gunicorn app:app
 
 #set -e
 
