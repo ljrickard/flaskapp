@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+
 VIRTUAL_ENV_DIRECTORY='/home/ec2-user/deploy/virtual_env'
 PY_CACHE_DIRECTORY='/home/ec2-user/deploy/__pycache__'
 
