@@ -10,7 +10,6 @@ set -euo pipefail
 
 #cp celeryd /etc/init.d
 
-
 #celery -A app.celery worker --loglevel=info &
 
 #exec chmod 755 /etc/init.d/celeryd

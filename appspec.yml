@@ -9,6 +9,8 @@ files:
     destination: /home/ec2-user/deploy
   - source: /gunicorn.py
     destination: /home/ec2-user/deploy
+  - source: /celeryd
+    destination: /etc/init.d
 hooks:
   ApplicationStop:
     - location: /stop.sh
