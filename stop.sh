@@ -8,3 +8,4 @@ if [ -e $GFILE ]; then
 	exec kill -s TERM $pid
 else
 	echo "No pid file found"
+fi
