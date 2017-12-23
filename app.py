@@ -22,7 +22,7 @@ celery.conf.update(app.config)
 
 
 @app.route('/celery', methods=['GET'])
-def celery():
+def celery_ok():
     logger.info('Celery check')
     if not inspect().stats():
         raise InternalServerError(description='Celery not running')
@@ -34,12 +34,12 @@ def status():
     logger.info('Status check')
     return 'ok'
 
+
 @app.route('/', methods=['POST'])
 def hello_world():
     result = do_something_async.delay(30)
     logger.info(str(result))
     return str(result)
-
 
 @celery.task
 def do_something_async(t):
