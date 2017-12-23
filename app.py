@@ -13,10 +13,6 @@ app = Flask(__name__)
 with app.app_context():
     app.config.from_object('config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig')))
 
-
-print('app.name')
-print(app.name)
-
 celery = Celery(
     app.name,
     backend=app.config['CELERY_RESULT_BACKEND'],
