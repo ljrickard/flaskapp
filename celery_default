@@ -18,7 +18,7 @@ CELERY_BIN="/home/ec2-user/deploy/virtual_env/bin/celery"
 #CELERY_APP="proj.tasks:app"
 
 # Where to chdir at start.
-CELERYD_CHDIR="/deploy/"
+CELERYD_CHDIR="/home/ec2-user/deploy/"
 
 # Extra command-line arguments to the worker
 CELERYD_OPTS="--time-limit=300 --concurrency=8"
@@ -35,8 +35,8 @@ CELERYD_PID_FILE="/var/run/celery/%n.pid"
 # Workers should run as an unprivileged user.
 #   You need to create this user manually (or you can choose
 #   a user/group combination that already exists (e.g., nobody).
-CELERYD_USER="celery"
-CELERYD_GROUP="celery"
+CELERYD_USER="ec2-user"
+#CELERYD_GROUP="celery"
 
 # If enabled pid and log directories will be created if missing,
 # and owned by the userid/group configured.
