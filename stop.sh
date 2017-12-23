@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-GFILE="/home/ec2-user/deploy/GFILE"
+GFILE="/home/ec2-user/deploy/gunicorn.pid"
 
 if [ -e $GFILE ]; then
 	pid=$(cat $GFILE)
