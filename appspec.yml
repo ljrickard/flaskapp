@@ -9,9 +9,9 @@ files:
     destination: /home/ec2-user/deploy
   - source: /gunicorn.py
     destination: /home/ec2-user/deploy
-  - source: /init_celery
+  - source: /celery_init
     destination: /etc/init.d
-  - source: /default_celery
+  - source: /celery_default
     destination: /etc/default
 hooks:
   ApplicationStop:
