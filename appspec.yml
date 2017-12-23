@@ -11,7 +11,7 @@ files:
     destination: /home/ec2-user/deploy
   - source: /celery_init
     destination: /etc/init.d
-  - source: /celery_default
+  - source: /celeryd
     destination: /etc/default
 hooks:
   ApplicationStop:
