@@ -21,13 +21,18 @@ celery = Celery(
 celery.conf.update(app.config)
 
 
-@app.route('/status', methods=['GET'])
-def status():
-    logger.info('Status')
+@app.route('/celery', methods=['GET'])
+def celery():
+    logger.info('Celery check')
     if not inspect().stats():
         raise InternalServerError(description='Celery not running')
-    return str()
+    return 'ok'
 
+
+@app.route('/status', methods=['GET'])
+def status():
+    logger.info('Status check')
+    return 'ok'
 
 @app.route('/', methods=['POST'])
 def hello_world():
