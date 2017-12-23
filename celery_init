@@ -51,8 +51,8 @@ fi
 SCRIPT_NAME="$(basename "$SCRIPT_FILE")"
 
 DEFAULT_USER="ec2-user"
-DEFAULT_PID_FILE="/deploy/CFILE.pid"
-DEFAULT_LOG_FILE="/deploy/log/celery/%n%I.log"
+DEFAULT_PID_FILE="/home/ec2-user/deploy/CFILE.pid"
+DEFAULT_LOG_FILE="/home/ec2-user/deploy/logs/celery/%n%I.log"
 DEFAULT_LOG_LEVEL="INFO"
 DEFAULT_NODES="celery"
 DEFAULT_CELERYD="-m celery worker --detach"
