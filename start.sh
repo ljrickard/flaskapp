@@ -2,7 +2,12 @@
 set -euo pipefail
 /home/ec2-user/deploy/virtual_env/bin/gunicorn --chdir /home/ec2-user/deploy -p /home/ec2-user/deploy/GFILE -c /home/ec2-user/deploy/gunicorn.py app:app
 
-/etc/init.d/celery_init start
+#/etc/init.d/celery_init start
+
+celery multi start worker1 \
+    -A /home/ec2-user/deploy/app.celery \
+    --pidfile="/home/ec2-user/deploy/C_FILE.pid" \
+    --logfile="/home/ec2-user/deploy/logs/celery/%n%I.log"
 
 #set -e
 
