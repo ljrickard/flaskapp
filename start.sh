@@ -4,7 +4,7 @@ set -euo pipefail
 
 #/etc/init.d/celery_init start
 
-celery multi start worker1 \
+/home/ec2-user/deploy/virtual_env/bin/celery multi start worker1 \
     -A /home/ec2-user/deploy/app.celery \
     --pidfile="/home/ec2-user/deploy/C_FILE.pid" \
     --logfile="/home/ec2-user/deploy/logs/celery/%n%I.log"
