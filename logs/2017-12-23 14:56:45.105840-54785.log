@@ -1,0 +1,4 @@
+2017-12-23 14:56:47,069: (ForkPoolWorker-2: 54792) INFO - app(44): starting to do something for 1
+2017-12-23 14:56:47,070: (ForkPoolWorker-1: 54791) INFO - app(44): starting to do something for 1
+2017-12-23 14:56:48,072: (ForkPoolWorker-2: 54792) INFO - app(46): finished doing something for 1
+2017-12-23 14:56:48,072: (ForkPoolWorker-1: 54791) INFO - app(46): finished doing something for 1

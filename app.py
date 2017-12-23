@@ -4,7 +4,8 @@ import logging
 from celery import Celery
 from flask import Flask
 from time import sleep
-from werkzeug.exceptions import NotFound
+from werkzeug.exceptions import InternalServerError
+from celery.task.control import inspect
 
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
@@ -26,6 +27,8 @@ celery.conf.update(app.config)
 
 @app.route('/status', methods=['GET'])
 def status():
+    if not inspect().stats():
+        raise InternalServerError(description='Celery not running')
     return str()
 
 
