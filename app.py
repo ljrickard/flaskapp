@@ -23,6 +23,7 @@ celery.conf.update(app.config)
 
 @app.route('/status', methods=['GET'])
 def status():
+    logger.info('Status')
     if not inspect().stats():
         raise InternalServerError(description='Celery not running')
     return str()
