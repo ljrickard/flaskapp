@@ -14,7 +14,7 @@ set -euo pipefail
     # -Ofair
 
 /home/ec2-user/deploy/virtual_env/bin/celery \
-	--app=app.celery flower \
+	--app=app.celery \
     --pidfile="/home/ec2-user/deploy/%n.pid" \
     --logfile="/home/ec2-user/deploy/logs/celery/%n%I.log" \
-    --workdir="/home/ec2-user/deploy"
+    --workdir="/home/ec2-user/deploy" flower
