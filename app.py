@@ -95,13 +95,14 @@ def result(id):
 
 @celery.task
 def do_something_async(site):
-    logger.info('starting to do something for {0}'.format(t))
+    logger.info('starting to do something for {0}'.format(site))
 
     logger.info('{0}'.format(do_something_async.request))
     task_id = do_something_async.request.id
     logger.info('task id is:{0}'.format(task_id))
     random_int = randint(1, 100)
     logger.info('random_int is:{0}'.format(random_int))
+    
     redis_connection = redis.StrictRedis(host='localhost', port=6379, db=3)
     redis_connection.set(str(task_id), random_int)
     
