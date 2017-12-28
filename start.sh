@@ -13,8 +13,8 @@ set -euo pipefail
     --workdir="/home/ec2-user/deploy"
     # -Ofair
 
-/home/ec2-user/deploy/virtual_env/bin/celery worker start f1 \
-	--app=app.celery flower \
+/home/ec2-user/deploy/virtual_env/bin/celery flower \
+	--app=app.celery 
     --pidfile="/home/ec2-user/deploy/%n.pid" \
     --logfile="/home/ec2-user/deploy/logs/celery/%n%I.log" \
     --workdir="/home/ec2-user/deploy"
