@@ -22,8 +22,6 @@ class ProductionConfig(Config):
     REDIS_URI = os.getenv('REDIS_URI', '')
     REDIS_PORT = os.getenv('REDIS_PORT', '')
     REDIS_DB = os.getenv('REDIS_DB', '')
-    RAILS_URI = os.getenv('RAILS_URI', '')
-    RAILS_PORT = os.getenv('RAILS_PORT', '')
     CELERY_BROKER_URL = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
     CELERY_RESULT_BACKEND = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
 
@@ -34,7 +32,5 @@ class DevelopmentConfig(Config):
     REDIS_URI = 'localhost'
     REDIS_PORT = 6379
     REDIS_DB = 3
-    RAILS_URI = 'http://127.0.0.1'
-    RAILS_PORT = 3000
-    CELERY_BROKER_URL = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
-    CELERY_RESULT_BACKEND = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
+    CELERY_BROKER_URL = 'redis://localhost:6379'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379'
