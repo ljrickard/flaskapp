@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /requirements.txt
-    destination: /home/ec2-user/deploy
+    destination: /home/ubuntu/deploy
   - source: /app.py
-    destination: /home/ec2-user/deploy
+    destination: /home/ubuntu/deploy
   - source: /config.py
-    destination: /home/ec2-user/deploy
+    destination: /home/ubuntu/deploy
   - source: /gunicorn.py
-    destination: /home/ec2-user/deploy
+    destination: /home/ubuntu/deploy
 hooks:
   ApplicationStop:
     - location: /stop.sh
