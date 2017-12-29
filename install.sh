@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-yum -y install python36
+apt -y install python36
 wget -O /home/ubuntu/deploy/virtualenv-15.1.0.tar.gz https://github.com/pypa/virtualenv/archive/15.1.0.tar.gz
 tar xzvf /home/ubuntu/deploy/virtualenv-15.1.0.tar.gz -C /home/ubuntu/deploy/
 python36 /home/ubuntu/deploy/virtualenv-15.1.0/virtualenv.py /home/ubuntu/deploy/virtual_env
