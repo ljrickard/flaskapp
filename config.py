@@ -32,7 +32,7 @@ class DevelopmentConfig(Config):
     REDIS_URI = 'localhost'
     REDIS_PORT = 6379
     REDIS_DB = 3
-    #CELERY_BROKER_URL = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
-    #CELERY_RESULT_BACKEND = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
-    CELERY_BROKER_URL = 'redis://localhost:6379'
-    CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+    CELERY_BROKER_URL = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
+    CELERY_RESULT_BACKEND = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
+    #CELERY_BROKER_URL = 'redis://localhost:6379'
+    #CELERY_RESULT_BACKEND = 'redis://localhost:6379'
