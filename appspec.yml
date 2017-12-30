@@ -9,6 +9,8 @@ files:
     destination: /home/ubuntu/deploy/flaskapp
   - source: /gunicorn.py
     destination: /home/ubuntu/deploy/flaskapp
+  - source: /flaskapp_logs.conf
+    destination: /var/awslogs/etc/config
 hooks:
   ApplicationStop:
     - location: /stop.sh
