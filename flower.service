@@ -5,7 +5,7 @@ Description=Flower Celery Service
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/deploy/flaskapp
-ExecStart=/home/ubuntu/deploy/flaskapp/virtual_env/bin/flower --port=5555  --loglevel=info -A app.celery
+ExecStart=/home/user/miniconda3/envs/virtualenv/bin/flower --port=5555  --loglevel=info -A app.celery --address=0.0.0.0 --log_file_prefix=/home/ubuntu/deploy/flaskapp/logs/flower
 Restart=on-failure
 Type=simple
 
