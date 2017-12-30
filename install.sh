@@ -11,3 +11,5 @@ mkdir -p /home/ubuntu/deploy/flaskapp/logs
 mkdir -p /home/ubuntu/deploy/flaskapp/logs/app
 mkdir -p /home/ubuntu/deploy/flaskapp/logs/flower
 mkdir -p /home/ubuntu/deploy/flaskapp/logs/celery
+
+

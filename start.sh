@@ -13,8 +13,8 @@ set -euo pipefail
     --workdir="/home/ubuntu/deploy/flaskapp"
     # -Ofair
 
-/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery worker \
-	--app=app.celery \
-    --pidfile="/home/ubuntu/deploy/flaskapp/%n.pid" \
-    --logfile="/home/ubuntu/deploy/flaskapp/logs/celery/%n.log" \
-    --workdir="/home/ubuntu/deploy/flaskapp" flower
+#/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery worker \
+#	--app=app.celery \
+#    --pidfile="/home/ubuntu/deploy/flaskapp/%n.pid" \
+#    --logfile="/home/ubuntu/deploy/flaskapp/logs/celery/%n.log" \
+#    --workdir="/home/ubuntu/deploy/flaskapp" flower
