@@ -13,6 +13,9 @@ set -euo pipefail
     --workdir="/home/ubuntu/deploy/flaskapp"
     # -Ofair
 
+systemctl daemon-reload
+systemctl start flower
+
 #/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery worker \
 #	--app=app.celery \
 #    --pidfile="/home/ubuntu/deploy/flaskapp/%n.pid" \

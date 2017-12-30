@@ -12,4 +12,10 @@ mkdir -p /home/ubuntu/deploy/flaskapp/logs/app
 mkdir -p /home/ubuntu/deploy/flaskapp/logs/flower
 mkdir -p /home/ubuntu/deploy/flaskapp/logs/celery
 
-
+# setup awslogs
+#wget -O /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+#chmod +x /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py
+#python3 /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py -n -r us-east-1 -c s3://aws-codedeploy-us-east-1/cloudwatch/awslogs.conf
+#mkdir -p /var/awslogs/etc/config
+#cp codedeploy_logs.conf /var/awslogs/etc/config/
+#service awslogs restart
