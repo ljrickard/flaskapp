@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /requirements.txt
-    destination: /home/ubuntu/deploy
+    destination: /home/ubuntu/deploy/flaskapp
   - source: /app.py
-    destination: /home/ubuntu/deploy
+    destination: /home/ubuntu/deploy/flaskapp
   - source: /config.py
-    destination: /home/ubuntu/deploy
+    destination: /home/ubuntu/deploy/flaskapp
   - source: /gunicorn.py
-    destination: /home/ubuntu/deploy
+    destination: /home/ubuntu/deploy/flaskapp
 hooks:
   ApplicationStop:
     - location: /stop.sh

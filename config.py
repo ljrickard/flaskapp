@@ -9,7 +9,7 @@ class Config(object):
     formatter = logging.Formatter(
         "%(asctime)s: (%(processName)s: %(process)d) %(levelname)-2s - %(module)-2s(%(lineno)d): %(message)s")
     handler = TimedRotatingFileHandler(
-        'logs/{0}-{1}.log'.format(str(datetime.now()), os.getpid()), when='H', interval=1)
+        'logs/app/{0}-{1}.log'.format(str(datetime.now()), os.getpid()), when='H', interval=1)
     handler.setLevel(logging.INFO)
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)
