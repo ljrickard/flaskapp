@@ -15,6 +15,7 @@ set -euo pipefail
 
 systemctl daemon-reload
 systemctl start flower
+systemctl status flower
 
 #/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery worker \
 #	--app=app.celery \
