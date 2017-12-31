@@ -17,24 +17,24 @@ hooks:
   ApplicationStop:
     - location: /stop.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
 
   BeforeInstall:
     - location: /clean.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
 
   AfterInstall:
     - location: /install.sh
       timeout: 600
-      runas: root
+      runas: ubuntu
 
   ApplicationStart:
     - location: /start.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
 
   ValidateService:
     - location: /healthcheck.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
