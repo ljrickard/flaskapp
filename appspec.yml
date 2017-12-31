@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /requirements.txt
     destination: /home/ubuntu/deploy/flaskapp
+  - source: /__init__.py
+    destination: /home/ubuntu/deploy/flaskapp
   - source: /app.py
     destination: /home/ubuntu/deploy/flaskapp
   - source: /config.py
