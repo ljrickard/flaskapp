@@ -61,9 +61,11 @@ def scrape():
     logger.info('scrape')
     async_results = []
     if request.data:
+        logger.info('request.data')
         for site in request.data.decode('utf-8').split(','):
             async_results.append(str(do_something_async.delay(60)))
     else:
+        logger.info('else')
         redis_connection = Redis._create_connection()
         all_sites = redis_connection.lrange(REDIS_KEY_SITES, 0, -1)
         for site in all_sites:
