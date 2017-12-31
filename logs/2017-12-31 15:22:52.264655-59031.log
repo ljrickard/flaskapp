@@ -1,2 +1,0 @@
-2017-12-31 15:22:54,681: (MainProcess: 59031) INFO - app(50): celery check
-2017-12-31 15:22:54,712: (MainProcess: 59031) ERROR - app(55): module 'redis' has no attribute 'Connection'
