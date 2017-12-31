@@ -10,15 +10,12 @@ from werkzeug.exceptions import InternalServerError, BadRequest
 from celery.task.control import inspect
 from random import randint
 import config
-from redis.redis import Redis
+from app_redis.app_redis import Redis
 from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 
 app = Flask(__name__)
-app.config.from_object(
-    'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 
-                                        'DevelopmentConfig')))  
-
+app.config.from_object('config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig')))  
 logger = logging.getLogger(__name__)
 formatter = logging.Formatter("%(asctime)s: (%(processName)s: %(process)d) %(levelname)-2s - %(module)-2s(%(lineno)d): %(message)s")
 handler = TimedRotatingFileHandler('{0}/{1}-{2}.log'.format(app.config['LOG_DIR'], str(datetime.now()), os.getpid()), when='H', interval=1)
@@ -46,15 +43,6 @@ FLOWERS_API = app.config['FLOWERS_API']
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
     logger.info('healthcheck')
-    return jsonify('ok')
-
-# add celery as option 
-
-@app.route('/celery', methods=['GET'])
-def celery_ok():
-    logger.info('celery check')
-    if not inspect().stats():
-        raise InternalServerError(description='celery not running')
     return jsonify('ok')
 
 

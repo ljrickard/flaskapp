@@ -1,0 +1,6 @@
+2017-12-31 15:26:12,093: (MainProcess: 59200) INFO - app(50): celery check
+2017-12-31 15:26:22,905: (MainProcess: 59200) INFO - app(50): celery check
+2017-12-31 15:26:34,860: (MainProcess: 59200) INFO - app(50): celery check
+2017-12-31 15:26:38,485: (MainProcess: 59200) INFO - app(50): celery check
+2017-12-31 15:26:40,803: (MainProcess: 59200) INFO - app(50): celery check
+2017-12-31 15:26:43,575: (MainProcess: 59200) INFO - app(50): celery check
