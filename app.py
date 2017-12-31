@@ -11,13 +11,23 @@ from celery.task.control import inspect
 from random import randint
 import config
 from redis.redis import Redis
+from logging.handlers import TimedRotatingFileHandler
+from datetime import datetime
 
-
-logger = logging.getLogger(__name__)
 app = Flask(__name__)
 app.config.from_object(
     'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 
                                         'DevelopmentConfig')))  
+
+logger = logging.getLogger(__name__)
+formatter = logging.Formatter("%(asctime)s: (%(processName)s: %(process)d) %(levelname)-2s - %(module)-2s(%(lineno)d): %(message)s")
+handler = TimedRotatingFileHandler('{0}/{1}-{2}.log'.format(app.config['LOG_DIR'], str(datetime.now()), os.getpid()), when='H', interval=1)
+handler.setLevel(logging.INFO)
+handler.setFormatter(formatter)
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.INFO)
+app.logger.handlers.extend(logging.getLogger("gunicorn.error").handlers)
+
 
 celery = Celery(
     app.name,
