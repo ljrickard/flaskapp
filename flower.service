@@ -9,8 +9,7 @@ ExecStart=/home/ubuntu/deploy/flaskapp/virtual_env/bin/flower \
             --port=5555  \
             --loglevel=info \
             --app=app.celery \
-            --address=0.0.0.0 \
-            --log_file_prefix=/home/ubuntu/deploy/flaskapp/logs/flower
+            --address=0.0.0.0 
 
 Restart=on-failure
 Type=simple
