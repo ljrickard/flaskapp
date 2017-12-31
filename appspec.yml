@@ -9,7 +9,7 @@ files:
     destination: /home/ubuntu/deploy/flaskapp
   - source: /gunicorn.py
     destination: /home/ubuntu/deploy/flaskapp
-  - source: /flaskapp_logs.conf
+  - source: /logs.conf
     destination: /var/awslogs/etc/config
   - source: /flower.service
     destination: /etc/systemd/system
