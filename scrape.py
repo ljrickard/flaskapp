@@ -10,12 +10,12 @@ from time import sleep
 from werkzeug.exceptions import InternalServerError, BadRequest
 from celery.task.control import inspect
 from random import randint
+import config
 
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
-
-with app.app_context():
-    app.config.from_object('config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig')))
+app.config.from_object(
+    'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig')))  
 
 celery = Celery(
     app.name,
@@ -24,18 +24,19 @@ celery = Celery(
 
 celery.conf.update(app.config)
 
-SITES_REDIS_KEY = 'sites'
-FLOWERS_URI = 'http://localhost:5555/api/tasks'
+REDIS_KEY_SITES = 'sites'
+FLOWERS_API = app.config['FLOWERS_API']
 
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
+    logger.info('healthcheck')
     return jsonify('ok')
 
 # add celery as option 
 
 @app.route('/celery', methods=['GET'])
 def celery_ok():
-    logger.info('Celery check')
+    logger.info('celery check')
     if not inspect().stats():
         raise InternalServerError(description='Celery not running')
     return jsonify('ok')
@@ -46,8 +47,8 @@ def sites():
     redis_connection = redis.StrictRedis(host='localhost', port=6379, db=3)
     if request.method == 'POST':
         for site in request.data.decode('utf-8').split(','):
-            redis_connection.lpush(SITES_REDIS_KEY, site)   
-    return jsonify(redis_connection.lrange(SITES_REDIS_KEY, 0, -1))
+            redis_connection.lpush(REDIS_KEY_SITES, site)   
+    return jsonify(redis_connection.lrange(REDIS_KEY_SITES, 0, -1))
 
 
 @app.route('/scrape', methods=['POST'])
@@ -58,7 +59,7 @@ def scrape():
             async_results.append(str(do_something_async.delay(60)))
     else:
         redis_connection = redis.StrictRedis(host='localhost', port=6379, db=3)
-        all_sites = redis_connection.lrange(SITES_REDIS_KEY, 0, -1)
+        all_sites = redis_connection.lrange(REDIS_KEY_SITES, 0, -1)
         for site in all_sites:
             async_results.append(str(do_something_async.delay(60)))   
     return jsonify(async_results)
@@ -67,7 +68,7 @@ def scrape():
 @app.route('/tasks/status', methods=['GET'])
 def tasks():
     return jsonify(str({key: {'state': value['state']} 
-        for key, value in json.loads(requests.get(FLOWERS_URI).text).items()}))
+        for key, value in json.loads(requests.get('{0}{1}'.format(FLOWERS_API, '/tasks')).text).items()}))
 
 
 @app.route('/tasks/<uuid:id>/status', methods=['GET'])
