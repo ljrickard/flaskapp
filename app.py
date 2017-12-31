@@ -48,6 +48,7 @@ def healthcheck():
 
 @app.route('/sites', methods=['GET', 'POST'])
 def sites():
+    logger.info('sites')
     redis_connection = Redis._create_connection()
     if request.method == 'POST':
         for site in request.data.decode('utf-8').split(','):
@@ -57,6 +58,7 @@ def sites():
 
 @app.route('/scrape', methods=['POST'])
 def scrape():
+    logger.info('scrape')
     async_results = []
     if request.data:
         for site in request.data.decode('utf-8').split(','):
@@ -71,6 +73,7 @@ def scrape():
 
 @app.route('/tasks/status', methods=['GET'])
 def tasks():
+    logger.info('tasks/status')
     return jsonify(str({key: {'state': value['state']} 
         for key, value in json.loads(
             requests.get('{0}{1}'.format(FLOWERS_API, '/tasks')).
@@ -79,6 +82,7 @@ def tasks():
 
 @app.route('/tasks/<uuid:id>/status', methods=['GET'])
 def status(id):
+    logger.info('tasks/uuid:id/status')
     task = do_something_async.AsyncResult(str(id))
     return jsonify(
         {
@@ -91,7 +95,7 @@ def status(id):
 
 @app.route('/tasks/<uuid:id>/result', methods=['GET'])
 def result(id):
-    logger.info('result')
+    logger.info('/tasks/<uuid:id>/result')
     redis_connection = Redis._create_connection()
     result = redis_connection.get(id)
     if result:
