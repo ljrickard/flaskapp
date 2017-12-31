@@ -11,5 +11,5 @@ class Redis:
 	    try:
 	        redis_connection = redis.StrictRedis(host=cls.URI, port=cls.PORT, db=cls.REDIS_DB)
 	    except redis.ConnectionError:
-	        raise InternalServerError(description='Redis ConnectionError')
+	        raise InternalServerError(description='redis ConnectionError')
 	    return redis_connection

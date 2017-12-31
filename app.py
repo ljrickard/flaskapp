@@ -10,7 +10,7 @@ from werkzeug.exceptions import InternalServerError, BadRequest
 from celery.task.control import inspect
 from random import randint
 import config
-from app_redis import Redis
+from redis.redis import Redis
 
 
 logger = logging.getLogger(__name__)
