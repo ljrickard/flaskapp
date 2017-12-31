@@ -62,6 +62,11 @@ def scrape():
     async_results = []
     if request.data:
         logger.info('request.data')
+
+        try:
+            do_something_async.delay(60)
+        except Exception as e:
+            logger.error(e)
         for site in request.data.decode('utf-8').split(','):
             async_results.append(str(do_something_async.delay(60)))
     else:
