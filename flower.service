@@ -2,7 +2,7 @@
 Description=Flower Celery Service
 
 [Service]
-User=ubuntu
+User=root
 WorkingDirectory=/home/ubuntu/deploy/flaskapp
 ExecStart=/home/ubuntu/deploy/flaskapp/virtual_env/bin/flower \
             --port=5555  \
