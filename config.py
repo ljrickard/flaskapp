@@ -20,9 +20,9 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG = False
-    REDIS_URI = os.getenv('REDIS_URI', '')
-    REDIS_PORT = os.getenv('REDIS_PORT', '')
-    REDIS_DB = os.getenv('REDIS_DB', '')
+    REDIS_URI = os.getenv('REDIS_URI', 'redis://ec2-54-175-79-8.compute-1.amazonaws.com')
+    REDIS_PORT = os.getenv('REDIS_PORT', 6379)
+    REDIS_DB = os.getenv('REDIS_DB', 3)
     LOG_DIR = '/home/ubuntu/deploy/flaskapp/logs/app'
     FLOWERS_API = 'http://0.0.0.0:5555/api'    
     CELERY_BROKER_URL = 'redis://ec2-54-175-79-8.compute-1.amazonaws.com:6379'
