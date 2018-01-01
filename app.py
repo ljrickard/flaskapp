@@ -15,7 +15,8 @@ from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 
 app = Flask(__name__)
-app.config.from_object('config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig')))  
+config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))
+app.config.from_object(config_object)  
 logger = logging.getLogger(__name__)
 formatter = logging.Formatter("%(asctime)s: (%(processName)s: %(process)d) %(levelname)-2s - %(module)-2s(%(lineno)d): %(message)s")
 handler = TimedRotatingFileHandler('{0}/{1}-{2}.log'.format(app.config['LOG_DIR'], str(datetime.now()), os.getpid()), when='H', interval=1)
@@ -39,6 +40,8 @@ Redis.DB = app.config['REDIS_DB']
 
 REDIS_KEY_SITES = 'sites'
 FLOWERS_API = app.config['FLOWERS_API']
+
+logger.info('Config object loaded {0}'.format(config_object))
 
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():

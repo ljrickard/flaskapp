@@ -5,12 +5,9 @@ from datetime import datetime
 from flask import current_app
 import os
 
-logger = logging.getLogger(__name__)
-
 class Config(): pass
 
 class DevelopmentConfig(Config):
-    logger.info('Running with DevelopmentConfig')
     DEBUG = True
     TESTING = True
     REDIS_URI = 'redis://localhost'
@@ -22,7 +19,6 @@ class DevelopmentConfig(Config):
     CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 
 class ProductionConfig(Config):
-    logger.info('Running with ProductionConfig')
     DEBUG = False
     REDIS_URI = os.getenv('REDIS_URI', '')
     REDIS_PORT = os.getenv('REDIS_PORT', '')
