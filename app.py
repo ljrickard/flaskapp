@@ -29,9 +29,8 @@ app.logger.handlers.extend(logging.getLogger("gunicorn.error").handlers)
 
 celery = Celery(
     app.name,
-    backend=app.config['CELERY_RESULT_BACKEND'],
-    broker=app.config['CELERY_BROKER_URL'],
-    redis_password=app.config['REDIS_PASSWORD'])
+    backend=app.config['CELERY_BROKER'],
+    broker=app.config['CELERY_BROKER'],)
 
 celery.conf.update(app.config)
 
