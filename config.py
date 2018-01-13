@@ -12,6 +12,7 @@ class DevelopmentConfig(Config):
     FLOWERS_API = 'http://localhost:5555/api'
     CELERY_BROKER_URL = 'redis://localhost:6379'
     CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+    REDIS_PASSWORD=os.getenv('REDIS_PASSWORD', None)
 
 class ProductionConfig(Config):
     DEBUG=False
