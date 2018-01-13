@@ -16,7 +16,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))
-app.config.from_object(config_object)  
+app.config.from_object(config_object)
 logger = logging.getLogger(__name__)
 formatter = logging.Formatter("%(asctime)s: (%(processName)s: %(process)d) %(levelname)-2s - %(module)-2s(%(lineno)d): %(message)s")
 handler = TimedRotatingFileHandler('{0}/{1}-{2}.log'.format(app.config['LOG_DIR'], str(datetime.now()), os.getpid()), when='H', interval=1)
@@ -30,13 +30,15 @@ app.logger.handlers.extend(logging.getLogger("gunicorn.error").handlers)
 celery = Celery(
     app.name,
     backend=app.config['CELERY_RESULT_BACKEND'],
-    broker=app.config['CELERY_BROKER_URL'])
+    broker=app.config['CELERY_BROKER_URL'],
+    redis_password=app.config['REDIS_PASSWORD'])
 
 celery.conf.update(app.config)
 
 Redis.PORT = app.config['REDIS_PORT']
 Redis.URI = app.config['REDIS_URI']
 Redis.DB = app.config['REDIS_DB']
+Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
 REDIS_KEY_SITES = 'sites'
 FLOWERS_API = app.config['FLOWERS_API']
@@ -125,6 +127,7 @@ def do_something_async(site):
     logger.info('random_int is:{0}'.format(random_int))
     
     redis_connection = Redis._create_connection()
+    logger.info(str(redis_connection))
     redis_connection.set(str(task_id), random_int)
     
     logger.info('task_id type is:{0}'.format(type(task_id)))
