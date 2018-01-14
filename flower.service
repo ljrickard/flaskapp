@@ -1,5 +1,6 @@
 [Unit]
 Description=Flower Celery Service
+After=network.target
 
 [Service]
 User=root

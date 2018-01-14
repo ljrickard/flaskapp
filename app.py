@@ -1,18 +1,18 @@
 #!/usr/bin/env python36
 import os
+import json
+import config
 import logging
 import requests
-import json
-from celery import Celery
-from flask import Flask, request, jsonify
 from time import sleep
-from werkzeug.exceptions import InternalServerError, BadRequest
-from celery.task.control import inspect
+from celery import Celery
 from random import randint
-import config
-from app_redis.app_redis import Redis
-from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
+from app_redis.app_redis import Redis
+from celery.task.control import inspect
+from flask import Flask, request, jsonify
+from logging.handlers import TimedRotatingFileHandler
+from werkzeug.exceptions import InternalServerError, BadRequest
 
 app = Flask(__name__)
 config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))

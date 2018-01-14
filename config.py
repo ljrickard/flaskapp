@@ -3,13 +3,13 @@ import os
 class Config(): pass
 
 class DevelopmentConfig(Config):
-    DEBUG = True
-    TESTING = True
-    REDIS_URI = 'localhost'
-    REDIS_PORT = 6379
-    REDIS_DB = 3
-    LOG_DIR = '{0}/logs'.format(os.getcwd())
-    FLOWERS_API = 'http://localhost:5555/api'
+    DEBUG=True
+    TESTING=True
+    REDIS_URI='localhost'
+    REDIS_PORT=6379
+    REDIS_DB=3
+    LOG_DIR='{0}/logs'.format(os.getcwd())
+    FLOWERS_API='http://localhost:5555/api'
     REDIS_PASSWORD=os.getenv('REDIS_PASSWORD', None)
     CELERY_BROKER='redis://:{0}@{1}:{2}/{3}'.format(REDIS_PASSWORD, REDIS_URI, REDIS_PORT, REDIS_DB)
 

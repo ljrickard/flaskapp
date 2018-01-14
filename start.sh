@@ -12,14 +12,7 @@ set -euo pipefail
     --logfile="/home/ubuntu/deploy/flaskapp/logs/app/%n.log" \
     --workdir="/home/ubuntu/deploy/flaskapp"
     # -Ofair
-    #--logfile="/home/ubuntu/deploy/flaskapp/logs/celery/%n.log" \
 
 systemctl daemon-reload
 systemctl start flower
 systemctl status flower
-
-#/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery worker \
-#	--app=app.celery \
-#    --pidfile="/home/ubuntu/deploy/flaskapp/%n.pid" \
-#    --logfile="/home/ubuntu/deploy/flaskapp/logs/celery/%n.log" \
-#    --workdir="/home/ubuntu/deploy/flaskapp" flower

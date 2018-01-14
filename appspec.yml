@@ -17,6 +17,8 @@ files:
     destination: /var/awslogs/etc/config
   - source: /flower.service
     destination: /etc/systemd/system
+  - source: /gunicorn.service
+    destination: /etc/systemd/system
 hooks:
   ApplicationStop:
     - location: /stop.sh

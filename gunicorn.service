@@ -1,18 +1,17 @@
 [Unit]
-Description=gunicorn daemon
-Requires=gunicorn.socket
+Description=Gunicorn Service
 After=network.target
 
 [Service]
-PIDFile=/run/gunicorn/pid
-User=someuser
-Group=someuser
-RuntimeDirectory=gunicorn
-WorkingDirectory=/home/someuser/applicationroot
-ExecStart=/usr/bin/gunicorn --pid /run/gunicorn/pid --bind unix:/run/gunicorn/socket applicationname.wsgi
+PIDFile=/var/run/gunicorn.pid
+User=root
+WorkingDirectory=/home/ubuntu/deploy/flaskapp
+ExecStart=/usr/bin/gunicorn --pid /var/run/gunicorn.pid \ 
+                            --config /home/ubuntu/deploy/flaskapp/gunicorn.py app:app
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
-PrivateTmp=true
+
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
