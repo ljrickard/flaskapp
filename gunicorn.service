@@ -1,5 +1,6 @@
 [Unit]
 Description=Gunicorn Service
+Requires=gunicorn.socket
 After=network.target
 
 [Service]
@@ -12,6 +13,7 @@ ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
 
 Restart=on-failure
+PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target

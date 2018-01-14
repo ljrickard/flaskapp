@@ -19,6 +19,8 @@ files:
     destination: /etc/systemd/system
   - source: /gunicorn.service
     destination: /etc/systemd/system
+  - source: /gunicorn.socket
+    destination: /etc/systemd/system
 hooks:
   ApplicationStop:
     - location: /stop.sh
