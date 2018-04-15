@@ -1,0 +1,6 @@
+2018-04-11 09:46:36,751: (MainProcess: 85172) INFO - app(45): Config object loaded config.DevelopmentConfig
+2018-04-11 09:47:37,875: (MainProcess: 85172) INFO - app(49): healthcheck
+2018-04-11 10:19:07,482: (MainProcess: 85172) INFO - app(49): healthcheck
+2018-04-11 10:19:15,350: (MainProcess: 85172) INFO - app(49): healthcheck
+2018-04-11 10:25:21,313: (MainProcess: 85172) INFO - app(49): healthcheck
+2018-04-11 10:25:29,516: (MainProcess: 85172) INFO - app(49): healthcheck

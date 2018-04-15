@@ -13,8 +13,10 @@ from celery.task.control import inspect
 from flask import Flask, request, jsonify
 from logging.handlers import TimedRotatingFileHandler
 from werkzeug.exceptions import InternalServerError, BadRequest
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))
 app.config.from_object(config_object)
 logger = logging.getLogger(__name__)

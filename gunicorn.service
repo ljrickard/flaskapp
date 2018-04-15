@@ -7,11 +7,9 @@ After=network.target
 PIDFile=/var/run/gunicorn.pid
 User=root
 WorkingDirectory=/home/ubuntu/deploy/flaskapp
-ExecStart=/usr/bin/gunicorn --pid /var/run/gunicorn.pid \ 
-                            --config /home/ubuntu/deploy/flaskapp/gunicorn.py app:app
+ExecStart=/home/ubuntu/deploy/flaskapp/virtual_env/bin/gunicorn --config /home/ubuntu/deploy/flaskapp/gunicorn.py app:app
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
-
 Restart=on-failure
 PrivateTmp=true
 

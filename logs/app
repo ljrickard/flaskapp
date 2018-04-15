@@ -1,0 +1,4 @@
+[2018-04-15 09:53:30,270: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 09:53:30,294: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 09:53:31,323: INFO/MainProcess] mingle: all alone
+[2018-04-15 09:53:31,336: INFO/MainProcess] celery@luke-mac.local ready.

@@ -13,6 +13,20 @@ set -euo pipefail
 #    --workdir="/home/ubuntu/deploy/flaskapp"
     # -Ofair
 
-#systemctl daemon-reload
+#systemctl daemon-reloadddddd 
 #systemctl start flower
 #systemctl status flower
+
+
+systemctl enable gunicorn.socket
+systemctl start gunicorn.socket
+
+add --log-config FILE
+
+ curl -v --unix-socket /run/gunicorn/socket http://0.0.0.0:9000/healthcheck
+
+
+ include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+
+        

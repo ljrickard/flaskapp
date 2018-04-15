@@ -19,3 +19,4 @@ mkdir -p /home/ubuntu/deploy/flaskapp/logs/celery
 #mkdir -p /var/awslogs/etc/config
 #cp codedeploy_logs.conf /var/awslogs/etc/config/
 #service awslogs restart
+
