@@ -2,3 +2,934 @@
 [2018-04-15 09:53:30,294: INFO/MainProcess] mingle: searching for neighbors
 [2018-04-15 09:53:31,323: INFO/MainProcess] mingle: all alone
 [2018-04-15 09:53:31,336: INFO/MainProcess] celery@luke-mac.local ready.
+[2018-04-15 14:13:40,321: INFO/MainProcess] Received task: app.do_something_async[ce097b76-5b93-4688-83b1-c2eecce16599]  
+[2018-04-15 14:13:40,395: INFO/MainProcess] Received task: app.do_something_async[024cc2bf-cafa-4bf0-ba10-8de42219f2a3]  
+[2018-04-15 14:13:40,402: INFO/MainProcess] Received task: app.do_something_async[6704add0-6c2a-439e-8d2e-3fb9dabe3595]  
+[2018-04-15 14:13:40,405: INFO/MainProcess] Received task: app.do_something_async[5a15fe72-ff4f-4301-81a0-9eb46a360871]  
+[2018-04-15 14:13:40,409: INFO/MainProcess] Received task: app.do_something_async[17ba070a-f8a6-482e-8017-fb6e4607c150]  
+[2018-04-15 14:13:40,411: INFO/MainProcess] Received task: app.do_something_async[075d2296-12bf-4ce8-85f5-5a4d43725799]  
+[2018-04-15 14:13:40,412: INFO/MainProcess] Received task: app.do_something_async[602f18e3-62cd-4235-b761-7e2cb5a37d71]  
+[2018-04-15 14:13:40,416: INFO/MainProcess] Received task: app.do_something_async[f46dd02c-bd7e-40f8-96f2-d7ad0f81db81]  
+[2018-04-15 14:13:40,418: INFO/MainProcess] Received task: app.do_something_async[92ccd270-78cc-4aea-ad6f-fed4f7cf62a0]  
+[2018-04-15 14:13:40,420: INFO/MainProcess] Received task: app.do_something_async[681e3a87-32ca-4aca-a67f-bef153ec8081]  
+[2018-04-15 14:13:40,422: INFO/MainProcess] Received task: app.do_something_async[26d6afcf-143d-412c-869a-4d00c14b4d20]  
+[2018-04-15 14:13:40,423: INFO/MainProcess] Received task: app.do_something_async[ddc37986-dbba-4414-8226-dd640feb7577]  
+[2018-04-15 14:13:40,429: INFO/MainProcess] Received task: app.do_something_async[5ad2e98e-f380-44c3-87ee-533408bac1e6]  
+[2018-04-15 14:13:40,431: INFO/MainProcess] Received task: app.do_something_async[1ee775c9-7b32-44b2-88ad-ec65b62fa843]  
+[2018-04-15 14:13:40,436: INFO/MainProcess] Received task: app.do_something_async[dd5243a7-5843-409a-ba6c-6505de437615]  
+[2018-04-15 14:13:40,472: INFO/MainProcess] Received task: app.do_something_async[383651de-3fd3-481d-bb1e-1fe1dad496f0]  
+[2018-04-15 14:13:40,518: INFO/MainProcess] Received task: app.do_something_async[7fee4e33-7cf0-48d7-b859-4bdce2a30fd8]  
+[2018-04-15 14:13:40,536: INFO/MainProcess] Received task: app.do_something_async[8e55e830-527c-4f28-b286-b3047f687b75]  
+[2018-04-15 14:13:40,550: INFO/MainProcess] Received task: app.do_something_async[9180a7b1-a900-4f50-a0c2-22376afd4553]  
+[2018-04-15 14:13:40,552: INFO/MainProcess] Received task: app.do_something_async[bcbd0028-f262-4c9b-9537-32d7031f99e4]  
+[2018-04-15 14:13:40,554: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,556: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,556: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,570: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,670: INFO/ForkPoolWorker-2] Task app.do_something_async[5a15fe72-ff4f-4301-81a0-9eb46a360871] succeeded in 0.1791994699742645s: '5a15fe72-ff4f-4301-81a0-9eb46a360871'
+[2018-04-15 14:13:40,671: INFO/ForkPoolWorker-3] Task app.do_something_async[6704add0-6c2a-439e-8d2e-3fb9dabe3595] succeeded in 0.17951406503561884s: '6704add0-6c2a-439e-8d2e-3fb9dabe3595'
+[2018-04-15 14:13:40,671: INFO/ForkPoolWorker-1] Task app.do_something_async[ce097b76-5b93-4688-83b1-c2eecce16599] succeeded in 0.1924694050103426s: 'ce097b76-5b93-4688-83b1-c2eecce16599'
+[2018-04-15 14:13:40,670: INFO/ForkPoolWorker-4] Task app.do_something_async[024cc2bf-cafa-4bf0-ba10-8de42219f2a3] succeeded in 0.18543890491127968s: '024cc2bf-cafa-4bf0-ba10-8de42219f2a3'
+[2018-04-15 14:13:40,680: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,684: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,685: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,692: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,695: INFO/ForkPoolWorker-1] Task app.do_something_async[075d2296-12bf-4ce8-85f5-5a4d43725799] succeeded in 0.0191616719821468s: '075d2296-12bf-4ce8-85f5-5a4d43725799'
+[2018-04-15 14:13:40,702: INFO/MainProcess] Received task: app.do_something_async[37ead9f3-eb2c-4872-9b0c-3ef2f377735a]  
+[2018-04-15 14:13:40,706: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,706: INFO/ForkPoolWorker-2] Task app.do_something_async[f46dd02c-bd7e-40f8-96f2-d7ad0f81db81] succeeded in 0.029335873085074127s: 'f46dd02c-bd7e-40f8-96f2-d7ad0f81db81'
+[2018-04-15 14:13:40,707: INFO/ForkPoolWorker-3] Task app.do_something_async[17ba070a-f8a6-482e-8017-fb6e4607c150] succeeded in 0.03169391304254532s: '17ba070a-f8a6-482e-8017-fb6e4607c150'
+[2018-04-15 14:13:40,709: INFO/ForkPoolWorker-4] Task app.do_something_async[602f18e3-62cd-4235-b761-7e2cb5a37d71] succeeded in 0.03363851096946746s: '602f18e3-62cd-4235-b761-7e2cb5a37d71'
+[2018-04-15 14:13:40,711: INFO/MainProcess] Received task: app.do_something_async[aaa81076-cd5a-4491-bfb8-ab35ff3376b2]  
+[2018-04-15 14:13:40,714: INFO/ForkPoolWorker-1] Task app.do_something_async[92ccd270-78cc-4aea-ad6f-fed4f7cf62a0] succeeded in 0.017161919036880136s: '92ccd270-78cc-4aea-ad6f-fed4f7cf62a0'
+[2018-04-15 14:13:40,716: INFO/MainProcess] Received task: app.do_something_async[206ceb02-422a-440f-8d87-bf713d240777]  
+[2018-04-15 14:13:40,722: INFO/MainProcess] Received task: app.do_something_async[634c61a0-f4e5-4bcb-b85b-ca0262783502]  
+[2018-04-15 14:13:40,723: INFO/MainProcess] Received task: app.do_something_async[4244b133-2d86-4b59-99b8-e30afd2c4610]  
+[2018-04-15 14:13:40,725: INFO/MainProcess] Received task: app.do_something_async[f63bad61-c448-4535-9c52-dedc70731de8]  
+[2018-04-15 14:13:40,730: INFO/MainProcess] Received task: app.do_something_async[84f4acb1-a365-42db-9cba-7fb7715b062e]  
+[2018-04-15 14:13:40,732: INFO/MainProcess] Received task: app.do_something_async[fff912b4-1cb0-4127-ad8d-90e4b3d129e0]  
+[2018-04-15 14:13:40,733: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,734: INFO/MainProcess] Received task: app.do_something_async[ca39c03e-ab17-4629-aa47-94e7cf8d43c6]  
+[2018-04-15 14:13:40,735: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,735: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,746: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,763: INFO/ForkPoolWorker-1] Task app.do_something_async[26d6afcf-143d-412c-869a-4d00c14b4d20] succeeded in 0.046609640936367214s: '26d6afcf-143d-412c-869a-4d00c14b4d20'
+[2018-04-15 14:13:40,763: INFO/ForkPoolWorker-4] Task app.do_something_async[ddc37986-dbba-4414-8226-dd640feb7577] succeeded in 0.04541121597867459s: 'ddc37986-dbba-4414-8226-dd640feb7577'
+[2018-04-15 14:13:40,765: INFO/ForkPoolWorker-3] Task app.do_something_async[681e3a87-32ca-4aca-a67f-bef153ec8081] succeeded in 0.048594755004160106s: '681e3a87-32ca-4aca-a67f-bef153ec8081'
+[2018-04-15 14:13:40,770: INFO/MainProcess] Received task: app.do_something_async[c98e728d-6fae-42c1-bfe7-1bd9a8511428]  
+[2018-04-15 14:13:40,770: INFO/ForkPoolWorker-2] Task app.do_something_async[5ad2e98e-f380-44c3-87ee-533408bac1e6] succeeded in 0.05178363400045782s: '5ad2e98e-f380-44c3-87ee-533408bac1e6'
+[2018-04-15 14:13:40,772: INFO/MainProcess] Received task: app.do_something_async[278374e0-7e76-43eb-8838-f1493a8b57e2]  
+[2018-04-15 14:13:40,774: INFO/MainProcess] Received task: app.do_something_async[64a3b0ea-15bb-4502-8c93-83e3604c0c30]  
+[2018-04-15 14:13:40,786: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,788: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,791: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,792: INFO/ForkPoolWorker-4] Task app.do_something_async[dd5243a7-5843-409a-ba6c-6505de437615] succeeded in 0.025395860895514488s: 'dd5243a7-5843-409a-ba6c-6505de437615'
+[2018-04-15 14:13:40,795: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,797: INFO/ForkPoolWorker-1] Task app.do_something_async[1ee775c9-7b32-44b2-88ad-ec65b62fa843] succeeded in 0.030754936044104397s: '1ee775c9-7b32-44b2-88ad-ec65b62fa843'
+[2018-04-15 14:13:40,798: INFO/MainProcess] Received task: app.do_something_async[6f356e8e-02cf-4ce1-8b38-76c74c16638d]  
+[2018-04-15 14:13:40,802: INFO/ForkPoolWorker-2] Task app.do_something_async[7fee4e33-7cf0-48d7-b859-4bdce2a30fd8] succeeded in 0.027412060066126287s: '7fee4e33-7cf0-48d7-b859-4bdce2a30fd8'
+[2018-04-15 14:13:40,804: INFO/MainProcess] Received task: app.do_something_async[3889317f-bcf3-4e4d-a7ea-c6d515b4c5fb]  
+[2018-04-15 14:13:40,802: INFO/ForkPoolWorker-3] Task app.do_something_async[383651de-3fd3-481d-bb1e-1fe1dad496f0] succeeded in 0.03476175095420331s: '383651de-3fd3-481d-bb1e-1fe1dad496f0'
+[2018-04-15 14:13:40,818: INFO/MainProcess] Received task: app.do_something_async[4e69d871-8564-4f22-9d5a-85007cf6e972]  
+[2018-04-15 14:13:40,821: INFO/MainProcess] Received task: app.do_something_async[386c51d0-3a77-477b-9d3a-e204c9652c6d]  
+[2018-04-15 14:13:40,822: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,823: INFO/MainProcess] Received task: app.do_something_async[ba4b8b36-1a79-40ba-8897-2cd8f759a131]  
+[2018-04-15 14:13:40,824: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,824: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,829: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,832: INFO/ForkPoolWorker-4] Task app.do_something_async[8e55e830-527c-4f28-b286-b3047f687b75] succeeded in 0.03331076703034341s: '8e55e830-527c-4f28-b286-b3047f687b75'
+[2018-04-15 14:13:40,833: INFO/ForkPoolWorker-2] Task app.do_something_async[bcbd0028-f262-4c9b-9537-32d7031f99e4] succeeded in 0.027049185009673238s: 'bcbd0028-f262-4c9b-9537-32d7031f99e4'
+[2018-04-15 14:13:40,837: INFO/ForkPoolWorker-1] Task app.do_something_async[9180a7b1-a900-4f50-a0c2-22376afd4553] succeeded in 0.036483627976849675s: '9180a7b1-a900-4f50-a0c2-22376afd4553'
+[2018-04-15 14:13:40,837: INFO/ForkPoolWorker-3] Task app.do_something_async[37ead9f3-eb2c-4872-9b0c-3ef2f377735a] succeeded in 0.021817693021148443s: '37ead9f3-eb2c-4872-9b0c-3ef2f377735a'
+[2018-04-15 14:13:40,841: INFO/MainProcess] Received task: app.do_something_async[0e9a91ae-f6b6-4390-b402-0095b5d34f3f]  
+[2018-04-15 14:13:40,842: INFO/MainProcess] Received task: app.do_something_async[987ec532-038a-453d-8189-b5eae8c5041a]  
+[2018-04-15 14:13:40,844: INFO/MainProcess] Received task: app.do_something_async[e78ca648-8e7e-4a0f-bfb5-829aaa938fed]  
+[2018-04-15 14:13:40,846: INFO/MainProcess] Received task: app.do_something_async[f352825a-167c-4066-acab-e4ed0da4f493]  
+[2018-04-15 14:13:40,847: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,848: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,848: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,852: INFO/ForkPoolWorker-4] Task app.do_something_async[aaa81076-cd5a-4491-bfb8-ab35ff3376b2] succeeded in 0.017711483989842236s: 'aaa81076-cd5a-4491-bfb8-ab35ff3376b2'
+[2018-04-15 14:13:40,852: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,853: INFO/ForkPoolWorker-3] Task app.do_something_async[634c61a0-f4e5-4bcb-b85b-ca0262783502] succeeded in 0.014534289948642254s: '634c61a0-f4e5-4bcb-b85b-ca0262783502'
+[2018-04-15 14:13:40,855: INFO/ForkPoolWorker-2] Task app.do_something_async[206ceb02-422a-440f-8d87-bf713d240777] succeeded in 0.020735802012495697s: '206ceb02-422a-440f-8d87-bf713d240777'
+[2018-04-15 14:13:40,857: INFO/ForkPoolWorker-1] Task app.do_something_async[4244b133-2d86-4b59-99b8-e30afd2c4610] succeeded in 0.018795485026203096s: '4244b133-2d86-4b59-99b8-e30afd2c4610'
+[2018-04-15 14:13:40,858: INFO/MainProcess] Received task: app.do_something_async[599a9806-8dd5-428b-80b0-d260c4c7e6e8]  
+[2018-04-15 14:13:40,858: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,863: INFO/MainProcess] Received task: app.do_something_async[bba8fb27-31e0-4a8b-a884-106f18613906]  
+[2018-04-15 14:13:40,863: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,863: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,865: INFO/ForkPoolWorker-4] Task app.do_something_async[f63bad61-c448-4535-9c52-dedc70731de8] succeeded in 0.01107233704533428s: 'f63bad61-c448-4535-9c52-dedc70731de8'
+[2018-04-15 14:13:40,865: INFO/MainProcess] Received task: app.do_something_async[94d5ce57-edca-4bdc-8b45-ec2554987a56]  
+[2018-04-15 14:13:40,868: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,868: INFO/MainProcess] Received task: app.do_something_async[0bccced0-c767-44fe-bc42-415612b4c480]  
+[2018-04-15 14:13:40,870: INFO/ForkPoolWorker-3] Task app.do_something_async[84f4acb1-a365-42db-9cba-7fb7715b062e] succeeded in 0.010745104984380305s: '84f4acb1-a365-42db-9cba-7fb7715b062e'
+[2018-04-15 14:13:40,870: INFO/ForkPoolWorker-2] Task app.do_something_async[fff912b4-1cb0-4127-ad8d-90e4b3d129e0] succeeded in 0.010447510983794928s: 'fff912b4-1cb0-4127-ad8d-90e4b3d129e0'
+[2018-04-15 14:13:40,872: INFO/MainProcess] Received task: app.do_something_async[fd111087-1f56-4e28-8d90-5156b9984d6f]  
+[2018-04-15 14:13:40,873: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,872: INFO/ForkPoolWorker-1] Task app.do_something_async[ca39c03e-ab17-4629-aa47-94e7cf8d43c6] succeeded in 0.010804246994666755s: 'ca39c03e-ab17-4629-aa47-94e7cf8d43c6'
+[2018-04-15 14:13:40,876: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,877: INFO/MainProcess] Received task: app.do_something_async[8855c02d-a06b-465e-9b14-f41582f320a4]  
+[2018-04-15 14:13:40,878: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,880: INFO/MainProcess] Received task: app.do_something_async[c6581626-c20d-4cda-bde6-3451979ce67c]  
+[2018-04-15 14:13:40,884: INFO/ForkPoolWorker-4] Task app.do_something_async[c98e728d-6fae-42c1-bfe7-1bd9a8511428] succeeded in 0.01742292905692011s: 'c98e728d-6fae-42c1-bfe7-1bd9a8511428'
+[2018-04-15 14:13:40,885: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,886: INFO/MainProcess] Received task: app.do_something_async[67b906cb-5708-4e47-ad2e-bf912b0bef99]  
+[2018-04-15 14:13:40,886: INFO/ForkPoolWorker-3] Task app.do_something_async[278374e0-7e76-43eb-8838-f1493a8b57e2] succeeded in 0.013357101008296013s: '278374e0-7e76-43eb-8838-f1493a8b57e2'
+[2018-04-15 14:13:40,890: INFO/ForkPoolWorker-2] Task app.do_something_async[64a3b0ea-15bb-4502-8c93-83e3604c0c30] succeeded in 0.017102611949667335s: '64a3b0ea-15bb-4502-8c93-83e3604c0c30'
+[2018-04-15 14:13:40,891: INFO/MainProcess] Received task: app.do_something_async[d1f981bb-847e-4fa8-bb32-eb7867453b58]  
+[2018-04-15 14:13:40,893: INFO/ForkPoolWorker-1] Task app.do_something_async[6f356e8e-02cf-4ce1-8b38-76c74c16638d] succeeded in 0.017352984054014087s: '6f356e8e-02cf-4ce1-8b38-76c74c16638d'
+[2018-04-15 14:13:40,894: INFO/MainProcess] Received task: app.do_something_async[349cefcc-6401-4392-8b64-09302f3a98da]  
+[2018-04-15 14:13:40,896: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,897: INFO/MainProcess] Received task: app.do_something_async[f21e2acf-03d1-43db-b523-b5643b9d098a]  
+[2018-04-15 14:13:40,897: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,897: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,900: INFO/ForkPoolWorker-3] Task app.do_something_async[4e69d871-8564-4f22-9d5a-85007cf6e972] succeeded in 0.012304634903557599s: '4e69d871-8564-4f22-9d5a-85007cf6e972'
+[2018-04-15 14:13:40,902: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,903: INFO/MainProcess] Received task: app.do_something_async[b26200c0-1670-45a8-ad2c-c04e60c2c19e]  
+[2018-04-15 14:13:40,904: INFO/ForkPoolWorker-2] Task app.do_something_async[386c51d0-3a77-477b-9d3a-e204c9652c6d] succeeded in 0.011729700025171041s: '386c51d0-3a77-477b-9d3a-e204c9652c6d'
+[2018-04-15 14:13:40,905: INFO/ForkPoolWorker-4] Task app.do_something_async[3889317f-bcf3-4e4d-a7ea-c6d515b4c5fb] succeeded in 0.017712397035211325s: '3889317f-bcf3-4e4d-a7ea-c6d515b4c5fb'
+[2018-04-15 14:13:40,907: INFO/ForkPoolWorker-1] Task app.do_something_async[ba4b8b36-1a79-40ba-8897-2cd8f759a131] succeeded in 0.008830638020299375s: 'ba4b8b36-1a79-40ba-8897-2cd8f759a131'
+[2018-04-15 14:13:40,909: INFO/MainProcess] Received task: app.do_something_async[c0358b6f-3ee1-485f-baf2-3d399a53aec1]  
+[2018-04-15 14:13:40,908: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,914: INFO/MainProcess] Received task: app.do_something_async[34bd1656-d9ca-4eb3-a28b-11c0f02516cb]  
+[2018-04-15 14:13:40,913: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,914: INFO/ForkPoolWorker-3] Task app.do_something_async[0e9a91ae-f6b6-4390-b402-0095b5d34f3f] succeeded in 0.009840846993029118s: '0e9a91ae-f6b6-4390-b402-0095b5d34f3f'
+[2018-04-15 14:13:40,916: INFO/MainProcess] Received task: app.do_something_async[91e176d3-e2f6-4f9c-af95-f5d4a697d666]  
+[2018-04-15 14:13:40,918: INFO/MainProcess] Received task: app.do_something_async[612b8893-580e-4478-b37c-1e0cb53fb159]  
+[2018-04-15 14:13:40,919: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,919: INFO/ForkPoolWorker-2] Task app.do_something_async[e78ca648-8e7e-4a0f-bfb5-829aaa938fed] succeeded in 0.009291133028455079s: 'e78ca648-8e7e-4a0f-bfb5-829aaa938fed'
+[2018-04-15 14:13:40,920: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,921: INFO/MainProcess] Received task: app.do_something_async[1b53848d-6a2e-4ac4-ad63-c6730c0e9ae2]  
+[2018-04-15 14:13:40,924: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,925: INFO/ForkPoolWorker-1] Task app.do_something_async[f352825a-167c-4066-acab-e4ed0da4f493] succeeded in 0.014587892917916179s: 'f352825a-167c-4066-acab-e4ed0da4f493'
+[2018-04-15 14:13:40,927: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,929: INFO/ForkPoolWorker-4] Task app.do_something_async[987ec532-038a-453d-8189-b5eae8c5041a] succeeded in 0.01815332705155015s: '987ec532-038a-453d-8189-b5eae8c5041a'
+[2018-04-15 14:13:40,929: INFO/MainProcess] Received task: app.do_something_async[5a2159cd-4045-4b22-80c2-cf1adb80ff11]  
+[2018-04-15 14:13:40,931: INFO/ForkPoolWorker-3] Task app.do_something_async[599a9806-8dd5-428b-80b0-d260c4c7e6e8] succeeded in 0.012665344984270632s: '599a9806-8dd5-428b-80b0-d260c4c7e6e8'
+[2018-04-15 14:13:40,932: INFO/MainProcess] Received task: app.do_something_async[18315730-9b48-4109-b99a-cdfe368d49fa]  
+[2018-04-15 14:13:40,933: INFO/ForkPoolWorker-2] Task app.do_something_async[bba8fb27-31e0-4a8b-a884-106f18613906] succeeded in 0.010806927923113108s: 'bba8fb27-31e0-4a8b-a884-106f18613906'
+[2018-04-15 14:13:40,935: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,938: INFO/MainProcess] Received task: app.do_something_async[0f923ec7-dab5-4989-830d-64c52681ab0c]  
+[2018-04-15 14:13:40,939: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,939: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,941: INFO/MainProcess] Received task: app.do_something_async[2308da71-d1ef-4900-a845-4c0161187dc4]  
+[2018-04-15 14:13:40,940: INFO/ForkPoolWorker-1] Task app.do_something_async[94d5ce57-edca-4bdc-8b45-ec2554987a56] succeeded in 0.011822388973087072s: '94d5ce57-edca-4bdc-8b45-ec2554987a56'
+[2018-04-15 14:13:40,942: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,944: INFO/MainProcess] Received task: app.do_something_async[5d7e6c8e-107e-483d-96d2-2c83d04c1bbc]  
+[2018-04-15 14:13:40,946: INFO/ForkPoolWorker-2] Task app.do_something_async[8855c02d-a06b-465e-9b14-f41582f320a4] succeeded in 0.0113688480341807s: '8855c02d-a06b-465e-9b14-f41582f320a4'
+[2018-04-15 14:13:40,946: INFO/ForkPoolWorker-4] Task app.do_something_async[0bccced0-c767-44fe-bc42-415612b4c480] succeeded in 0.012669292977079749s: '0bccced0-c767-44fe-bc42-415612b4c480'
+[2018-04-15 14:13:40,949: INFO/MainProcess] Received task: app.do_something_async[1d362351-7468-454f-b606-00ab2282b76b]  
+[2018-04-15 14:13:40,949: INFO/ForkPoolWorker-3] Task app.do_something_async[fd111087-1f56-4e28-8d90-5156b9984d6f] succeeded in 0.014757025055587292s: 'fd111087-1f56-4e28-8d90-5156b9984d6f'
+[2018-04-15 14:13:40,952: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,953: INFO/MainProcess] Received task: app.do_something_async[79250221-c416-40bb-8de0-4d203787be70]  
+[2018-04-15 14:13:40,954: INFO/MainProcess] Received task: app.do_something_async[11e97b70-e1c7-45cb-af54-13424f08dfe6]  
+[2018-04-15 14:13:40,955: INFO/MainProcess] Received task: app.do_something_async[da82d10b-26c8-4a68-a7cf-13608c8de4f4]  
+[2018-04-15 14:13:40,956: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,957: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,958: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,963: INFO/ForkPoolWorker-1] Task app.do_something_async[c6581626-c20d-4cda-bde6-3451979ce67c] succeeded in 0.01866796100512147s: 'c6581626-c20d-4cda-bde6-3451979ce67c'
+[2018-04-15 14:13:40,963: INFO/ForkPoolWorker-2] Task app.do_something_async[d1f981bb-847e-4fa8-bb32-eb7867453b58] succeeded in 0.014573713997378945s: 'd1f981bb-847e-4fa8-bb32-eb7867453b58'
+[2018-04-15 14:13:40,965: INFO/ForkPoolWorker-4] Task app.do_something_async[67b906cb-5708-4e47-ad2e-bf912b0bef99] succeeded in 0.015959781012497842s: '67b906cb-5708-4e47-ad2e-bf912b0bef99'
+[2018-04-15 14:13:40,971: INFO/ForkPoolWorker-3] Task app.do_something_async[349cefcc-6401-4392-8b64-09302f3a98da] succeeded in 0.01928879297338426s: '349cefcc-6401-4392-8b64-09302f3a98da'
+[2018-04-15 14:13:40,973: INFO/MainProcess] Received task: app.do_something_async[2fbf9244-7e2e-4bdc-9bc5-1f0a01539257]  
+[2018-04-15 14:13:40,981: INFO/MainProcess] Received task: app.do_something_async[73bad002-904d-4ed1-a832-7084046c1191]  
+[2018-04-15 14:13:40,985: INFO/MainProcess] Received task: app.do_something_async[71333048-8844-49e9-b7b3-dc932016ab32]  
+[2018-04-15 14:13:40,987: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,988: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,988: INFO/MainProcess] Received task: app.do_something_async[d3a8f085-ec89-46e6-aba0-6fa2bba2dc3f]  
+[2018-04-15 14:13:40,990: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,990: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:40,994: INFO/ForkPoolWorker-2] Task app.do_something_async[b26200c0-1670-45a8-ad2c-c04e60c2c19e] succeeded in 0.02855833899229765s: 'b26200c0-1670-45a8-ad2c-c04e60c2c19e'
+[2018-04-15 14:13:40,994: INFO/ForkPoolWorker-1] Task app.do_something_async[f21e2acf-03d1-43db-b523-b5643b9d098a] succeeded in 0.028537946986034513s: 'f21e2acf-03d1-43db-b523-b5643b9d098a'
+[2018-04-15 14:13:40,997: INFO/ForkPoolWorker-4] Task app.do_something_async[c0358b6f-3ee1-485f-baf2-3d399a53aec1] succeeded in 0.028249094961211085s: 'c0358b6f-3ee1-485f-baf2-3d399a53aec1'
+[2018-04-15 14:13:40,998: INFO/ForkPoolWorker-3] Task app.do_something_async[34bd1656-d9ca-4eb3-a28b-11c0f02516cb] succeeded in 0.014678726089186966s: '34bd1656-d9ca-4eb3-a28b-11c0f02516cb'
+[2018-04-15 14:13:41,000: INFO/MainProcess] Received task: app.do_something_async[13d8e11e-c725-4608-9805-51dba560a4f8]  
+[2018-04-15 14:13:41,007: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,012: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,013: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,013: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,020: INFO/ForkPoolWorker-2] Task app.do_something_async[612b8893-580e-4478-b37c-1e0cb53fb159] succeeded in 0.023780142073519528s: '612b8893-580e-4478-b37c-1e0cb53fb159'
+[2018-04-15 14:13:41,022: INFO/ForkPoolWorker-4] Task app.do_something_async[5a2159cd-4045-4b22-80c2-cf1adb80ff11] succeeded in 0.020251818001270294s: '5a2159cd-4045-4b22-80c2-cf1adb80ff11'
+[2018-04-15 14:13:41,022: INFO/ForkPoolWorker-1] Task app.do_something_async[91e176d3-e2f6-4f9c-af95-f5d4a697d666] succeeded in 0.02567346196155995s: '91e176d3-e2f6-4f9c-af95-f5d4a697d666'
+[2018-04-15 14:13:41,028: INFO/ForkPoolWorker-3] Task app.do_something_async[1b53848d-6a2e-4ac4-ad63-c6730c0e9ae2] succeeded in 0.027080651954747736s: '1b53848d-6a2e-4ac4-ad63-c6730c0e9ae2'
+[2018-04-15 14:13:41,031: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,039: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,040: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,040: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,043: INFO/ForkPoolWorker-2] Task app.do_something_async[18315730-9b48-4109-b99a-cdfe368d49fa] succeeded in 0.018926678923889995s: '18315730-9b48-4109-b99a-cdfe368d49fa'
+[2018-04-15 14:13:41,046: INFO/ForkPoolWorker-4] Task app.do_something_async[0f923ec7-dab5-4989-830d-64c52681ab0c] succeeded in 0.019842748995870352s: '0f923ec7-dab5-4989-830d-64c52681ab0c'
+[2018-04-15 14:13:41,046: INFO/ForkPoolWorker-3] Task app.do_something_async[5d7e6c8e-107e-483d-96d2-2c83d04c1bbc] succeeded in 0.015850118012167513s: '5d7e6c8e-107e-483d-96d2-2c83d04c1bbc'
+[2018-04-15 14:13:41,048: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,049: INFO/ForkPoolWorker-1] Task app.do_something_async[2308da71-d1ef-4900-a845-4c0161187dc4] succeeded in 0.02005926996935159s: '2308da71-d1ef-4900-a845-4c0161187dc4'
+[2018-04-15 14:13:41,062: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,062: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,063: INFO/ForkPoolWorker-2] Task app.do_something_async[1d362351-7468-454f-b606-00ab2282b76b] succeeded in 0.018081341055221856s: '1d362351-7468-454f-b606-00ab2282b76b'
+[2018-04-15 14:13:41,065: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,069: INFO/ForkPoolWorker-4] Task app.do_something_async[11e97b70-e1c7-45cb-af54-13424f08dfe6] succeeded in 0.020336837973445654s: '11e97b70-e1c7-45cb-af54-13424f08dfe6'
+[2018-04-15 14:13:41,069: INFO/ForkPoolWorker-3] Task app.do_something_async[79250221-c416-40bb-8de0-4d203787be70] succeeded in 0.020423222915269434s: '79250221-c416-40bb-8de0-4d203787be70'
+[2018-04-15 14:13:41,069: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,070: INFO/ForkPoolWorker-1] Task app.do_something_async[da82d10b-26c8-4a68-a7cf-13608c8de4f4] succeeded in 0.01882874791044742s: 'da82d10b-26c8-4a68-a7cf-13608c8de4f4'
+[2018-04-15 14:13:41,075: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,076: INFO/ForkPoolWorker-2] Task app.do_something_async[2fbf9244-7e2e-4bdc-9bc5-1f0a01539257] succeeded in 0.011430212995037436s: '2fbf9244-7e2e-4bdc-9bc5-1f0a01539257'
+[2018-04-15 14:13:41,077: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,078: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,081: INFO/ForkPoolWorker-4] Task app.do_something_async[71333048-8844-49e9-b7b3-dc932016ab32] succeeded in 0.01039042801130563s: '71333048-8844-49e9-b7b3-dc932016ab32'
+[2018-04-15 14:13:41,081: INFO/ForkPoolWorker-3] Task app.do_something_async[73bad002-904d-4ed1-a832-7084046c1191] succeeded in 0.010257810004986823s: '73bad002-904d-4ed1-a832-7084046c1191'
+[2018-04-15 14:13:41,082: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:13:41,083: INFO/ForkPoolWorker-1] Task app.do_something_async[d3a8f085-ec89-46e6-aba0-6fa2bba2dc3f] succeeded in 0.010363300913013518s: 'd3a8f085-ec89-46e6-aba0-6fa2bba2dc3f'
+[2018-04-15 14:13:41,086: INFO/ForkPoolWorker-2] Task app.do_something_async[13d8e11e-c725-4608-9805-51dba560a4f8] succeeded in 0.008148944936692715s: '13d8e11e-c725-4608-9805-51dba560a4f8'
+[2018-04-15 14:17:33,339: INFO/MainProcess] Received task: app.do_something_async[165965f0-7c82-42cf-8335-0a7d693f3d0b]  
+[2018-04-15 14:17:33,344: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:17:33,368: INFO/ForkPoolWorker-3] Task app.do_something_async[165965f0-7c82-42cf-8335-0a7d693f3d0b] succeeded in 0.026560757076367736s: '165965f0-7c82-42cf-8335-0a7d693f3d0b'
+[2018-04-15 14:20:20,965: INFO/MainProcess] Received task: app.do_something_async[6cb9cfb0-3982-404f-8d2e-ac69e5205825]  
+[2018-04-15 14:20:20,969: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:20:20,974: INFO/ForkPoolWorker-4] Task app.do_something_async[6cb9cfb0-3982-404f-8d2e-ac69e5205825] succeeded in 0.007877047988586128s: '6cb9cfb0-3982-404f-8d2e-ac69e5205825'
+[2018-04-15 14:21:15,350: INFO/MainProcess] Received task: app.do_something_async[19cdb790-d9d1-4036-8e1d-e5d7476188e1]  
+[2018-04-15 14:21:15,355: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:21:15,361: INFO/ForkPoolWorker-3] Task app.do_something_async[19cdb790-d9d1-4036-8e1d-e5d7476188e1] succeeded in 0.009398665046319366s: '19cdb790-d9d1-4036-8e1d-e5d7476188e1'
+[2018-04-15 14:21:54,335: INFO/MainProcess] Received task: app.do_something_async[3fa54916-a034-4c39-989b-1dea5bbb5281]  
+[2018-04-15 14:21:54,340: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:21:54,344: INFO/ForkPoolWorker-4] Task app.do_something_async[3fa54916-a034-4c39-989b-1dea5bbb5281] succeeded in 0.00761068903375417s: '3fa54916-a034-4c39-989b-1dea5bbb5281'
+[2018-04-15 14:22:25,138: INFO/MainProcess] Received task: app.do_something_async[af45f825-4ee1-44b0-8fe1-85db535bd7dc]  
+[2018-04-15 14:22:25,142: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 14:22:25,146: INFO/ForkPoolWorker-3] Task app.do_something_async[af45f825-4ee1-44b0-8fe1-85db535bd7dc] succeeded in 0.0062756630359217525s: 'af45f825-4ee1-44b0-8fe1-85db535bd7dc'
+[2018-04-15 14:42:06,162: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 15:01:00,896: INFO/MainProcess] Received task: app.do_something_async[1450bc58-60b8-4f71-8bdc-a80a6b932904]  
+[2018-04-15 15:01:00,927: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:01:00,938: INFO/ForkPoolWorker-4] Task app.do_something_async[1450bc58-60b8-4f71-8bdc-a80a6b932904] succeeded in 0.02390710497274995s: '1450bc58-60b8-4f71-8bdc-a80a6b932904'
+[2018-04-15 15:06:17,551: INFO/MainProcess] Received task: app.do_something_async[6a7f328b-a4bb-49db-8d6c-af9360926c8c]  
+[2018-04-15 15:06:17,582: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:06:17,594: INFO/ForkPoolWorker-3] Task app.do_something_async[6a7f328b-a4bb-49db-8d6c-af9360926c8c] succeeded in 0.023335434030741453s: '6a7f328b-a4bb-49db-8d6c-af9360926c8c'
+[2018-04-15 15:07:24,371: INFO/MainProcess] Received task: app.do_something_async[b495a981-881f-425d-b086-d72006432887]  
+[2018-04-15 15:07:24,380: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:24,394: INFO/ForkPoolWorker-4] Task app.do_something_async[b495a981-881f-425d-b086-d72006432887] succeeded in 0.020614100038073957s: 'b495a981-881f-425d-b086-d72006432887'
+[2018-04-15 15:07:44,837: INFO/MainProcess] Received task: app.do_something_async[ecb4567a-b614-40a9-8606-9883030d7bce]  
+[2018-04-15 15:07:44,850: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:44,859: INFO/ForkPoolWorker-3] Task app.do_something_async[ecb4567a-b614-40a9-8606-9883030d7bce] succeeded in 0.01701365492772311s: 'ecb4567a-b614-40a9-8606-9883030d7bce'
+[2018-04-15 15:07:45,668: INFO/MainProcess] Received task: app.do_something_async[906fbf32-87fa-416f-a3a6-219d13d02fa6]  
+[2018-04-15 15:07:45,672: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:45,680: INFO/ForkPoolWorker-4] Task app.do_something_async[906fbf32-87fa-416f-a3a6-219d13d02fa6] succeeded in 0.010358244064264s: '906fbf32-87fa-416f-a3a6-219d13d02fa6'
+[2018-04-15 15:07:46,476: INFO/MainProcess] Received task: app.do_something_async[7ffcbe81-6529-4b9b-8837-76231e1efa4d]  
+[2018-04-15 15:07:46,486: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:46,490: INFO/ForkPoolWorker-3] Task app.do_something_async[7ffcbe81-6529-4b9b-8837-76231e1efa4d] succeeded in 0.0089083838975057s: '7ffcbe81-6529-4b9b-8837-76231e1efa4d'
+[2018-04-15 15:07:47,169: INFO/MainProcess] Received task: app.do_something_async[b7aea4b8-167e-4e4f-995e-1fb2e889992a]  
+[2018-04-15 15:07:47,182: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:47,187: INFO/ForkPoolWorker-4] Task app.do_something_async[b7aea4b8-167e-4e4f-995e-1fb2e889992a] succeeded in 0.012283791904337704s: 'b7aea4b8-167e-4e4f-995e-1fb2e889992a'
+[2018-04-15 15:07:47,862: INFO/MainProcess] Received task: app.do_something_async[55bf5e61-4a52-443d-91da-cc04375241c1]  
+[2018-04-15 15:07:47,866: INFO/ForkPoolWorker-3] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:47,871: INFO/ForkPoolWorker-3] Task app.do_something_async[55bf5e61-4a52-443d-91da-cc04375241c1] succeeded in 0.007553975097835064s: '55bf5e61-4a52-443d-91da-cc04375241c1'
+[2018-04-15 15:07:48,502: INFO/MainProcess] Received task: app.do_something_async[699a5fbb-a0ef-4127-adf9-53a7b221e6c4]  
+[2018-04-15 15:07:48,510: INFO/ForkPoolWorker-4] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:07:48,519: INFO/ForkPoolWorker-4] Task app.do_something_async[699a5fbb-a0ef-4127-adf9-53a7b221e6c4] succeeded in 0.012759370962157845s: '699a5fbb-a0ef-4127-adf9-53a7b221e6c4'
+[2018-04-15 15:14:16,648: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 15:14:16,652: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 15:14:16,652: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 15:14:16,656: WARNING/MainProcess] finalizer()
+[2018-04-15 15:14:16,656: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 15:14:16,656: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 15:14:16,657: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 15:14:16,659: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 15:14:16,659: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 15:14:16,661: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 15:14:16,662: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 15:14:16,664: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 15:14:16,664: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 15:14:16,665: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 15:14:16,665: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 15:14:16,667: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 15:14:16,667: WARNING/MainProcess] celery.exceptions
+[2018-04-15 15:14:16,667: WARNING/MainProcess] .
+[2018-04-15 15:14:16,668: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 15:14:16,668: WARNING/MainProcess] :
+[2018-04-15 15:14:16,668: WARNING/MainProcess] 1
+[2018-04-15 15:14:20,031: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 15:14:20,057: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 15:14:21,096: INFO/MainProcess] mingle: all alone
+[2018-04-15 15:14:21,111: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 15:14:21,160: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 15:14:38,824: INFO/MainProcess] Received task: app.do_something_async[2a008bce-e5cc-4509-9d7c-ae03fac0d283]  
+[2018-04-15 15:14:38,832: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:38,876: INFO/ForkPoolWorker-1] Task app.do_something_async[2a008bce-e5cc-4509-9d7c-ae03fac0d283] succeeded in 0.0479374669957906s: '2a008bce-e5cc-4509-9d7c-ae03fac0d283'
+[2018-04-15 15:14:39,534: INFO/MainProcess] Received task: app.do_something_async[2037bc9f-4633-476c-acf7-2fd848c17ead]  
+[2018-04-15 15:14:39,547: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:39,569: INFO/ForkPoolWorker-2] Task app.do_something_async[2037bc9f-4633-476c-acf7-2fd848c17ead] succeeded in 0.031789439963176847s: '2037bc9f-4633-476c-acf7-2fd848c17ead'
+[2018-04-15 15:14:40,206: INFO/MainProcess] Received task: app.do_something_async[83098f0d-d3b7-42f3-a050-d061f8f21cd8]  
+[2018-04-15 15:14:40,213: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:40,218: INFO/ForkPoolWorker-1] Task app.do_something_async[83098f0d-d3b7-42f3-a050-d061f8f21cd8] succeeded in 0.007760187960229814s: '83098f0d-d3b7-42f3-a050-d061f8f21cd8'
+[2018-04-15 15:14:40,827: INFO/MainProcess] Received task: app.do_something_async[2d794a34-3e80-4d69-8d17-c8a6b2bc0691]  
+[2018-04-15 15:14:40,837: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:40,846: INFO/ForkPoolWorker-2] Task app.do_something_async[2d794a34-3e80-4d69-8d17-c8a6b2bc0691] succeeded in 0.015456157037988305s: '2d794a34-3e80-4d69-8d17-c8a6b2bc0691'
+[2018-04-15 15:14:41,389: INFO/MainProcess] Received task: app.do_something_async[abcc9f8e-845e-4046-a403-4b8e50dd0edc]  
+[2018-04-15 15:14:41,399: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:41,404: INFO/ForkPoolWorker-1] Task app.do_something_async[abcc9f8e-845e-4046-a403-4b8e50dd0edc] succeeded in 0.00959755596704781s: 'abcc9f8e-845e-4046-a403-4b8e50dd0edc'
+[2018-04-15 15:14:41,657: INFO/MainProcess] Received task: app.do_something_async[98bbe7e6-4b20-473a-b892-215235187a6c]  
+[2018-04-15 15:14:41,661: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:41,666: INFO/ForkPoolWorker-2] Task app.do_something_async[98bbe7e6-4b20-473a-b892-215235187a6c] succeeded in 0.006797378067858517s: '98bbe7e6-4b20-473a-b892-215235187a6c'
+[2018-04-15 15:14:41,887: INFO/MainProcess] Received task: app.do_something_async[c01699ea-4a0f-4a47-8b2d-95794cca03f5]  
+[2018-04-15 15:14:41,898: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:41,902: INFO/ForkPoolWorker-1] Task app.do_something_async[c01699ea-4a0f-4a47-8b2d-95794cca03f5] succeeded in 0.009826710098423064s: 'c01699ea-4a0f-4a47-8b2d-95794cca03f5'
+[2018-04-15 15:14:42,111: INFO/MainProcess] Received task: app.do_something_async[3c24d039-3585-4714-b5ba-fd642de464bf]  
+[2018-04-15 15:14:42,119: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:42,124: INFO/ForkPoolWorker-2] Task app.do_something_async[3c24d039-3585-4714-b5ba-fd642de464bf] succeeded in 0.010140595026314259s: '3c24d039-3585-4714-b5ba-fd642de464bf'
+[2018-04-15 15:14:42,361: INFO/MainProcess] Received task: app.do_something_async[0de6cf06-5ea2-4ec2-be6b-da6daa18fada]  
+[2018-04-15 15:14:42,367: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:42,373: INFO/ForkPoolWorker-1] Task app.do_something_async[0de6cf06-5ea2-4ec2-be6b-da6daa18fada] succeeded in 0.00975633691996336s: '0de6cf06-5ea2-4ec2-be6b-da6daa18fada'
+[2018-04-15 15:14:42,659: INFO/MainProcess] Received task: app.do_something_async[730dc4b0-0200-4e84-a1c8-89323daa6f0f]  
+[2018-04-15 15:14:42,666: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:14:42,669: INFO/ForkPoolWorker-2] Task app.do_something_async[730dc4b0-0200-4e84-a1c8-89323daa6f0f] succeeded in 0.005628583952784538s: '730dc4b0-0200-4e84-a1c8-89323daa6f0f'
+[2018-04-15 15:48:44,739: INFO/MainProcess] Received task: app.do_something_async[218c885d-c56e-4a42-bbad-02bc609ba584]  
+[2018-04-15 15:48:44,760: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:44,770: INFO/ForkPoolWorker-1] Task app.do_something_async[218c885d-c56e-4a42-bbad-02bc609ba584] succeeded in 0.019428676925599575s: '218c885d-c56e-4a42-bbad-02bc609ba584'
+[2018-04-15 15:48:48,100: INFO/MainProcess] Received task: app.do_something_async[6138b3e2-ae09-48d6-a36e-ea26e5bb444e]  
+[2018-04-15 15:48:48,118: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:48,127: INFO/ForkPoolWorker-2] Task app.do_something_async[6138b3e2-ae09-48d6-a36e-ea26e5bb444e] succeeded in 0.01563291996717453s: '6138b3e2-ae09-48d6-a36e-ea26e5bb444e'
+[2018-04-15 15:48:49,246: INFO/MainProcess] Received task: app.do_something_async[d2793014-ab47-4759-b77e-2db5769dbe96]  
+[2018-04-15 15:48:49,253: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:49,267: INFO/ForkPoolWorker-1] Task app.do_something_async[d2793014-ab47-4759-b77e-2db5769dbe96] succeeded in 0.017060818034224212s: 'd2793014-ab47-4759-b77e-2db5769dbe96'
+[2018-04-15 15:48:50,093: INFO/MainProcess] Received task: app.do_something_async[8a4f884f-4723-479b-8869-bd485b6ef3c7]  
+[2018-04-15 15:48:50,100: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:50,105: INFO/ForkPoolWorker-2] Task app.do_something_async[8a4f884f-4723-479b-8869-bd485b6ef3c7] succeeded in 0.007626950973644853s: '8a4f884f-4723-479b-8869-bd485b6ef3c7'
+[2018-04-15 15:48:50,918: INFO/MainProcess] Received task: app.do_something_async[e2847483-7ad8-439b-8c75-f3145f66c126]  
+[2018-04-15 15:48:50,929: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:50,934: INFO/ForkPoolWorker-1] Task app.do_something_async[e2847483-7ad8-439b-8c75-f3145f66c126] succeeded in 0.012463764986023307s: 'e2847483-7ad8-439b-8c75-f3145f66c126'
+[2018-04-15 15:48:51,753: INFO/MainProcess] Received task: app.do_something_async[f8524883-ebd5-4cb2-8c86-d1a83ca5f118]  
+[2018-04-15 15:48:51,759: INFO/ForkPoolWorker-2] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:51,763: INFO/ForkPoolWorker-2] Task app.do_something_async[f8524883-ebd5-4cb2-8c86-d1a83ca5f118] succeeded in 0.007430491037666798s: 'f8524883-ebd5-4cb2-8c86-d1a83ca5f118'
+[2018-04-15 15:48:52,641: INFO/MainProcess] Received task: app.do_something_async[5ad56c80-ecc4-4fed-b1bf-981c814f8b22]  
+[2018-04-15 15:48:52,650: INFO/ForkPoolWorker-1] StrictRedis<ConnectionPool<Connection<host=localhost,port=6379,db=3>>>
+[2018-04-15 15:48:52,654: INFO/ForkPoolWorker-1] Task app.do_something_async[5ad56c80-ecc4-4fed-b1bf-981c814f8b22] succeeded in 0.00801531202159822s: '5ad56c80-ecc4-4fed-b1bf-981c814f8b22'
+[2018-04-15 15:49:45,548: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 15:49:45,549: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 15:49:45,550: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 15:49:45,552: WARNING/MainProcess] finalizer()
+[2018-04-15 15:49:45,552: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 15:49:45,553: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 15:49:45,553: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 15:49:45,555: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 15:49:45,555: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 15:49:45,557: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 15:49:45,557: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 15:49:45,558: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 15:49:45,558: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 15:49:45,558: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 15:49:45,558: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 15:49:45,559: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 15:49:45,559: WARNING/MainProcess] celery.exceptions
+[2018-04-15 15:49:45,559: WARNING/MainProcess] .
+[2018-04-15 15:49:45,559: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 15:49:45,560: WARNING/MainProcess] :
+[2018-04-15 15:49:45,560: WARNING/MainProcess] 1
+[2018-04-15 15:49:59,320: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 15:49:59,341: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 15:50:00,364: INFO/MainProcess] mingle: all alone
+[2018-04-15 15:50:00,379: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 15:50:01,156: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 15:50:03,015: INFO/MainProcess] Received task: app.do_something_async[6561d3d1-5186-4c7d-8e53-c06d12892e89]  
+[2018-04-15 15:50:25,485: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 15:50:25,485: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 15:50:25,485: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 15:50:25,487: WARNING/MainProcess] finalizer()
+[2018-04-15 15:50:25,487: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 15:50:25,487: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 15:50:25,487: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 15:50:25,489: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 15:50:25,489: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 15:50:25,491: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 15:50:25,491: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 15:50:25,491: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 15:50:25,491: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 15:50:25,492: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 15:50:25,492: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 15:50:25,493: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 15:50:25,493: WARNING/MainProcess] celery.exceptions
+[2018-04-15 15:50:25,493: WARNING/MainProcess] .
+[2018-04-15 15:50:25,493: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 15:50:25,493: WARNING/MainProcess] :
+[2018-04-15 15:50:25,493: WARNING/MainProcess] 1
+[2018-04-15 15:50:32,968: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 15:50:32,983: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 15:50:34,008: INFO/MainProcess] mingle: all alone
+[2018-04-15 15:50:34,024: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 15:50:35,772: INFO/MainProcess] Received task: app.do_something_async[620386ef-be81-4b78-9c95-4393642ff1cf]  
+[2018-04-15 15:50:36,156: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 15:50:39,796: INFO/ForkPoolWorker-1] Task app.do_something_async[620386ef-be81-4b78-9c95-4393642ff1cf] succeeded in 4.020982614951208s: '620386ef-be81-4b78-9c95-4393642ff1cf'
+[2018-04-15 15:51:03,069: INFO/ForkPoolWorker-1] Task app.do_something_async[6561d3d1-5186-4c7d-8e53-c06d12892e89] succeeded in 60.04402178002056s: '6561d3d1-5186-4c7d-8e53-c06d12892e89'
+[2018-04-15 15:51:03,078: ERROR/ForkPoolWorker-1] Pool process <celery.concurrency.asynpool.Worker object at 0x10da89f28> error: BrokenPipeError(32, 'Broken pipe')
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 362, in workloop
+    put((READY, (job, i, result, inqW_fd)))
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/queues.py", line 366, in put
+    self.send_payload(ForkingPickler.dumps(obj))
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/queues.py", line 358, in send_payload
+    self._writer.send_bytes(value)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 229, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 455, in _send_bytes
+    self._send(header + buf)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 408, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 370, in workloop
+    put((READY, (job, i, (False, einfo), inqW_fd)))
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/queues.py", line 366, in put
+    self.send_payload(ForkingPickler.dumps(obj))
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/queues.py", line 358, in send_payload
+    self._writer.send_bytes(value)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 229, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 455, in _send_bytes
+    self._send(header + buf)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/connection.py", line 408, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+[2018-04-15 15:51:20,663: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 15:51:20,663: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 15:51:20,663: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 15:51:20,664: WARNING/MainProcess] finalizer()
+[2018-04-15 15:51:20,664: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 15:51:20,665: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 15:51:20,665: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 15:51:20,666: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 15:51:20,666: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 15:51:20,667: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 15:51:20,668: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 15:51:20,668: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 15:51:20,668: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 15:51:20,668: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 15:51:20,669: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 15:51:20,669: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 15:51:20,670: WARNING/MainProcess] celery.exceptions
+[2018-04-15 15:51:20,670: WARNING/MainProcess] .
+[2018-04-15 15:51:20,670: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 15:51:20,670: WARNING/MainProcess] :
+[2018-04-15 15:51:20,670: WARNING/MainProcess] 1
+[2018-04-15 15:51:23,658: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 15:51:23,682: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 15:51:24,719: INFO/MainProcess] mingle: all alone
+[2018-04-15 15:51:24,738: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 15:51:26,155: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 15:51:29,785: INFO/MainProcess] Received task: app.do_something_async[57ce86df-5973-412f-95ad-6f0b637e06fa]  
+[2018-04-15 15:51:33,811: INFO/ForkPoolWorker-1] Task app.do_something_async[57ce86df-5973-412f-95ad-6f0b637e06fa] succeeded in 4.021301505039446s: '57ce86df-5973-412f-95ad-6f0b637e06fa'
+[2018-04-15 15:51:37,116: INFO/MainProcess] Received task: app.do_something_async[cfe416d8-8dec-46b6-b115-046c46a52d15]  
+[2018-04-15 15:51:38,117: INFO/MainProcess] Received task: app.do_something_async[7c9081e6-868e-441f-8cd0-ddc67ea38c87]  
+[2018-04-15 15:51:38,831: INFO/MainProcess] Received task: app.do_something_async[a658d924-e903-4703-a052-75e554b92591]  
+[2018-04-15 15:51:39,387: INFO/MainProcess] Received task: app.do_something_async[cffa0777-69f7-4eac-89d3-15d6d1ff32d0]  
+[2018-04-15 15:51:39,851: INFO/MainProcess] Received task: app.do_something_async[98d97770-60a5-4cfc-bdb8-7ac8ee4ba427]  
+[2018-04-15 15:51:40,253: INFO/MainProcess] Received task: app.do_something_async[da248175-9c40-4555-ad69-7b6fbefe61c1]  
+[2018-04-15 15:51:40,574: INFO/MainProcess] Received task: app.do_something_async[2c8908bd-a0f5-4c5d-ba0c-48695015fd5f]  
+[2018-04-15 15:51:40,818: INFO/MainProcess] Received task: app.do_something_async[0c866e57-a76d-4890-8eb6-a19218e31d1d]  
+[2018-04-15 15:51:41,179: INFO/ForkPoolWorker-2] Task app.do_something_async[cfe416d8-8dec-46b6-b115-046c46a52d15] succeeded in 4.057353836018592s: 'cfe416d8-8dec-46b6-b115-046c46a52d15'
+[2018-04-15 15:51:41,353: INFO/MainProcess] Received task: app.do_something_async[7c726612-b5b4-44ea-afa0-512b168b0c60]  
+[2018-04-15 15:51:41,620: INFO/MainProcess] Received task: app.do_something_async[13ec58d8-06d6-4f88-a982-9d2f6e0370ae]  
+[2018-04-15 15:51:41,839: INFO/MainProcess] Received task: app.do_something_async[c8f5b03a-95e4-412f-8894-8a1598bf8300]  
+[2018-04-15 15:51:42,084: INFO/MainProcess] Received task: app.do_something_async[bb652ff2-667c-4a2c-8448-4b0f1d76a54c]  
+[2018-04-15 15:51:42,125: INFO/ForkPoolWorker-1] Task app.do_something_async[7c9081e6-868e-441f-8cd0-ddc67ea38c87] succeeded in 4.004699256038293s: '7c9081e6-868e-441f-8cd0-ddc67ea38c87'
+[2018-04-15 15:51:42,854: INFO/ForkPoolWorker-3] Task app.do_something_async[a658d924-e903-4703-a052-75e554b92591] succeeded in 4.019101746031083s: 'a658d924-e903-4703-a052-75e554b92591'
+[2018-04-15 15:51:43,418: INFO/ForkPoolWorker-4] Task app.do_something_async[cffa0777-69f7-4eac-89d3-15d6d1ff32d0] succeeded in 4.028169812983833s: 'cffa0777-69f7-4eac-89d3-15d6d1ff32d0'
+[2018-04-15 15:51:45,191: INFO/ForkPoolWorker-2] Task app.do_something_async[98d97770-60a5-4cfc-bdb8-7ac8ee4ba427] succeeded in 4.00397384702228s: '98d97770-60a5-4cfc-bdb8-7ac8ee4ba427'
+[2018-04-15 15:51:46,131: INFO/ForkPoolWorker-1] Task app.do_something_async[da248175-9c40-4555-ad69-7b6fbefe61c1] succeeded in 4.004593315999955s: 'da248175-9c40-4555-ad69-7b6fbefe61c1'
+[2018-04-15 15:51:46,871: INFO/ForkPoolWorker-3] Task app.do_something_async[2c8908bd-a0f5-4c5d-ba0c-48695015fd5f] succeeded in 4.006772123975679s: '2c8908bd-a0f5-4c5d-ba0c-48695015fd5f'
+[2018-04-15 15:51:47,442: INFO/ForkPoolWorker-4] Task app.do_something_async[0c866e57-a76d-4890-8eb6-a19218e31d1d] succeeded in 4.004884970956482s: '0c866e57-a76d-4890-8eb6-a19218e31d1d'
+[2018-04-15 15:51:49,198: INFO/ForkPoolWorker-2] Task app.do_something_async[7c726612-b5b4-44ea-afa0-512b168b0c60] succeeded in 4.004500476992689s: '7c726612-b5b4-44ea-afa0-512b168b0c60'
+[2018-04-15 15:51:50,137: INFO/ForkPoolWorker-1] Task app.do_something_async[13ec58d8-06d6-4f88-a982-9d2f6e0370ae] succeeded in 4.004077571909875s: '13ec58d8-06d6-4f88-a982-9d2f6e0370ae'
+[2018-04-15 15:51:50,878: INFO/ForkPoolWorker-3] Task app.do_something_async[c8f5b03a-95e4-412f-8894-8a1598bf8300] succeeded in 4.004507191013545s: 'c8f5b03a-95e4-412f-8894-8a1598bf8300'
+[2018-04-15 15:51:51,451: INFO/ForkPoolWorker-4] Task app.do_something_async[bb652ff2-667c-4a2c-8448-4b0f1d76a54c] succeeded in 4.005755671998486s: 'bb652ff2-667c-4a2c-8448-4b0f1d76a54c'
+[2018-04-15 16:02:02,584: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:02:02,586: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:02:02,586: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:02:02,589: WARNING/MainProcess] finalizer()
+[2018-04-15 16:02:02,589: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:02:02,590: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:02:02,590: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:02:02,592: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:02:02,593: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:02:02,595: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:02:02,595: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:02:02,595: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:02:02,595: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:02:02,596: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:02:02,596: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:02:02,597: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:02:02,597: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:02:02,597: WARNING/MainProcess] .
+[2018-04-15 16:02:02,597: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:02:02,597: WARNING/MainProcess] :
+[2018-04-15 16:02:02,597: WARNING/MainProcess] 1
+[2018-04-15 16:02:05,823: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:02:05,841: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:02:06,879: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:02:06,893: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:02:11,162: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:02:16,243: INFO/MainProcess] Received task: app.do_something_async[13500bcd-150c-45e0-999e-fff91e2a61a1]  
+[2018-04-15 16:02:18,023: INFO/MainProcess] Received task: app.do_something_async[025d2e39-e537-4427-9100-df93699208b1]  
+[2018-04-15 16:02:18,902: INFO/MainProcess] Received task: app.do_something_async[a2e9c82d-acd3-4eeb-9af7-d8b6a4f578df]  
+[2018-04-15 16:02:19,941: INFO/MainProcess] Received task: app.do_something_async[13e0fa05-de0b-4c4f-b9da-1e6fbaab89db]  
+[2018-04-15 16:02:20,271: ERROR/ForkPoolWorker-1] Task app.do_something_async[13500bcd-150c-45e0-999e-fff91e2a61a1] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:02:22,075: ERROR/ForkPoolWorker-2] Task app.do_something_async[025d2e39-e537-4427-9100-df93699208b1] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:02:22,939: ERROR/ForkPoolWorker-4] Task app.do_something_async[a2e9c82d-acd3-4eeb-9af7-d8b6a4f578df] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:02:23,983: ERROR/ForkPoolWorker-3] Task app.do_something_async[13e0fa05-de0b-4c4f-b9da-1e6fbaab89db] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:09:35,282: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:09:35,284: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:09:35,284: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:09:35,286: WARNING/MainProcess] finalizer()
+[2018-04-15 16:09:35,286: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:09:35,287: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:09:35,287: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:09:35,289: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:09:35,289: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:09:35,291: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:09:35,292: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:09:35,292: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:09:35,292: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:09:35,292: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:09:35,292: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:09:35,293: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:09:35,294: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:09:35,294: WARNING/MainProcess] .
+[2018-04-15 16:09:35,294: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:09:35,294: WARNING/MainProcess] :
+[2018-04-15 16:09:35,294: WARNING/MainProcess] 1
+[2018-04-15 16:09:37,836: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:09:37,858: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:09:38,886: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:09:38,908: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:09:41,160: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:09:51,302: INFO/MainProcess] Received task: app.do_something_async[fd6e32d0-ddfa-4b3a-bb25-029ec8a24a7a]  
+[2018-04-15 16:09:53,061: INFO/MainProcess] Received task: app.do_something_async[dfc74f94-2818-4950-a6f6-c54d9fa4ad5d]  
+[2018-04-15 16:09:55,345: ERROR/ForkPoolWorker-1] Task app.do_something_async[fd6e32d0-ddfa-4b3a-bb25-029ec8a24a7a] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:09:57,097: ERROR/ForkPoolWorker-2] Task app.do_something_async[dfc74f94-2818-4950-a6f6-c54d9fa4ad5d] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:12:03,675: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:12:03,676: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:12:03,676: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:12:03,678: WARNING/MainProcess] finalizer()
+[2018-04-15 16:12:03,679: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:12:03,679: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:12:03,679: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:12:03,681: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:12:03,682: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:12:03,683: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:12:03,683: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:12:03,684: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:12:03,684: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:12:03,684: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:12:03,684: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:12:03,685: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:12:03,685: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:12:03,685: WARNING/MainProcess] .
+[2018-04-15 16:12:03,685: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:12:03,686: WARNING/MainProcess] :
+[2018-04-15 16:12:03,686: WARNING/MainProcess] 1
+[2018-04-15 16:12:13,318: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:12:13,337: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:12:14,365: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:12:14,382: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:12:16,161: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:12:24,731: INFO/MainProcess] Received task: app.do_something_async[9d0b55d8-4111-4192-9c9f-b14c871ccc39]  
+[2018-04-15 16:12:24,759: ERROR/ForkPoolWorker-1] Task app.do_something_async[9d0b55d8-4111-4192-9c9f-b14c871ccc39] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:12:33,077: INFO/MainProcess] Received task: app.do_something_async[4774557c-c530-46d9-a8fa-3869736a5a24]  
+[2018-04-15 16:12:33,106: ERROR/ForkPoolWorker-2] Task app.do_something_async[4774557c-c530-46d9-a8fa-3869736a5a24] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:12:34,834: INFO/MainProcess] Received task: app.do_something_async[16e881b7-e60d-4b03-b012-35f2964cc367]  
+[2018-04-15 16:12:34,839: ERROR/ForkPoolWorker-1] Task app.do_something_async[16e881b7-e60d-4b03-b012-35f2964cc367] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:13:51,956: INFO/MainProcess] Received task: app.do_something_async[3726328c-910d-4dd2-8a6d-8c545387e0ea]  
+[2018-04-15 16:13:51,962: ERROR/ForkPoolWorker-2] Task app.do_something_async[3726328c-910d-4dd2-8a6d-8c545387e0ea] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:13:53,461: INFO/MainProcess] Received task: app.do_something_async[8f9eff12-3abf-450c-b4be-fd5362b4c5fd]  
+[2018-04-15 16:13:53,471: ERROR/ForkPoolWorker-1] Task app.do_something_async[8f9eff12-3abf-450c-b4be-fd5362b4c5fd] raised unexpected: AttributeError("'int' object has no attribute 'items'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 129, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+[2018-04-15 16:16:04,222: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:16:04,223: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:16:04,223: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:16:04,225: WARNING/MainProcess] finalizer()
+[2018-04-15 16:16:04,225: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:16:04,226: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:16:04,226: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:16:04,228: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:16:04,228: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:16:04,230: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:16:04,230: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:16:04,230: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:16:04,231: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:16:04,231: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:16:04,231: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:16:04,232: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:16:04,232: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:16:04,232: WARNING/MainProcess] .
+[2018-04-15 16:16:04,232: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:16:04,232: WARNING/MainProcess] :
+[2018-04-15 16:16:04,232: WARNING/MainProcess] 1
+[2018-04-15 16:16:12,884: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:16:12,900: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:16:13,938: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:16:13,957: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:16:16,160: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:17:33,940: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:17:33,941: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:17:33,942: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:17:33,943: WARNING/MainProcess] finalizer()
+[2018-04-15 16:17:33,943: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:17:33,943: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:17:33,943: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:17:33,945: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:17:33,945: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:17:33,946: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:17:33,947: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:17:33,948: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:17:33,948: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:17:33,948: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:17:33,949: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:17:33,949: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:17:33,950: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:17:33,950: WARNING/MainProcess] .
+[2018-04-15 16:17:33,950: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:17:33,950: WARNING/MainProcess] :
+[2018-04-15 16:17:33,950: WARNING/MainProcess] 1
+[2018-04-15 16:17:37,422: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:17:37,448: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:17:38,472: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:17:38,541: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:17:41,159: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:17:56,018: INFO/MainProcess] Received task: app.do_something_async[99cf12f0-3924-4898-a86a-214a08eaaf7c]  
+[2018-04-15 16:17:56,083: ERROR/ForkPoolWorker-1] Task app.do_something_async[99cf12f0-3924-4898-a86a-214a08eaaf7c] raised unexpected: NameError("name 'e' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 140, in do_something_async
+    response = redis_connection.hmset(key, random_int)   #set(str(task_id), random_int)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/client.py", line 2009, in hmset
+    for pair in iteritems(mapping):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/redis/_compat.py", line 142, in iteritems
+    return iter(x.items())
+AttributeError: 'int' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 145, in do_something_async
+    except e:
+NameError: name 'e' is not defined
+[2018-04-15 16:20:21,131: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 16:20:21,132: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 16:20:21,133: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 16:20:21,135: WARNING/MainProcess] finalizer()
+[2018-04-15 16:20:21,135: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 16:20:21,135: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 16:20:21,135: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 16:20:21,138: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 16:20:21,138: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 16:20:21,140: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 16:20:21,140: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 16:20:21,140: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 16:20:21,141: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 16:20:21,141: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 16:20:21,141: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 16:20:21,142: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 16:20:21,142: WARNING/MainProcess] celery.exceptions
+[2018-04-15 16:20:21,143: WARNING/MainProcess] .
+[2018-04-15 16:20:21,143: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 16:20:21,143: WARNING/MainProcess] :
+[2018-04-15 16:20:21,143: WARNING/MainProcess] 1
+[2018-04-15 16:21:34,293: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 16:21:34,310: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 16:21:35,346: INFO/MainProcess] mingle: all alone
+[2018-04-15 16:21:35,365: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 16:21:36,157: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 16:21:42,978: INFO/MainProcess] Received task: app.do_something_async[95b82ab8-433d-4d0a-832e-b5c8ec71529a]  
+[2018-04-15 16:21:43,011: INFO/ForkPoolWorker-1] Task app.do_something_async[95b82ab8-433d-4d0a-832e-b5c8ec71529a] succeeded in 0.02774415898602456s: '95b82ab8-433d-4d0a-832e-b5c8ec71529a'
+[2018-04-15 18:19:31,854: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 18:19:31,857: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 18:19:31,857: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 18:19:31,859: WARNING/MainProcess] finalizer()
+[2018-04-15 18:19:31,859: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 18:19:31,860: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 18:19:31,860: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 18:19:31,864: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 18:19:31,864: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 18:19:31,866: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 18:19:31,867: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 18:19:31,867: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 18:19:31,867: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 18:19:31,867: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 18:19:31,867: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 18:19:31,869: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 18:19:31,869: WARNING/MainProcess] celery.exceptions
+[2018-04-15 18:19:31,869: WARNING/MainProcess] .
+[2018-04-15 18:19:31,869: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 18:19:31,869: WARNING/MainProcess] :
+[2018-04-15 18:19:31,870: WARNING/MainProcess] 1
+[2018-04-15 18:19:34,821: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 18:19:34,844: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 18:19:35,872: INFO/MainProcess] mingle: all alone
+[2018-04-15 18:19:35,895: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 18:19:36,161: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 18:19:44,272: INFO/MainProcess] Received task: app.do_something_async[44e8f1c5-9f98-4d6b-b363-b634ad7764ac]  
+[2018-04-15 18:19:44,304: INFO/ForkPoolWorker-1] Task app.do_something_async[44e8f1c5-9f98-4d6b-b363-b634ad7764ac] succeeded in 0.027003427036106586s: '44e8f1c5-9f98-4d6b-b363-b634ad7764ac'
+[2018-04-15 18:20:18,181: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 18:20:18,181: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 18:20:18,181: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 18:20:18,183: WARNING/MainProcess] finalizer()
+[2018-04-15 18:20:18,184: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 18:20:18,184: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 18:20:18,184: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 18:20:18,187: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 18:20:18,188: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 18:20:18,189: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 18:20:18,189: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 18:20:18,190: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 18:20:18,190: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 18:20:18,190: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 18:20:18,190: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 18:20:18,191: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 18:20:18,191: WARNING/MainProcess] celery.exceptions
+[2018-04-15 18:20:18,191: WARNING/MainProcess] .
+[2018-04-15 18:20:18,191: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 18:20:18,191: WARNING/MainProcess] :
+[2018-04-15 18:20:18,191: WARNING/MainProcess] 1
+[2018-04-15 18:20:20,594: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 18:20:20,607: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 18:20:21,633: INFO/MainProcess] mingle: all alone
+[2018-04-15 18:20:21,650: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 18:20:23,510: INFO/MainProcess] Received task: app.do_something_async[02e4397b-40a1-46cf-afe9-f69fab17bafc]  
+[2018-04-15 18:20:23,578: INFO/ForkPoolWorker-1] Task app.do_something_async[02e4397b-40a1-46cf-afe9-f69fab17bafc] succeeded in 0.059030241100117564s: '02e4397b-40a1-46cf-afe9-f69fab17bafc'
+[2018-04-15 18:20:26,157: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 18:28:47,916: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 18:28:47,917: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 18:28:47,918: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 18:28:47,920: WARNING/MainProcess] finalizer()
+[2018-04-15 18:28:47,920: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 18:28:47,920: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 18:28:47,920: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 18:28:47,922: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 18:28:47,923: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 18:28:47,925: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 18:28:47,925: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 18:28:47,925: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 18:28:47,925: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 18:28:47,926: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 18:28:47,926: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 18:28:47,927: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 18:28:47,928: WARNING/MainProcess] celery.exceptions
+[2018-04-15 18:28:47,928: WARNING/MainProcess] .
+[2018-04-15 18:28:47,928: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 18:28:47,928: WARNING/MainProcess] :
+[2018-04-15 18:28:47,928: WARNING/MainProcess] 1
+[2018-04-15 18:31:57,340: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 18:31:57,367: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 18:31:58,404: INFO/MainProcess] mingle: all alone
+[2018-04-15 18:31:58,420: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 18:32:01,156: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 18:36:56,452: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-15 18:36:56,454: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-15 18:36:56,454: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-15 18:36:56,456: WARNING/MainProcess] finalizer()
+[2018-04-15 18:36:56,456: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-15 18:36:56,456: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-15 18:36:56,456: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-15 18:36:56,458: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-15 18:36:56,459: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-15 18:36:56,461: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-15 18:36:56,461: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-15 18:36:56,462: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-15 18:36:56,462: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-15 18:36:56,462: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-15 18:36:56,463: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-15 18:36:56,464: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-15 18:36:56,464: WARNING/MainProcess] celery.exceptions
+[2018-04-15 18:36:56,464: WARNING/MainProcess] .
+[2018-04-15 18:36:56,464: WARNING/MainProcess] WorkerTerminate
+[2018-04-15 18:36:56,464: WARNING/MainProcess] :
+[2018-04-15 18:36:56,464: WARNING/MainProcess] 1
+[2018-04-15 18:36:58,876: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-15 18:36:58,905: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-15 18:36:59,940: INFO/MainProcess] mingle: all alone
+[2018-04-15 18:36:59,963: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-15 18:37:01,159: INFO/MainProcess] Events of group {task} enabled by remote.
+[2018-04-15 18:37:14,446: INFO/MainProcess] Received task: app.do_something_async[4de8fe84-aef6-4edf-b595-e6c6f64291f4]  
+[2018-04-15 18:37:14,525: INFO/ForkPoolWorker-1] Task app.do_something_async[4de8fe84-aef6-4edf-b595-e6c6f64291f4] succeeded in 0.07454518601298332s: '4de8fe84-aef6-4edf-b595-e6c6f64291f4'
+[2018-04-15 18:37:15,531: INFO/MainProcess] Received task: app.do_something_async[258d8007-ba28-4523-9ac4-cc32520a2195]  
+[2018-04-15 18:37:15,577: INFO/ForkPoolWorker-2] Task app.do_something_async[258d8007-ba28-4523-9ac4-cc32520a2195] succeeded in 0.03803318098653108s: '258d8007-ba28-4523-9ac4-cc32520a2195'
+[2018-04-15 18:37:16,293: INFO/MainProcess] Received task: app.do_something_async[8168941d-1fc2-4421-a764-35d0ae449ab7]  
+[2018-04-15 18:37:16,304: INFO/ForkPoolWorker-1] Task app.do_something_async[8168941d-1fc2-4421-a764-35d0ae449ab7] succeeded in 0.009036201983690262s: '8168941d-1fc2-4421-a764-35d0ae449ab7'
+[2018-04-15 18:37:16,884: INFO/MainProcess] Received task: app.do_something_async[04847843-2ab8-45ab-8de8-1c17751de37b]  
+[2018-04-15 18:37:16,896: INFO/ForkPoolWorker-2] Task app.do_something_async[04847843-2ab8-45ab-8de8-1c17751de37b] succeeded in 0.006691854097880423s: '04847843-2ab8-45ab-8de8-1c17751de37b'
+[2018-04-15 18:37:17,460: INFO/MainProcess] Received task: app.do_something_async[7c0d3d80-a6bf-4df0-ba00-56210cc9f091]  
+[2018-04-15 18:37:17,468: INFO/ForkPoolWorker-1] Task app.do_something_async[7c0d3d80-a6bf-4df0-ba00-56210cc9f091] succeeded in 0.005873529007658362s: '7c0d3d80-a6bf-4df0-ba00-56210cc9f091'
+[2018-04-15 18:37:18,023: INFO/MainProcess] Received task: app.do_something_async[9ef1b74b-e5aa-49c6-8003-72ab67afc300]  
+[2018-04-15 18:37:18,031: INFO/ForkPoolWorker-2] Task app.do_something_async[9ef1b74b-e5aa-49c6-8003-72ab67afc300] succeeded in 0.004990939982235432s: '9ef1b74b-e5aa-49c6-8003-72ab67afc300'

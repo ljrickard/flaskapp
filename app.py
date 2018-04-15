@@ -48,90 +48,102 @@ logger.info('Config object loaded {0}'.format(config_object))
 
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
-    logger.info('healthcheck')
     return jsonify('ok')
 
+@app.route('/conf', methods=['GET'])
+def conf():
+    return jsonify(celery.control.inspect().conf())
 
-@app.route('/sites', methods=['GET', 'POST'])
+@app.route('/scheduled', methods=['GET'])
+def scheduled():
+    return jsonify(celery.control.inspect().scheduled())
+
+@app.route('/active', methods=['GET'])
+def active():
+    return jsonify(celery.control.inspect().active())
+
+@app.route('/reserved', methods=['GET'])
+def reserved():
+    return jsonify(celery.control.inspect().reserved())
+
+@app.route('/stats', methods=['GET'])
+def stats():
+    return jsonify(celery.control.inspect().stats())
+
+@app.route('/registered_tasks', methods=['GET'])
+def registered_tasks():
+    return jsonify(celery.control.inspect().registered_tasks())
+
+@app.route('/registered', methods=['GET'])
+def registered():
+    return jsonify(celery.control.inspect().registered())
+
+@app.route('/sites', methods=['GET'])
 def sites():
-    logger.info('sites')
     redis_connection = Redis._create_connection()
-    if request.method == 'POST':
-        for site in request.data.decode('utf-8').split(','):
-            redis_connection.lpush(REDIS_KEY_SITES, site)   
     return jsonify(redis_connection.lrange(REDIS_KEY_SITES, 0, -1))
 
-
-@app.route('/scrape', methods=['POST'])
-def scrape():
-    logger.info('scrape')
-    async_results = []
-    if request.data:
-        logger.info('request.data')
-
-        try:
-            do_something_async.delay(60)
-        except Exception as e:
-            logger.error(e)
-        for site in request.data.decode('utf-8').split(','):
-            async_results.append(str(do_something_async.delay(60)))
-    else:
-        logger.info('else')
-        redis_connection = Redis._create_connection()
-        all_sites = redis_connection.lrange(REDIS_KEY_SITES, 0, -1)
-        for site in all_sites:
-            async_results.append(str(do_something_async.delay(60)))   
-    return jsonify(async_results)
-
+@app.route('/action', methods=['POST'])
+def action():
+    return jsonify(str(do_something_async.delay(60)))
 
 @app.route('/tasks/status', methods=['GET'])
 def tasks():
-    logger.info('tasks/status')
     return jsonify(str({key: {'state': value['state']} 
         for key, value in json.loads(
-            requests.get('{0}{1}'.format(FLOWERS_API, '/tasks')).
-                                                        text).items()}))
-
+            requests.get('{0}{1}'.format(FLOWERS_API, '/tasks')).text).items()}))
 
 @app.route('/tasks/<uuid:id>/status', methods=['GET'])
 def status(id):
-    logger.info('tasks/uuid:id/status')
-    task = do_something_async.AsyncResult(str(id))
-    return jsonify(
-        {
-            str(task.id): {
-                'status':str(task.status), 
-                'info':str(task.info)
-            }
-        })
-
+    try:
+        return jsonify(do_something_async.AsyncResult(str(id)).status)
+    except:
+        raise BadRequest()
 
 @app.route('/tasks/<uuid:id>/result', methods=['GET'])
 def result(id):
-    logger.info('/tasks/<uuid:id>/result')
     redis_connection = Redis._create_connection()
     result = redis_connection.get(id)
     if result:
         return jsonify(result)
     else:
-        raise BadRequest(description='resource not found') 
+        raise BadRequest() 
 
+redis_connection = Redis._create_connection()
+
+@app.route('/something', methods=['GET'])
+def something():
+    resturn jsonify([key in redis_connection.scan_iter("action:*")])
 
 @celery.task
 def do_something_async(site):
-    logger.info('starting to do something for {0}'.format(site))
+    logger.info('starting to do something.....')
 
-    logger.info('{0}'.format(do_something_async.request))
+    user = {"Name":"Pradeep", "Company":"SCTL", "Address":"Mumbai", "Location":"RCP"} 
+
+    # logger.info('{0}'.format(do_something_async.request))
     task_id = do_something_async.request.id
     logger.info('task id is:{0}'.format(task_id))
-    random_int = randint(1, 100)
-    logger.info('random_int is:{0}'.format(random_int))
     
-    redis_connection = Redis._create_connection()
-    logger.info(str(redis_connection))
-    redis_connection.set(str(task_id), random_int)
+    #error handling not working! 
+
+    key = 'action:{0}'.format(str(task_id))
+
+    logger.info(key)
+
+    try:
+        response = redis_connection.hmset(key, user)   #set(str(task_id), random_int)
+        logger.info("response")
+        logger.info(response)
+
+        response2 = redis_connection.hgetall(key)
+        logger.info("response2")
+        logger.info(response2)
+
+    except e:
+        logger.error(e)
     
-    logger.info('task_id type is:{0}'.format(type(task_id)))
+    logger.info('finishing to do something.....')
     return task_id
 
 
