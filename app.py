@@ -5,7 +5,6 @@ import json
 import config
 import logging
 import requests
-# import pytz, datetime
 from time import sleep
 from celery import Celery
 from random import randint
@@ -46,8 +45,6 @@ Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
 DOMAINS = 'domains'
 FLOWERS_API = app.config['FLOWERS_API']
-
-TYPES = ['search', 'scrape']
 
 redis_connection = Redis._create_connection()
 
@@ -119,13 +116,20 @@ def task_post():
     _type = request.args.get('type')
     domains = request.args.get('domain').split(',') if request.args.get('domain') else _get_domains()
     func = Task.factory(_type)
+    try:
+        kwargs = request.get_json(force=True)
+    except:
+        kwargs = {}
+    
     response = {}
-
     for domain in domains:
-        id = str(func.delay(domain))
+        id = str(func.delay(domain, **kwargs))
         task = {
                     'id': id, 
-                    'type': _type, 
+                    'type': _type,
+                    'domain': domain,
+                    'kwargs': kwargs,
+                    'error': None,
                     'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
                     '_links': { 'href': '/task/{0}'.format(id) }
                 }
@@ -154,7 +158,7 @@ def task_delete(id):
 
 
 @celery.task
-def search(domain):
+def search(domain, **kwargs):
     logger.info('begin search.....')
     id = search.request.id
     random_number = randint(9, 19)
@@ -163,35 +167,26 @@ def search(domain):
         logger.info('search sleeping for {0}'.format(random_number))
         sleep(random_number)
 
-        task = redis_connection.hmset(id, {'details': {
-                                'id': search.request.id, 
-                                'task': 'app.search', 
-                                'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
-                                'result': { random_number }, 
-                                'errors': {},
-                                'action': 'search',
-                                'domain' : domain
-                            }})
+        task = redis_connection.hgetall(id)
+        task['result'] = 'i did my task in only {0} seconds'.format(random_number)  # this is where the action will take place
+        redis_connection.hmset(id, task)
 
     except Exception as e:
+        task = redis_connection.hgetall(id)
+        task['result'] = e
+        redis_connection.hmset(id, task)
         logger.error(e)
-        try:
-            response = redis_connection.hmset(id, {'error': str(e)}) #this is a bit shit
-            logger.info('Error logged to db={0}'.format(response))
-        except Exception as e:
-            logger.error(e)
         
-    
     logger.info('end search.....')
     return id
 
 
 @celery.task
-def scrape(brand, sites):
+def scrape(domain, **kwargs):
     logger.info('begin scrape_async.....')
     id = scrape_async.request.id
     key = 'scrape_async:{0}'.format(str(id))
-    logger.info('task id for {0} and {1} is:{2}'.format(brand, site, id))
+    logger.info('task id for {0} and {1} is:{2}'.format(domain, site, id))
     random_number = randint(1, 9999)
 
     try:

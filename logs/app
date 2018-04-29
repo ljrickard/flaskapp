@@ -1,0 +1,264 @@
+[2018-04-29 15:49:56,443: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 2.00 seconds...
+
+[2018-04-29 15:49:58,453: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 4.00 seconds...
+
+[2018-04-29 15:50:02,464: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 6.00 seconds...
+
+[2018-04-29 15:50:08,482: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 8.00 seconds...
+
+[2018-04-29 15:50:16,495: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 10.00 seconds...
+
+[2018-04-29 15:50:26,520: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 12.00 seconds...
+
+[2018-04-29 15:50:38,542: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 14.00 seconds...
+
+[2018-04-29 15:50:52,564: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 16.00 seconds...
+
+[2018-04-29 15:51:08,598: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 18.00 seconds...
+
+[2018-04-29 15:51:26,630: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 20.00 seconds...
+
+[2018-04-29 15:51:46,681: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 22.00 seconds...
+
+[2018-04-29 15:52:08,738: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 24.00 seconds...
+
+[2018-04-29 15:52:32,773: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 26.00 seconds...
+
+[2018-04-29 15:52:58,829: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 28.00 seconds...
+
+[2018-04-29 15:53:26,894: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 30.00 seconds...
+
+[2018-04-29 15:53:56,962: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:54:29,028: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:55:01,111: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:55:33,210: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:56:05,284: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:56:37,380: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:57:09,490: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:57:41,585: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:58:13,658: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:58:45,745: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:59:17,841: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 15:59:49,928: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:00:22,016: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:00:54,082: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:01:26,141: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:01:58,229: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:02:30,336: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:03:02,410: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:03:34,460: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:04:06,539: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:04:38,615: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:05:10,715: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:05:42,838: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:06:14,941: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:06:47,014: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:07:19,106: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:07:51,158: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:08:23,222: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:08:55,321: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:09:27,413: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:09:59,507: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:10:31,593: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:11:03,698: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:11:35,801: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:12:07,895: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:12:39,951: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:13:12,046: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:13:44,142: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:14:16,222: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:14:48,313: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:15:20,386: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:15:52,441: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:16:24,487: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:16:56,547: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:17:28,605: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:18:00,682: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:18:32,764: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:19:04,822: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:19:36,869: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:20:08,944: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:20:40,988: ERROR/MainProcess] consumer: Cannot connect to redis://:**@localhost:6379/3: invalid password.
+Trying again in 32.00 seconds...
+
+[2018-04-29 16:20:51,267: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 16:20:51,267: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 16:20:51,268: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 16:20:51,270: WARNING/MainProcess] finalizer()
+[2018-04-29 16:20:51,270: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 16:20:51,270: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 16:20:51,270: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 16:20:51,273: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 16:20:51,273: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 16:20:51,275: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 16:20:51,276: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 16:20:51,276: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 16:20:51,276: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 16:20:51,277: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 16:20:51,277: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 16:20:51,278: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 16:20:51,278: WARNING/MainProcess] celery.exceptions
+[2018-04-29 16:20:51,278: WARNING/MainProcess] .
+[2018-04-29 16:20:51,278: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 16:20:51,278: WARNING/MainProcess] :
+[2018-04-29 16:20:51,278: WARNING/MainProcess] 1
+[2018-04-29 16:20:54,701: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 16:20:54,718: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 16:20:55,759: INFO/MainProcess] mingle: all alone
+[2018-04-29 16:20:55,805: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 16:20:56,734: INFO/MainProcess] Received task: app.search[714867fc-b9f3-4af6-9bf7-25de0291a9c3]  
+[2018-04-29 16:20:56,737: INFO/MainProcess] Received task: app.search[48005bba-952d-4696-bc2c-76ac968535ef]  
+[2018-04-29 16:20:56,738: INFO/MainProcess] Received task: app.search[8b6b1b9e-7feb-4589-acfe-d5931f6830ed]  
+[2018-04-29 16:20:56,740: INFO/MainProcess] Received task: app.search[374372ea-28cc-4eb7-a20e-4d7005521871]  
+[2018-04-29 16:20:56,744: INFO/MainProcess] Received task: app.search[80cb0b9d-ee28-4554-a36a-3d4e36418596]  
+[2018-04-29 16:20:56,747: INFO/MainProcess] Received task: app.search[444cc9b6-7149-4696-b450-0c5e8ec2c57e]  
+[2018-04-29 16:21:05,787: INFO/ForkPoolWorker-2] Task app.search[374372ea-28cc-4eb7-a20e-4d7005521871] succeeded in 9.043021548073739s: '374372ea-28cc-4eb7-a20e-4d7005521871'
+[2018-04-29 16:21:09,767: INFO/ForkPoolWorker-1] Task app.search[714867fc-b9f3-4af6-9bf7-25de0291a9c3] succeeded in 13.027185961138457s: '714867fc-b9f3-4af6-9bf7-25de0291a9c3'
+[2018-04-29 16:21:11,764: INFO/ForkPoolWorker-4] Task app.search[48005bba-952d-4696-bc2c-76ac968535ef] succeeded in 15.025111406110227s: '48005bba-952d-4696-bc2c-76ac968535ef'
+[2018-04-29 16:21:12,773: INFO/ForkPoolWorker-3] Task app.search[8b6b1b9e-7feb-4589-acfe-d5931f6830ed] succeeded in 16.029556507943198s: '8b6b1b9e-7feb-4589-acfe-d5931f6830ed'
+[2018-04-29 16:21:15,793: INFO/ForkPoolWorker-2] Task app.search[80cb0b9d-ee28-4554-a36a-3d4e36418596] succeeded in 10.003627734957263s: '80cb0b9d-ee28-4554-a36a-3d4e36418596'
+[2018-04-29 16:21:28,774: INFO/ForkPoolWorker-1] Task app.search[444cc9b6-7149-4696-b450-0c5e8ec2c57e] succeeded in 19.004516662098467s: '444cc9b6-7149-4696-b450-0c5e8ec2c57e'
+[2018-04-29 16:23:15,618: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 16:23:15,619: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 16:23:15,619: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 16:23:15,620: WARNING/MainProcess] finalizer()
+[2018-04-29 16:23:15,620: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 16:23:15,620: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 16:23:15,620: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 16:23:15,621: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 16:23:15,621: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 16:23:15,622: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 16:23:15,622: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 16:23:15,622: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 16:23:15,622: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 16:23:15,623: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 16:23:15,623: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 16:23:15,623: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 16:23:15,623: WARNING/MainProcess] celery.exceptions
+[2018-04-29 16:23:15,623: WARNING/MainProcess] .
+[2018-04-29 16:23:15,624: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 16:23:15,624: WARNING/MainProcess] :
+[2018-04-29 16:23:15,624: WARNING/MainProcess] 1
+[2018-04-29 16:23:18,078: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 16:23:18,109: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 16:23:19,153: INFO/MainProcess] mingle: all alone
+[2018-04-29 16:23:19,176: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 16:23:25,871: INFO/MainProcess] Received task: app.search[2577ac05-bdc9-4e37-8695-354f9fc5cfd0]  
+[2018-04-29 16:23:25,877: INFO/MainProcess] Received task: app.search[827ea694-7cb2-43b8-b9fd-1955ffb28249]  
+[2018-04-29 16:23:34,906: INFO/ForkPoolWorker-2] Task app.search[827ea694-7cb2-43b8-b9fd-1955ffb28249] succeeded in 9.02590909297578s: '827ea694-7cb2-43b8-b9fd-1955ffb28249'
+[2018-04-29 16:23:36,902: INFO/ForkPoolWorker-1] Task app.search[2577ac05-bdc9-4e37-8695-354f9fc5cfd0] succeeded in 11.027565869037062s: '2577ac05-bdc9-4e37-8695-354f9fc5cfd0'

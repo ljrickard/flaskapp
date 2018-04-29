@@ -10,7 +10,7 @@ class DevelopmentConfig(Config):
     REDIS_DB=3
     LOG_DIR='{0}/logs'.format(os.getcwd())
     FLOWERS_API='http://localhost:5555/api'
-    REDIS_PASSWORD=os.getenv('REDIS_PASSWORD1', None)
+    REDIS_PASSWORD=os.getenv('REDIS_PASSWORD', None)
     CELERY_BROKER='redis://:{0}@{1}:{2}/{3}'.format(REDIS_PASSWORD, REDIS_URI, REDIS_PORT, REDIS_DB)
 
 class ProductionConfig(Config):
