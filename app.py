@@ -86,10 +86,17 @@ def task_get(id):
 
     response = {}
 
+    _type = request.args.get('type') if request.args.get('type') else None
+
     for domain in domains:
         response[domain] = []
         for id in redis_connection.lrange(domain, 0, -1):
-           response[domain].append(_get_task(id))
+            task = _get_task(id)
+            if _type:
+                if task['type'] == _type:
+                    response[domain].append(task)
+            else:
+                response[domain].append(task)
 
     return jsonify(response)
 
