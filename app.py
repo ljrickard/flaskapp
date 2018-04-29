@@ -1,9 +1,11 @@
 #!/usr/bin/env python36
 import os
+import ast
 import json
 import config
 import logging
 import requests
+# import pytz, datetime
 from time import sleep
 from celery import Celery
 from random import randint
@@ -14,6 +16,7 @@ from flask import Flask, request, jsonify
 from logging.handlers import TimedRotatingFileHandler
 from werkzeug.exceptions import InternalServerError, BadRequest
 from flask_cors import CORS
+from celery.task.control import revoke
 
 app = Flask(__name__)
 CORS(app)
@@ -41,8 +44,12 @@ Redis.URI = app.config['REDIS_URI']
 Redis.DB = app.config['REDIS_DB']
 Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
-REDIS_KEY_SITES = 'sites'
+DOMAINS = 'domains'
 FLOWERS_API = app.config['FLOWERS_API']
+
+TYPES = ['search', 'scrape']
+
+redis_connection = Redis._create_connection()
 
 logger.info('Config object loaded {0}'.format(config_object))
 
@@ -50,102 +57,170 @@ logger.info('Config object loaded {0}'.format(config_object))
 def healthcheck():
     return jsonify('ok')
 
-@app.route('/conf', methods=['GET'])
+@app.route('/celery/conf', methods=['GET'])
 def conf():
     return jsonify(celery.control.inspect().conf())
 
-@app.route('/scheduled', methods=['GET'])
-def scheduled():
-    return jsonify(celery.control.inspect().scheduled())
+@app.route('/redis/flushall', methods=['POST'])
+def flushall():
+    return jsonify(redis_connection.flushall())
 
-@app.route('/active', methods=['GET'])
-def active():
-    return jsonify(celery.control.inspect().active())
+@app.route('/domain', methods=['GET'])
+def domain():
+    return jsonify(_get_domains())
 
-@app.route('/reserved', methods=['GET'])
-def reserved():
-    return jsonify(celery.control.inspect().reserved())
+def _get_domains():
+    return [domain for domain in redis_connection.lrange(DOMAINS, 0, -1)]
 
-@app.route('/stats', methods=['GET'])
-def stats():
-    return jsonify(celery.control.inspect().stats())
-
-@app.route('/registered_tasks', methods=['GET'])
-def registered_tasks():
-    return jsonify(celery.control.inspect().registered_tasks())
-
-@app.route('/registered', methods=['GET'])
-def registered():
-    return jsonify(celery.control.inspect().registered())
-
-@app.route('/sites', methods=['GET'])
-def sites():
-    redis_connection = Redis._create_connection()
-    return jsonify(redis_connection.lrange(REDIS_KEY_SITES, 0, -1))
-
-@app.route('/action', methods=['POST'])
-def action():
-    return jsonify(str(do_something_async.delay(60)))
-
-@app.route('/tasks/status', methods=['GET'])
-def tasks():
-    return jsonify(str({key: {'state': value['state']} 
-        for key, value in json.loads(
-            requests.get('{0}{1}'.format(FLOWERS_API, '/tasks')).text).items()}))
-
-@app.route('/tasks/<uuid:id>/status', methods=['GET'])
-def status(id):
-    try:
-        return jsonify(do_something_async.AsyncResult(str(id)).status)
-    except:
+@app.route('/task', defaults={'id': None}, methods=['GET'])
+@app.route('/task/<id>', methods=['GET'])
+def task_get(id):
+    if id and request.args.get('domain'):
         raise BadRequest()
-
-@app.route('/tasks/<uuid:id>/result', methods=['GET'])
-def result(id):
-    redis_connection = Redis._create_connection()
-    result = redis_connection.get(id)
-    if result:
-        return jsonify(result)
+    elif id:
+        return jsonify(_get_task(id))
+    elif request.args.get('domain'):
+        domains = request.args.get('domain').split(',')
+        for domain in domains:
+            if domain not in _get_domains():
+                raise BadRequest()
     else:
-        raise BadRequest() 
+        domains = _get_domains()
 
-redis_connection = Redis._create_connection()
+    response = {}
 
-@app.route('/something', methods=['GET'])
-def something():
-    resturn jsonify([key in redis_connection.scan_iter("action:*")])
+    for domain in domains:
+        response[domain] = []
+        for id in redis_connection.lrange(domain, 0, -1):
+           response[domain].append(_get_task(id))
+
+    return jsonify(response)
+
+
+def _get_task(id):
+    task = redis_connection.hgetall(id)
+    func = Task.factory(task['type'])
+    task['status'] = func.AsyncResult(id).state
+    return task
+
+
+class Task(object):
+    def factory(type):
+        if type == "search": 
+            return search
+        if type == "scrape": 
+            return scrape
+        else:
+            raise BadRequest()
+
+
+@app.route('/task', methods=['POST'])
+def task_post():
+    _type = request.args.get('type')
+    domains = request.args.get('domain').split(',') if request.args.get('domain') else _get_domains()
+    func = Task.factory(_type)
+    response = {}
+
+    for domain in domains:
+        id = str(func.delay(domain))
+        task = {
+                    'id': id, 
+                    'type': _type, 
+                    'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
+                    '_links': { 'href': '/task/{0}'.format(id) }
+                }
+
+        redis_connection.lpush(domain, id)
+        redis_connection.hmset(id, task)
+
+        task['state'] = func.AsyncResult(id).state
+        response[domain] = task
+
+    return jsonify(response)
+
+
+@app.route('/task/<id>', methods=['DELETE'])
+def task_delete(id):
+    task = _get_task(id)
+    func = Task.factory(task['type'])
+
+    if task['status'] in ['PENDING', 'STARTED']:
+        revoke(id, terminate=True)
+        while func.AsyncResult(id).state != 'REVOKED':
+            sleep(0.1) 
+        task['status'] = func.AsyncResult(id).state
+
+    return jsonify(task)
+
 
 @celery.task
-def do_something_async(site):
-    logger.info('starting to do something.....')
-
-    user = {"Name":"Pradeep", "Company":"SCTL", "Address":"Mumbai", "Location":"RCP"} 
-
-    # logger.info('{0}'.format(do_something_async.request))
-    task_id = do_something_async.request.id
-    logger.info('task id is:{0}'.format(task_id))
-    
-    #error handling not working! 
-
-    key = 'action:{0}'.format(str(task_id))
-
-    logger.info(key)
+def search(domain):
+    logger.info('begin search.....')
+    id = search.request.id
+    random_number = randint(9, 19)
 
     try:
-        response = redis_connection.hmset(key, user)   #set(str(task_id), random_int)
-        logger.info("response")
+        logger.info('search sleeping for {0}'.format(random_number))
+        sleep(random_number)
+
+        task = redis_connection.hmset(id, {'details': {
+                                'id': search.request.id, 
+                                'task': 'app.search', 
+                                'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
+                                'result': { random_number }, 
+                                'errors': {},
+                                'action': 'search',
+                                'domain' : domain
+                            }})
+
+    except Exception as e:
+        logger.error(e)
+        try:
+            response = redis_connection.hmset(id, {'error': str(e)}) #this is a bit shit
+            logger.info('Error logged to db={0}'.format(response))
+        except Exception as e:
+            logger.error(e)
+        
+    
+    logger.info('end search.....')
+    return id
+
+
+@celery.task
+def scrape(brand, sites):
+    logger.info('begin scrape_async.....')
+    id = scrape_async.request.id
+    key = 'scrape_async:{0}'.format(str(id))
+    logger.info('task id for {0} and {1} is:{2}'.format(brand, site, id))
+    random_number = randint(1, 9999)
+
+    try:
+
+        user = {
+            'id': scrape_async.request.id, 
+            'task': 'app.scrape_async', 
+            'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
+            'result': { random_number }, 
+            'errors': {}
+        } 
+
+        response = redis_connection.hmset(key, user) 
         logger.info(response)
 
         response2 = redis_connection.hgetall(key)
-        logger.info("response2")
         logger.info(response2)
 
-    except e:
+    except Exception as e:
         logger.error(e)
+        try:
+            response = redis_connection.hmset(key, {'error': str(e)}) #this is a bit shit
+            logger.info('Error logged to db={0}'.format(response))
+        except Exception as e:
+            logger.error(e)
+        
     
-    logger.info('finishing to do something.....')
-    return task_id
-
+    logger.info('end scrape_async.....')
+    return id
 
 
 
