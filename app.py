@@ -16,6 +16,7 @@ from logging.handlers import TimedRotatingFileHandler
 from werkzeug.exceptions import InternalServerError, BadRequest
 from flask_cors import CORS
 from celery.task.control import revoke
+from domains.domain import Domain
 
 app = Flask(__name__)
 CORS(app)
@@ -27,7 +28,7 @@ handler = TimedRotatingFileHandler('{0}/{1}-{2}.log'.format(app.config['LOG_DIR'
 handler.setLevel(logging.INFO)
 handler.setFormatter(formatter)
 app.logger.addHandler(handler)
-app.logger.setLevel(logging.INFO)
+app.logger.setLevel(logging.DEBUG)
 app.logger.handlers.extend(logging.getLogger("gunicorn.error").handlers)
 
 
@@ -103,26 +104,15 @@ def task_get(id):
 
 def _get_task(id):
     task = redis_connection.hgetall(id)
-    func = Task.factory(task['type'])
-    task['status'] = func.AsyncResult(id).state
+    task['status'] = celery_task.AsyncResult(id).state
     return task
-
-
-class Task(object):
-    def factory(type):
-        if type == "search": 
-            return search
-        if type == "scrape": 
-            return scrape
-        else:
-            raise BadRequest()
 
 
 @app.route('/task', methods=['POST'])
 def task_post():
     _type = request.args.get('type')
     domains = request.args.get('domain').split(',') if request.args.get('domain') else _get_domains()
-    func = Task.factory(_type)
+
     try:
         kwargs = request.get_json(force=True)
     except:
@@ -130,13 +120,13 @@ def task_post():
     
     response = {}
     for domain in domains:
-        id = str(func.delay(domain, **kwargs))
+        id = str(celery_task.delay(domain, **kwargs))
         task = {
                     'id': id, 
                     'type': _type,
                     'domain': domain,
                     'kwargs': kwargs,
-                    'error': None,
+                    'errors': '',
                     'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
                     '_links': { 'href': '/task/{0}'.format(id) }
                 }
@@ -144,7 +134,7 @@ def task_post():
         redis_connection.lpush(domain, id)
         redis_connection.hmset(id, task)
 
-        task['state'] = func.AsyncResult(id).state
+        task['state'] = celery_task.AsyncResult(id).state
         response[domain] = task
 
     return jsonify(response)
@@ -153,77 +143,43 @@ def task_post():
 @app.route('/task/<id>', methods=['DELETE'])
 def task_delete(id):
     task = _get_task(id)
-    func = Task.factory(task['type'])
 
     if task['status'] in ['PENDING', 'STARTED']:
         revoke(id, terminate=True)
-        while func.AsyncResult(id).state != 'REVOKED':
+        while celery_task.AsyncResult(id).state != 'REVOKED':
             sleep(0.1) 
-        task['status'] = func.AsyncResult(id).state
+        task['status'] = celery_task.AsyncResult(id).state
 
     return jsonify(task)
 
 
 @celery.task
-def search(domain, **kwargs):
-    logger.info('begin search.....')
-    id = search.request.id
+def celery_task(domain, **kwargs):
+    logger.info('begin celery_task.....')
+    id = celery_task.request.id
     random_number = randint(9, 19)
 
     try:
-        logger.info('search sleeping for {0}'.format(random_number))
+        logger.info('celery_task sleeping for {0}'.format(random_number))
         sleep(random_number)
 
         task = redis_connection.hgetall(id)
+        
+        Domain().factory(domain).search()
+
         task['result'] = 'i did my task in only {0} seconds'.format(random_number)  # this is where the action will take place
         redis_connection.hmset(id, task)
 
     except Exception as e:
         task = redis_connection.hgetall(id)
-        task['result'] = e
+        errors = task['errors'].split()
+        errors.append(e)
+        task['errors'] = errors
         redis_connection.hmset(id, task)
         logger.error(e)
         
-    logger.info('end search.....')
+    logger.info('end celery_task.....')
     return id
-
-
-@celery.task
-def scrape(domain, **kwargs):
-    logger.info('begin scrape_async.....')
-    id = scrape_async.request.id
-    key = 'scrape_async:{0}'.format(str(id))
-    logger.info('task id for {0} and {1} is:{2}'.format(domain, site, id))
-    random_number = randint(1, 9999)
-
-    try:
-
-        user = {
-            'id': scrape_async.request.id, 
-            'task': 'app.scrape_async', 
-            'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
-            'result': { random_number }, 
-            'errors': {}
-        } 
-
-        response = redis_connection.hmset(key, user) 
-        logger.info(response)
-
-        response2 = redis_connection.hgetall(key)
-        logger.info(response2)
-
-    except Exception as e:
-        logger.error(e)
-        try:
-            response = redis_connection.hmset(key, {'error': str(e)}) #this is a bit shit
-            logger.info('Error logged to db={0}'.format(response))
-        except Exception as e:
-            logger.error(e)
-        
-    
-    logger.info('end scrape_async.....')
-    return id
-
 
 
 

@@ -262,3 +262,1236 @@ Trying again in 32.00 seconds...
 [2018-04-29 16:23:25,877: INFO/MainProcess] Received task: app.search[827ea694-7cb2-43b8-b9fd-1955ffb28249]  
 [2018-04-29 16:23:34,906: INFO/ForkPoolWorker-2] Task app.search[827ea694-7cb2-43b8-b9fd-1955ffb28249] succeeded in 9.02590909297578s: '827ea694-7cb2-43b8-b9fd-1955ffb28249'
 [2018-04-29 16:23:36,902: INFO/ForkPoolWorker-1] Task app.search[2577ac05-bdc9-4e37-8695-354f9fc5cfd0] succeeded in 11.027565869037062s: '2577ac05-bdc9-4e37-8695-354f9fc5cfd0'
+[2018-04-29 16:50:11,824: ERROR/MainProcess] Received unregistered task of type 'app.celery_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (121b)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 561, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'app.celery_task'
+[2018-04-29 16:50:11,836: ERROR/MainProcess] Received unregistered task of type 'app.celery_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (120b)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/worker/consumer/consumer.py", line 561, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'app.celery_task'
+[2018-04-29 16:50:22,062: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 16:50:22,064: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 16:50:22,064: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 16:50:22,065: WARNING/MainProcess] finalizer()
+[2018-04-29 16:50:22,065: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 16:50:22,066: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 16:50:22,066: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 16:50:22,068: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 16:50:22,068: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 16:50:22,070: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 16:50:22,070: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 16:50:22,071: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 16:50:22,071: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 16:50:22,071: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 16:50:22,071: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 16:50:22,072: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 16:50:22,072: WARNING/MainProcess] celery.exceptions
+[2018-04-29 16:50:22,072: WARNING/MainProcess] .
+[2018-04-29 16:50:22,072: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 16:50:22,072: WARNING/MainProcess] :
+[2018-04-29 16:50:22,073: WARNING/MainProcess] 1
+[2018-04-29 16:50:24,910: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 16:50:24,932: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 16:50:25,964: INFO/MainProcess] mingle: all alone
+[2018-04-29 16:50:25,988: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 16:50:31,228: INFO/MainProcess] Received task: app.celery_task[cf69b69a-70dd-4b0e-83cf-d05799ac6013]  
+[2018-04-29 16:50:31,232: INFO/MainProcess] Received task: app.celery_task[d72bb546-c28f-4b8e-9870-21b51fc4edeb]  
+[2018-04-29 16:50:31,284: ERROR/ForkPoolWorker-2] Task app.celery_task[d72bb546-c28f-4b8e-9870-21b51fc4edeb] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 16:50:31,284: ERROR/ForkPoolWorker-1] Task app.celery_task[cf69b69a-70dd-4b0e-83cf-d05799ac6013] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 17:46:25,877: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 17:46:25,880: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 17:46:25,881: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 17:46:25,883: WARNING/MainProcess] finalizer()
+[2018-04-29 17:46:25,883: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 17:46:25,885: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 17:46:25,885: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 17:46:25,888: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 17:46:25,888: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 17:46:25,890: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 17:46:25,890: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 17:46:25,891: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 17:46:25,891: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 17:46:25,891: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 17:46:25,892: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 17:46:25,893: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 17:46:25,893: WARNING/MainProcess] celery.exceptions
+[2018-04-29 17:46:25,893: WARNING/MainProcess] .
+[2018-04-29 17:46:25,893: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 17:46:25,893: WARNING/MainProcess] :
+[2018-04-29 17:46:25,893: WARNING/MainProcess] 1
+[2018-04-29 17:46:34,207: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 17:46:34,210: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 17:46:34,210: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2018-04-29 17:46:34,231: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 17:46:34,232: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 17:46:34,248: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Agent, Tasks, Control, Heart, event loop}
+[2018-04-29 17:46:34,276: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 17:46:34,277: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:34,277: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 17:46:34,483: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:34,484: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 17:46:34,485: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 17:46:34,529: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 17:46:34,529: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:34,529: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 17:46:34,551: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:34,551: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 17:46:34,552: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 17:46:35,598: INFO/MainProcess] mingle: all alone
+[2018-04-29 17:46:35,598: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:35,599: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 17:46:35,605: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:35,606: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 17:46:35,610: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:35,611: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 17:46:35,615: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:35,615: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 17:46:35,623: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:46:35,623: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 17:46:35,624: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 17:46:35,625: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 17:46:35,625: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 17:46:46,135: INFO/MainProcess] Received task: app.celery_task[1e77f386-a2ea-490a-bba4-ef830da3de93]  
+[2018-04-29 17:46:46,137: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8dd7b8> (args:('app.celery_task', '1e77f386-a2ea-490a-bba4-ef830da3de93', {'lang': 'py', 'task': 'app.celery_task', 'id': '1e77f386-a2ea-490a-bba4-ef830da3de93', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1e77f386-a2ea-490a-bba4-ef830da3de93', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen2771@luke-mac', 'reply_to': '3c93b7de-0634-379d-9527-6fc31b7569dd', 'correlation_id': '1e77f386-a2ea-490a-bba4-ef830da3de93', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:46:46,140: DEBUG/MainProcess] Task accepted: app.celery_task[1e77f386-a2ea-490a-bba4-ef830da3de93] pid:3895
+[2018-04-29 17:46:46,152: INFO/MainProcess] Received task: app.celery_task[eb3eb0f6-2480-4a29-a562-c5f361e010c5]  
+[2018-04-29 17:46:46,152: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8dd7b8> (args:('app.celery_task', 'eb3eb0f6-2480-4a29-a562-c5f361e010c5', {'lang': 'py', 'task': 'app.celery_task', 'id': 'eb3eb0f6-2480-4a29-a562-c5f361e010c5', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'eb3eb0f6-2480-4a29-a562-c5f361e010c5', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen2771@luke-mac', 'reply_to': '3c93b7de-0634-379d-9527-6fc31b7569dd', 'correlation_id': 'eb3eb0f6-2480-4a29-a562-c5f361e010c5', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:46:46,155: DEBUG/MainProcess] Task accepted: app.celery_task[eb3eb0f6-2480-4a29-a562-c5f361e010c5] pid:3896
+[2018-04-29 17:46:46,226: ERROR/ForkPoolWorker-2] Task app.celery_task[eb3eb0f6-2480-4a29-a562-c5f361e010c5] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 17:46:46,230: ERROR/ForkPoolWorker-1] Task app.celery_task[1e77f386-a2ea-490a-bba4-ef830da3de93] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 17:47:39,756: INFO/MainProcess] Received task: app.celery_task[3869ca15-cbd4-4869-961b-eed396d7fd07]  
+[2018-04-29 17:47:39,757: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8dd7b8> (args:('app.celery_task', '3869ca15-cbd4-4869-961b-eed396d7fd07', {'lang': 'py', 'task': 'app.celery_task', 'id': '3869ca15-cbd4-4869-961b-eed396d7fd07', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3869ca15-cbd4-4869-961b-eed396d7fd07', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen3938@luke-mac', 'reply_to': '7a034bf8-2a26-3a60-b5eb-b6b2d34dee9d', 'correlation_id': '3869ca15-cbd4-4869-961b-eed396d7fd07', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:47:39,758: DEBUG/MainProcess] Task accepted: app.celery_task[3869ca15-cbd4-4869-961b-eed396d7fd07] pid:3895
+[2018-04-29 17:47:39,762: INFO/MainProcess] Received task: app.celery_task[6d3e86d5-64e9-4a71-a8f4-6af031fa5da2]  
+[2018-04-29 17:47:39,762: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8dd7b8> (args:('app.celery_task', '6d3e86d5-64e9-4a71-a8f4-6af031fa5da2', {'lang': 'py', 'task': 'app.celery_task', 'id': '6d3e86d5-64e9-4a71-a8f4-6af031fa5da2', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6d3e86d5-64e9-4a71-a8f4-6af031fa5da2', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen3938@luke-mac', 'reply_to': '7a034bf8-2a26-3a60-b5eb-b6b2d34dee9d', 'correlation_id': '6d3e86d5-64e9-4a71-a8f4-6af031fa5da2', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:47:39,762: ERROR/ForkPoolWorker-1] Task app.celery_task[3869ca15-cbd4-4869-961b-eed396d7fd07] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 17:47:39,764: DEBUG/MainProcess] Task accepted: app.celery_task[6d3e86d5-64e9-4a71-a8f4-6af031fa5da2] pid:3896
+[2018-04-29 17:47:39,769: ERROR/ForkPoolWorker-2] Task app.celery_task[6d3e86d5-64e9-4a71-a8f4-6af031fa5da2] raised unexpected: NameError("name 'search' is not defined",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 158, in celery_task
+    id = search.request.id
+NameError: name 'search' is not defined
+[2018-04-29 17:48:25,569: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 17:48:25,570: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 17:48:25,570: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 17:48:25,570: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 17:48:25,570: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 17:48:25,570: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 17:48:25,571: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 17:48:25,572: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 17:48:25,575: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 17:48:25,575: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 17:48:25,575: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 17:48:25,578: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 17:48:25,578: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 17:48:25,578: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 17:48:25,578: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 17:48:25,760: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 17:48:25,917: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 17:48:25,917: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 17:48:25,918: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 17:48:25,918: WARNING/MainProcess] finalizer()
+[2018-04-29 17:48:25,918: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 17:48:25,919: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 17:48:25,919: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 17:48:25,920: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 17:48:25,920: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 17:48:25,921: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 17:48:25,921: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 17:48:25,921: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 17:48:25,921: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 17:48:25,922: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 17:48:25,922: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 17:48:25,922: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 17:48:25,922: WARNING/MainProcess] celery.exceptions
+[2018-04-29 17:48:25,922: WARNING/MainProcess] .
+[2018-04-29 17:48:25,923: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 17:48:25,923: WARNING/MainProcess] :
+[2018-04-29 17:48:25,923: WARNING/MainProcess] 1
+[2018-04-29 17:48:27,907: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 17:48:27,909: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 17:48:27,909: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2018-04-29 17:48:27,923: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 17:48:27,924: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 17:48:27,939: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Tasks, Control, Gossip, Agent, event loop}
+[2018-04-29 17:48:27,966: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 17:48:27,967: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:27,967: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 17:48:28,175: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:28,176: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 17:48:28,177: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 17:48:28,201: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 17:48:28,202: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:28,202: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 17:48:28,224: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:28,225: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 17:48:28,228: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:28,228: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 17:48:28,228: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 17:48:29,256: INFO/MainProcess] mingle: all alone
+[2018-04-29 17:48:29,256: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:29,256: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 17:48:29,261: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:29,262: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 17:48:29,266: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:29,266: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 17:48:29,271: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 17:48:29,271: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 17:48:29,271: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 17:48:29,272: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 17:48:29,272: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 17:48:40,615: INFO/MainProcess] Received task: app.celery_task[c4b16e3a-c983-44ba-bf99-823001452bf4]  
+[2018-04-29 17:48:40,617: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e07b8> (args:('app.celery_task', 'c4b16e3a-c983-44ba-bf99-823001452bf4', {'lang': 'py', 'task': 'app.celery_task', 'id': 'c4b16e3a-c983-44ba-bf99-823001452bf4', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c4b16e3a-c983-44ba-bf99-823001452bf4', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4005@luke-mac', 'reply_to': '11cb8b13-5e28-3878-87db-4342030590a6', 'correlation_id': 'c4b16e3a-c983-44ba-bf99-823001452bf4', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:48:40,620: INFO/MainProcess] Received task: app.celery_task[2b63364a-81df-4cac-86ef-dedf58e2dd2b]  
+[2018-04-29 17:48:40,620: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e07b8> (args:('app.celery_task', '2b63364a-81df-4cac-86ef-dedf58e2dd2b', {'lang': 'py', 'task': 'app.celery_task', 'id': '2b63364a-81df-4cac-86ef-dedf58e2dd2b', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2b63364a-81df-4cac-86ef-dedf58e2dd2b', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4005@luke-mac', 'reply_to': '11cb8b13-5e28-3878-87db-4342030590a6', 'correlation_id': '2b63364a-81df-4cac-86ef-dedf58e2dd2b', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 17:48:40,621: DEBUG/MainProcess] Task accepted: app.celery_task[c4b16e3a-c983-44ba-bf99-823001452bf4] pid:3999
+[2018-04-29 17:48:40,624: DEBUG/MainProcess] Task accepted: app.celery_task[2b63364a-81df-4cac-86ef-dedf58e2dd2b] pid:4000
+[2018-04-29 17:48:55,645: INFO/ForkPoolWorker-1] Task app.celery_task[c4b16e3a-c983-44ba-bf99-823001452bf4] succeeded in 15.025357853155583s: 'c4b16e3a-c983-44ba-bf99-823001452bf4'
+[2018-04-29 17:48:57,652: INFO/ForkPoolWorker-2] Task app.celery_task[2b63364a-81df-4cac-86ef-dedf58e2dd2b] succeeded in 17.027936751954257s: '2b63364a-81df-4cac-86ef-dedf58e2dd2b'
+[2018-04-29 18:05:20,109: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:05:20,113: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:05:20,117: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:05:20,119: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:05:20,120: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:05:20,122: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:05:20,123: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:05:20,123: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:05:20,123: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:05:20,124: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:05:20,124: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:05:20,124: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:05:20,124: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:05:20,125: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:05:20,137: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:05:20,148: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:05:20,148: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:05:20,148: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:05:20,148: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:05:20,150: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:05:20,151: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:05:20,151: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:05:20,227: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:05:20,342: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:05:20,343: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:05:20,343: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:05:20,345: WARNING/MainProcess] finalizer()
+[2018-04-29 18:05:20,345: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:05:20,345: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:05:20,346: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:05:20,348: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:05:20,348: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:05:20,349: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:05:20,350: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:05:20,350: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:05:20,350: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:05:20,350: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:05:20,350: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:05:20,352: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:05:20,352: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:05:20,352: WARNING/MainProcess] .
+[2018-04-29 18:05:20,352: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:05:20,352: WARNING/MainProcess] :
+[2018-04-29 18:05:20,352: WARNING/MainProcess] 1
+[2018-04-29 18:06:19,171: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:06:19,174: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:06:19,175: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2018-04-29 18:06:19,197: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:06:19,197: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:06:19,215: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Agent, Mingle, Gossip, Tasks, Control, event loop}
+[2018-04-29 18:06:19,246: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:06:19,246: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:19,246: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:06:19,424: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:19,425: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:06:19,426: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:06:19,463: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:06:19,465: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:19,465: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:06:19,485: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:19,485: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:06:19,490: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:19,490: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:06:19,490: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:06:20,531: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:06:20,532: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:20,533: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:06:20,545: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:20,545: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:06:20,551: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:20,551: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:06:20,555: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:06:20,555: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:06:20,556: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:06:20,556: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:06:20,556: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:06:42,339: INFO/MainProcess] Received task: app.celery_task[9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83]  
+[2018-04-29 18:06:42,340: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e0b70> (args:('app.celery_task', '9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83', {'lang': 'py', 'task': 'app.celery_task', 'id': '9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4646@luke-mac', 'reply_to': '80e7a269-e526-39eb-aeea-ddc48d6bb31f', 'correlation_id': '9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:06:42,342: DEBUG/MainProcess] Task accepted: app.celery_task[9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83] pid:4639
+[2018-04-29 18:06:42,345: INFO/MainProcess] Received task: app.celery_task[12071587-9d8b-49e2-a74c-65e255942118]  
+[2018-04-29 18:06:42,345: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e0b70> (args:('app.celery_task', '12071587-9d8b-49e2-a74c-65e255942118', {'lang': 'py', 'task': 'app.celery_task', 'id': '12071587-9d8b-49e2-a74c-65e255942118', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '12071587-9d8b-49e2-a74c-65e255942118', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4646@luke-mac', 'reply_to': '80e7a269-e526-39eb-aeea-ddc48d6bb31f', 'correlation_id': '12071587-9d8b-49e2-a74c-65e255942118', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:06:42,347: DEBUG/MainProcess] Task accepted: app.celery_task[12071587-9d8b-49e2-a74c-65e255942118] pid:4640
+[2018-04-29 18:06:52,380: INFO/ForkPoolWorker-2] Task app.celery_task[12071587-9d8b-49e2-a74c-65e255942118] succeeded in 10.03255016496405s: '12071587-9d8b-49e2-a74c-65e255942118'
+[2018-04-29 18:06:53,422: INFO/ForkPoolWorker-1] Task app.celery_task[9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83] succeeded in 11.079087419202551s: '9c2a9d69-a7c3-41f6-8d7e-d5e09f09ee83'
+[2018-04-29 18:09:05,751: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:09:05,754: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:09:05,754: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:09:05,754: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:09:05,755: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:09:05,756: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:09:05,756: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:09:05,764: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:09:05,764: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:09:05,764: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:09:05,767: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:09:05,767: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:09:05,770: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:09:05,770: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:09:05,770: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:09:05,917: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:09:06,074: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:09:06,074: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:09:06,074: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:09:06,075: WARNING/MainProcess] finalizer()
+[2018-04-29 18:09:06,075: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:09:06,076: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:09:06,076: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:09:06,077: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:09:06,078: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:09:06,079: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:09:06,079: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:09:06,080: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:09:06,080: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:09:06,080: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:09:06,080: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:09:06,081: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:09:06,081: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:09:06,081: WARNING/MainProcess] .
+[2018-04-29 18:09:06,081: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:09:06,081: WARNING/MainProcess] :
+[2018-04-29 18:09:06,082: WARNING/MainProcess] 1
+[2018-04-29 18:09:08,754: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:09:08,757: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:09:08,758: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2018-04-29 18:09:08,786: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:09:08,787: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:09:08,813: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Tasks, Control, Gossip, Heart, event loop}
+[2018-04-29 18:09:08,844: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:09:08,844: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:08,845: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:09:09,030: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:09,031: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:09:09,031: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:09:09,060: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:09:09,060: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:09,060: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:09:09,071: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:09,071: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:09:09,071: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:09:10,101: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:09:10,102: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:10,102: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:09:10,108: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:10,108: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:09:10,115: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:10,115: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:09:10,123: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:10,123: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:09:10,126: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:09:10,126: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:09:10,126: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:09:10,127: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:09:10,127: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:09:18,361: INFO/MainProcess] Received task: app.celery_task[dbc79013-dfd8-48d0-b8b7-d4f5920efef4]  
+[2018-04-29 18:09:18,362: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', 'dbc79013-dfd8-48d0-b8b7-d4f5920efef4', {'lang': 'py', 'task': 'app.celery_task', 'id': 'dbc79013-dfd8-48d0-b8b7-d4f5920efef4', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'dbc79013-dfd8-48d0-b8b7-d4f5920efef4', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4769@luke-mac', 'reply_to': 'cef74fc7-9c5c-3cff-ab4b-d1cf0780b405', 'correlation_id': 'dbc79013-dfd8-48d0-b8b7-d4f5920efef4', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:09:18,365: INFO/MainProcess] Received task: app.celery_task[028ff233-842b-4f49-af91-7ac57b93d49c]  
+[2018-04-29 18:09:18,365: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', '028ff233-842b-4f49-af91-7ac57b93d49c', {'lang': 'py', 'task': 'app.celery_task', 'id': '028ff233-842b-4f49-af91-7ac57b93d49c', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '028ff233-842b-4f49-af91-7ac57b93d49c', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4769@luke-mac', 'reply_to': 'cef74fc7-9c5c-3cff-ab4b-d1cf0780b405', 'correlation_id': '028ff233-842b-4f49-af91-7ac57b93d49c', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:09:18,366: DEBUG/MainProcess] Task accepted: app.celery_task[dbc79013-dfd8-48d0-b8b7-d4f5920efef4] pid:4733
+[2018-04-29 18:09:18,369: DEBUG/MainProcess] Task accepted: app.celery_task[028ff233-842b-4f49-af91-7ac57b93d49c] pid:4734
+[2018-04-29 18:09:36,402: INFO/ForkPoolWorker-2] Task app.celery_task[028ff233-842b-4f49-af91-7ac57b93d49c] succeeded in 18.032664923928678s: '028ff233-842b-4f49-af91-7ac57b93d49c'
+[2018-04-29 18:09:36,403: INFO/ForkPoolWorker-1] Task app.celery_task[dbc79013-dfd8-48d0-b8b7-d4f5920efef4] succeeded in 18.03744304412976s: 'dbc79013-dfd8-48d0-b8b7-d4f5920efef4'
+[2018-04-29 18:11:59,707: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:11:59,707: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:11:59,708: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:11:59,708: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:11:59,708: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:11:59,708: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:11:59,709: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:11:59,710: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:11:59,710: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:11:59,713: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:11:59,716: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:11:59,717: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:11:59,717: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:11:59,717: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:11:59,717: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:11:59,717: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:11:59,886: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:12:00,167: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:12:00,167: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:12:00,168: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:12:00,168: WARNING/MainProcess] finalizer()
+[2018-04-29 18:12:00,169: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:12:00,169: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:12:00,169: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:12:00,171: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:12:00,171: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:12:00,173: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:12:00,173: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:12:00,173: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:12:00,173: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:12:00,174: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:12:00,174: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:12:00,175: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:12:00,175: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:12:00,175: WARNING/MainProcess] .
+[2018-04-29 18:12:00,175: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:12:00,175: WARNING/MainProcess] :
+[2018-04-29 18:12:00,175: WARNING/MainProcess] 1
+[2018-04-29 18:12:02,769: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:12:02,772: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:12:02,772: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2018-04-29 18:12:02,798: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:12:02,798: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:12:02,825: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Heart, Mingle, Tasks, Control, Gossip, event loop}
+[2018-04-29 18:12:02,861: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:12:02,861: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:02,861: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:12:03,058: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:03,059: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:12:03,059: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:12:03,086: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:12:03,086: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:03,086: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:12:03,099: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:03,100: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:12:03,103: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:03,103: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:12:03,103: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:12:04,133: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:12:04,133: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:04,133: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:12:04,139: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:04,139: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:12:04,144: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:04,144: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:12:04,148: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:12:04,148: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:12:04,149: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:12:04,149: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:12:04,149: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:12:12,990: INFO/MainProcess] Received task: app.celery_task[5e6a5038-406d-4aee-b891-2623eff19644]  
+[2018-04-29 18:12:12,991: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8deb70> (args:('app.celery_task', '5e6a5038-406d-4aee-b891-2623eff19644', {'lang': 'py', 'task': 'app.celery_task', 'id': '5e6a5038-406d-4aee-b891-2623eff19644', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '5e6a5038-406d-4aee-b891-2623eff19644', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4881@luke-mac', 'reply_to': '6a59d2f1-15e2-3f46-8c9e-22c7b3c7b473', 'correlation_id': '5e6a5038-406d-4aee-b891-2623eff19644', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:12:12,993: DEBUG/MainProcess] Task accepted: app.celery_task[5e6a5038-406d-4aee-b891-2623eff19644] pid:4845
+[2018-04-29 18:12:13,004: INFO/MainProcess] Received task: app.celery_task[2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2]  
+[2018-04-29 18:12:13,005: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8deb70> (args:('app.celery_task', '2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2', {'lang': 'py', 'task': 'app.celery_task', 'id': '2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4881@luke-mac', 'reply_to': '6a59d2f1-15e2-3f46-8c9e-22c7b3c7b473', 'correlation_id': '2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:12:13,007: DEBUG/MainProcess] Task accepted: app.celery_task[2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2] pid:4846
+[2018-04-29 18:12:23,114: INFO/ForkPoolWorker-2] Task app.celery_task[2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2] succeeded in 10.106965286890045s: '2e4bbd29-e9aa-47f8-a59c-c5e15cae86f2'
+[2018-04-29 18:12:26,021: INFO/ForkPoolWorker-1] Task app.celery_task[5e6a5038-406d-4aee-b891-2623eff19644] succeeded in 13.02710108901374s: '5e6a5038-406d-4aee-b891-2623eff19644'
+[2018-04-29 18:13:09,930: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:13:09,931: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:13:09,932: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:13:09,933: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:13:09,936: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:13:09,939: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:13:09,939: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:13:09,939: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:13:09,939: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:13:09,940: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:13:09,940: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:13:09,940: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:13:10,121: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:13:10,334: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:13:10,334: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:13:10,334: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:13:10,335: WARNING/MainProcess] finalizer()
+[2018-04-29 18:13:10,336: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:13:10,336: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:13:10,336: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:13:10,338: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:13:10,338: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:13:10,339: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:13:10,340: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:13:10,340: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:13:10,340: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:13:10,340: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:13:10,340: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:13:10,341: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:13:10,342: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:13:10,342: WARNING/MainProcess] .
+[2018-04-29 18:13:10,342: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:13:10,342: WARNING/MainProcess] :
+[2018-04-29 18:13:10,342: WARNING/MainProcess] 1
+[2018-04-29 18:13:12,274: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:13:12,277: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:13:12,277: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2018-04-29 18:13:12,298: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:13:12,299: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:13:12,315: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Gossip, Heart, Agent, event loop}
+[2018-04-29 18:13:12,342: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:13:12,343: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:12,343: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:13:12,540: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:12,541: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:13:12,541: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:13:12,584: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:13:12,584: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:12,584: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:13:12,596: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:12,596: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:13:12,596: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:13:13,624: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:13:13,624: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:13,624: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:13:13,630: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:13,630: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:13:13,635: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:13,635: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:13:13,639: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:13,639: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:13:13,642: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:13:13,642: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:13:13,642: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:13:13,643: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:13:13,643: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:13:19,045: INFO/MainProcess] Received task: app.celery_task[c4a03d45-56cb-4a14-ba0d-87ad30e97b04]  
+[2018-04-29 18:13:19,046: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e1b70> (args:('app.celery_task', 'c4a03d45-56cb-4a14-ba0d-87ad30e97b04', {'lang': 'py', 'task': 'app.celery_task', 'id': 'c4a03d45-56cb-4a14-ba0d-87ad30e97b04', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c4a03d45-56cb-4a14-ba0d-87ad30e97b04', 'parent_id': None, 'argsrepr': "('clarins',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4931@luke-mac', 'reply_to': '7d3157b4-9db4-3af6-a21b-295ad8cc7725', 'correlation_id': 'c4a03d45-56cb-4a14-ba0d-87ad30e97b04', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["clarins"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:13:19,048: INFO/MainProcess] Received task: app.celery_task[a65965c3-1f0b-4231-8ea7-10cc51cdee51]  
+[2018-04-29 18:13:19,049: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e1b70> (args:('app.celery_task', 'a65965c3-1f0b-4231-8ea7-10cc51cdee51', {'lang': 'py', 'task': 'app.celery_task', 'id': 'a65965c3-1f0b-4231-8ea7-10cc51cdee51', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a65965c3-1f0b-4231-8ea7-10cc51cdee51', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4931@luke-mac', 'reply_to': '7d3157b4-9db4-3af6-a21b-295ad8cc7725', 'correlation_id': 'a65965c3-1f0b-4231-8ea7-10cc51cdee51', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:13:19,050: DEBUG/MainProcess] Task accepted: app.celery_task[c4a03d45-56cb-4a14-ba0d-87ad30e97b04] pid:4950
+[2018-04-29 18:13:19,052: DEBUG/MainProcess] Task accepted: app.celery_task[a65965c3-1f0b-4231-8ea7-10cc51cdee51] pid:4951
+[2018-04-29 18:13:28,075: INFO/ForkPoolWorker-1] Task app.celery_task[c4a03d45-56cb-4a14-ba0d-87ad30e97b04] succeeded in 9.026274950010702s: 'c4a03d45-56cb-4a14-ba0d-87ad30e97b04'
+[2018-04-29 18:13:29,073: WARNING/ForkPoolWorker-2] __init__
+[2018-04-29 18:13:29,074: WARNING/ForkPoolWorker-2] search
+[2018-04-29 18:13:29,080: INFO/ForkPoolWorker-2] Task app.celery_task[a65965c3-1f0b-4231-8ea7-10cc51cdee51] succeeded in 10.027389626950026s: 'a65965c3-1f0b-4231-8ea7-10cc51cdee51'
+[2018-04-29 18:14:37,938: INFO/MainProcess] Received task: app.celery_task[1f8bf48d-90cf-4879-9302-43e1d7dc980d]  
+[2018-04-29 18:14:37,939: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e1b70> (args:('app.celery_task', '1f8bf48d-90cf-4879-9302-43e1d7dc980d', {'lang': 'py', 'task': 'app.celery_task', 'id': '1f8bf48d-90cf-4879-9302-43e1d7dc980d', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1f8bf48d-90cf-4879-9302-43e1d7dc980d', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen4931@luke-mac', 'reply_to': '7d3157b4-9db4-3af6-a21b-295ad8cc7725', 'correlation_id': '1f8bf48d-90cf-4879-9302-43e1d7dc980d', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:14:37,941: DEBUG/MainProcess] Task accepted: app.celery_task[1f8bf48d-90cf-4879-9302-43e1d7dc980d] pid:4950
+[2018-04-29 18:14:46,944: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:14:46,945: WARNING/ForkPoolWorker-1] search
+[2018-04-29 18:14:46,948: INFO/ForkPoolWorker-1] Task app.celery_task[1f8bf48d-90cf-4879-9302-43e1d7dc980d] succeeded in 9.006651420146227s: '1f8bf48d-90cf-4879-9302-43e1d7dc980d'
+[2018-04-29 18:18:11,096: INFO/MainProcess] Received task: app.celery_task[ea7694e7-644b-4fcb-8ff7-b6150cd255a2]  
+[2018-04-29 18:18:11,097: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e1b70> (args:('app.celery_task', 'ea7694e7-644b-4fcb-8ff7-b6150cd255a2', {'lang': 'py', 'task': 'app.celery_task', 'id': 'ea7694e7-644b-4fcb-8ff7-b6150cd255a2', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ea7694e7-644b-4fcb-8ff7-b6150cd255a2', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5142@luke-mac', 'reply_to': '9d438c2f-1770-3024-8a23-a55d80e2fdbe', 'correlation_id': 'ea7694e7-644b-4fcb-8ff7-b6150cd255a2', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:18:11,098: DEBUG/MainProcess] Task accepted: app.celery_task[ea7694e7-644b-4fcb-8ff7-b6150cd255a2] pid:4951
+[2018-04-29 18:18:22,109: WARNING/ForkPoolWorker-2] __init__
+[2018-04-29 18:18:22,110: WARNING/ForkPoolWorker-2] search
+[2018-04-29 18:18:22,114: INFO/ForkPoolWorker-2] Task app.celery_task[ea7694e7-644b-4fcb-8ff7-b6150cd255a2] succeeded in 11.01523289992474s: 'ea7694e7-644b-4fcb-8ff7-b6150cd255a2'
+[2018-04-29 18:20:20,431: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:20:20,434: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:20:20,435: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:20:20,436: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:20:20,437: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:20:20,438: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:20:20,438: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:20:20,438: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:20:20,439: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:20:20,439: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:20:20,439: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:20:20,439: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:20:20,440: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:20:20,440: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:20:20,445: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:20:20,458: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:20:20,465: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:20:20,465: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:20:20,465: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:20:20,465: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:20:20,465: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:20:20,467: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:20:20,573: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:20:20,712: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:20:20,713: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:20:20,713: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:20:20,716: WARNING/MainProcess] finalizer()
+[2018-04-29 18:20:20,716: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:20:20,717: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:20:20,717: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:20:20,719: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:20:20,719: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:20:20,721: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:20:20,721: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:20:20,722: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:20:20,722: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:20:20,722: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:20:20,722: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:20:20,723: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:20:20,724: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:20:20,725: WARNING/MainProcess] .
+[2018-04-29 18:20:20,725: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:20:20,725: WARNING/MainProcess] :
+[2018-04-29 18:20:20,725: WARNING/MainProcess] 1
+[2018-04-29 18:20:22,742: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:20:22,745: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:20:22,746: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2018-04-29 18:20:22,768: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:20:22,769: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:20:22,785: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Heart, Agent, Tasks, Control, event loop}
+[2018-04-29 18:20:22,818: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:20:22,818: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:22,819: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:20:23,008: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:23,009: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:20:23,010: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:20:23,043: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:20:23,043: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:23,044: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:20:23,062: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:23,062: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:20:23,063: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:20:24,092: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:20:24,093: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:24,093: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:20:24,098: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:24,099: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:20:24,101: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:24,102: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:20:24,106: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:24,106: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:20:24,110: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:20:24,110: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:20:24,111: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:20:24,111: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:20:24,111: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:20:30,421: INFO/MainProcess] Received task: app.celery_task[d8ed4662-925d-453b-9a86-e437ef4dbebf]  
+[2018-04-29 18:20:30,422: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', 'd8ed4662-925d-453b-9a86-e437ef4dbebf', {'lang': 'py', 'task': 'app.celery_task', 'id': 'd8ed4662-925d-453b-9a86-e437ef4dbebf', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'd8ed4662-925d-453b-9a86-e437ef4dbebf', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5218@luke-mac', 'reply_to': '71089ffd-276f-3216-a362-47ef83704dee', 'correlation_id': 'd8ed4662-925d-453b-9a86-e437ef4dbebf', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:20:30,424: DEBUG/MainProcess] Task accepted: app.celery_task[d8ed4662-925d-453b-9a86-e437ef4dbebf] pid:5246
+[2018-04-29 18:20:47,478: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:20:47,486: ERROR/ForkPoolWorker-1] Task app.celery_task[d8ed4662-925d-453b-9a86-e437ef4dbebf] raised unexpected: AttributeError("'str' object has no attribute 'append'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 168, in celery_task
+    Domain().factory(domain).search()
+  File "/Users/lukerickard/repos/flaskapp/domains/kiehls.py", line 19, in search
+    raise Exception('wtf!')
+Exception: wtf!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 175, in celery_task
+    task['errors'].append(e)
+AttributeError: 'str' object has no attribute 'append'
+[2018-04-29 18:22:15,676: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:22:15,677: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:22:15,678: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:22:15,679: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:22:15,681: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:22:15,681: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:22:15,682: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:22:15,682: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:22:15,685: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:22:15,685: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:22:15,685: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:22:15,685: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:22:15,911: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:22:16,181: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:22:16,181: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:22:16,181: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:22:16,182: WARNING/MainProcess] finalizer()
+[2018-04-29 18:22:16,182: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:22:16,182: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:22:16,182: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:22:16,183: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:22:16,183: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:22:16,184: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:22:16,184: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:22:16,184: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:22:16,184: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:22:16,185: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:22:16,185: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:22:16,185: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:22:16,185: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:22:16,185: WARNING/MainProcess] .
+[2018-04-29 18:22:16,186: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:22:16,186: WARNING/MainProcess] :
+[2018-04-29 18:22:16,186: WARNING/MainProcess] 1
+[2018-04-29 18:22:22,598: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:22:22,600: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:22:22,600: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2018-04-29 18:22:22,616: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:22:22,617: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:22:22,635: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Gossip, Tasks, Control, Agent, event loop}
+[2018-04-29 18:22:22,662: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:22:22,662: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:22,663: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:22:22,894: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:22,896: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:22:22,896: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:22:22,942: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:22:22,943: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:22,943: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:22:22,968: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:22,968: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:22:22,975: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:22,975: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:22:22,975: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:22:24,026: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:22:24,027: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:24,027: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:22:24,033: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:24,034: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:22:24,040: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:24,040: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:22:24,045: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:22:24,045: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:22:24,045: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:22:24,046: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:22:24,046: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:24:58,438: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:24:58,445: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:24:58,453: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:24:58,454: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:24:58,454: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:24:58,456: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:24:58,457: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:24:58,458: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:24:58,479: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:24:58,480: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:24:58,481: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:24:58,488: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:24:58,488: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:24:58,489: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:24:58,489: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:24:58,489: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:24:58,568: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:24:58,732: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:24:58,733: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:24:58,733: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:24:58,735: WARNING/MainProcess] finalizer()
+[2018-04-29 18:24:58,735: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:24:58,736: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:24:58,736: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:24:58,738: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:24:58,738: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:24:58,741: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:24:58,741: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:24:58,742: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:24:58,742: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:24:58,743: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:24:58,743: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:24:58,745: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:24:58,745: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:24:58,745: WARNING/MainProcess] .
+[2018-04-29 18:24:58,746: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:24:58,746: WARNING/MainProcess] :
+[2018-04-29 18:24:58,746: WARNING/MainProcess] 1
+[2018-04-29 18:25:01,522: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:25:01,524: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:25:01,525: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2018-04-29 18:25:01,559: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:25:01,559: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:25:01,583: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Gossip, Heart, Agent, event loop}
+[2018-04-29 18:25:01,617: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:25:01,617: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:01,617: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:25:01,807: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:01,808: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:25:01,808: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:25:01,835: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:25:01,836: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:01,836: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:25:01,850: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:01,850: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:25:01,851: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:25:02,884: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:25:02,884: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:02,885: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:25:02,891: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:02,891: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:25:02,896: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:02,896: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:25:02,904: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:02,904: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:25:02,907: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:25:02,907: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:25:02,908: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:25:02,908: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:25:02,909: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:25:11,895: INFO/MainProcess] Received task: app.celery_task[cfdf73b8-8b7c-4fd6-908e-bb645bee8b54]  
+[2018-04-29 18:25:11,897: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', 'cfdf73b8-8b7c-4fd6-908e-bb645bee8b54', {'lang': 'py', 'task': 'app.celery_task', 'id': 'cfdf73b8-8b7c-4fd6-908e-bb645bee8b54', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cfdf73b8-8b7c-4fd6-908e-bb645bee8b54', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5457@luke-mac', 'reply_to': '57dc73a6-fd50-30c4-964c-1bb379397744', 'correlation_id': 'cfdf73b8-8b7c-4fd6-908e-bb645bee8b54', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:25:11,899: DEBUG/MainProcess] Task accepted: app.celery_task[cfdf73b8-8b7c-4fd6-908e-bb645bee8b54] pid:5420
+[2018-04-29 18:25:16,744: INFO/MainProcess] Received task: app.celery_task[c428004a-17bf-48ec-bb44-5ba307b3e65e]  
+[2018-04-29 18:25:16,745: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', 'c428004a-17bf-48ec-bb44-5ba307b3e65e', {'lang': 'py', 'task': 'app.celery_task', 'id': 'c428004a-17bf-48ec-bb44-5ba307b3e65e', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c428004a-17bf-48ec-bb44-5ba307b3e65e', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5457@luke-mac', 'reply_to': '57dc73a6-fd50-30c4-964c-1bb379397744', 'correlation_id': 'c428004a-17bf-48ec-bb44-5ba307b3e65e', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:25:16,749: DEBUG/MainProcess] Task accepted: app.celery_task[c428004a-17bf-48ec-bb44-5ba307b3e65e] pid:5421
+[2018-04-29 18:25:25,920: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:25:25,921: WARNING/ForkPoolWorker-1] <class 'str'>
+[2018-04-29 18:25:25,930: ERROR/ForkPoolWorker-1] Task app.celery_task[cfdf73b8-8b7c-4fd6-908e-bb645bee8b54] raised unexpected: AttributeError("'str' object has no attribute 'append'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 168, in celery_task
+    Domain().factory(domain).search()
+  File "/Users/lukerickard/repos/flaskapp/domains/kiehls.py", line 19, in search
+    raise Exception('wtf!')
+Exception: wtf!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 176, in celery_task
+    task['errors'].append(e)
+AttributeError: 'str' object has no attribute 'append'
+[2018-04-29 18:25:30,772: WARNING/ForkPoolWorker-2] __init__
+[2018-04-29 18:25:30,774: WARNING/ForkPoolWorker-2] <class 'str'>
+[2018-04-29 18:25:30,780: ERROR/ForkPoolWorker-2] Task app.celery_task[c428004a-17bf-48ec-bb44-5ba307b3e65e] raised unexpected: AttributeError("'str' object has no attribute 'append'",)
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 168, in celery_task
+    Domain().factory(domain).search()
+  File "/Users/lukerickard/repos/flaskapp/domains/kiehls.py", line 19, in search
+    raise Exception('wtf!')
+Exception: wtf!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/lukerickard/repos/flaskapp/app.py", line 176, in celery_task
+    task['errors'].append(e)
+AttributeError: 'str' object has no attribute 'append'
+[2018-04-29 18:27:36,097: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:27:36,097: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:27:36,098: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:27:36,099: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:27:36,099: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:27:36,099: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:27:36,099: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:27:36,099: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:27:36,100: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:27:36,103: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:27:36,105: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:27:36,105: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:27:36,105: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:27:36,105: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:27:36,106: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:27:36,106: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:27:36,299: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:27:36,434: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:27:36,434: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:27:36,434: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:27:36,436: WARNING/MainProcess] finalizer()
+[2018-04-29 18:27:36,436: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:27:36,437: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:27:36,437: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:27:36,438: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:27:36,439: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:27:36,440: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:27:36,440: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:27:36,441: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:27:36,441: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:27:36,441: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:27:36,441: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:27:36,442: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:27:36,442: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:27:36,442: WARNING/MainProcess] .
+[2018-04-29 18:27:36,442: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:27:36,442: WARNING/MainProcess] :
+[2018-04-29 18:27:36,443: WARNING/MainProcess] 1
+[2018-04-29 18:27:38,429: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:27:38,434: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:27:38,434: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2018-04-29 18:27:38,458: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:27:38,459: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:27:38,476: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Tasks, Control, Gossip, Agent, event loop}
+[2018-04-29 18:27:38,511: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:27:38,512: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:38,512: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:27:38,704: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:38,705: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:27:38,706: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:27:38,734: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:27:38,734: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:38,735: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:27:38,752: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:38,752: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:27:38,759: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:38,759: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:27:38,759: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:27:39,789: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:27:39,789: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:39,789: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:27:39,796: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:39,796: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:27:39,801: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:39,801: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:27:39,806: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:27:39,806: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:27:39,806: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:27:39,807: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:27:39,808: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:27:45,703: INFO/MainProcess] Received task: app.celery_task[4066892b-ca19-4d5a-a18e-5a7bd57b7bf8]  
+[2018-04-29 18:27:45,704: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d9f9b70> (args:('app.celery_task', '4066892b-ca19-4d5a-a18e-5a7bd57b7bf8', {'lang': 'py', 'task': 'app.celery_task', 'id': '4066892b-ca19-4d5a-a18e-5a7bd57b7bf8', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '4066892b-ca19-4d5a-a18e-5a7bd57b7bf8', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5548@luke-mac', 'reply_to': '1565a5b5-e21c-3d4d-abcd-59526c560ca8', 'correlation_id': '4066892b-ca19-4d5a-a18e-5a7bd57b7bf8', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:27:45,707: DEBUG/MainProcess] Task accepted: app.celery_task[4066892b-ca19-4d5a-a18e-5a7bd57b7bf8] pid:5574
+[2018-04-29 18:28:04,726: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:28:04,735: INFO/ForkPoolWorker-1] Task app.celery_task[4066892b-ca19-4d5a-a18e-5a7bd57b7bf8] succeeded in 19.02730729803443s: '4066892b-ca19-4d5a-a18e-5a7bd57b7bf8'
+[2018-04-29 18:30:35,569: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:30:35,569: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:30:35,569: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:30:35,570: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:30:35,571: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:30:35,571: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:30:35,571: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:30:35,571: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:30:35,571: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:30:35,575: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:30:35,578: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:30:35,578: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:30:35,578: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:30:35,578: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:30:35,579: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:30:35,579: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:30:35,579: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:30:35,779: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:30:35,924: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:30:35,924: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:30:35,925: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:30:35,927: WARNING/MainProcess] finalizer()
+[2018-04-29 18:30:35,927: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:30:35,927: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:30:35,927: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:30:35,929: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:30:35,929: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:30:35,931: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:30:35,931: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:30:35,931: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:30:35,932: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:30:35,932: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:30:35,932: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:30:35,933: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:30:35,934: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:30:35,934: WARNING/MainProcess] .
+[2018-04-29 18:30:35,934: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:30:35,934: WARNING/MainProcess] :
+[2018-04-29 18:30:35,935: WARNING/MainProcess] 1
+[2018-04-29 18:30:38,060: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:30:38,063: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:30:38,063: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2018-04-29 18:30:38,086: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:30:38,086: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:30:38,111: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Gossip, Heart, Tasks, Control, event loop}
+[2018-04-29 18:30:38,155: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:30:38,156: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:38,156: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:30:38,431: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:38,433: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:30:38,433: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:30:38,484: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:30:38,484: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:38,485: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:30:38,506: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:38,506: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:30:38,506: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:30:39,547: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:30:39,547: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:39,547: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:30:39,552: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:39,553: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:30:39,555: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:39,555: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:30:39,559: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:39,560: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:30:39,563: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:30:39,564: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:30:39,564: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:30:39,564: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:30:39,565: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:30:44,787: INFO/MainProcess] Received task: app.celery_task[80656245-47a3-4fdb-9022-f3e1b3e21a30]  
+[2018-04-29 18:30:44,788: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e0b70> (args:('app.celery_task', '80656245-47a3-4fdb-9022-f3e1b3e21a30', {'lang': 'py', 'task': 'app.celery_task', 'id': '80656245-47a3-4fdb-9022-f3e1b3e21a30', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '80656245-47a3-4fdb-9022-f3e1b3e21a30', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5675@luke-mac', 'reply_to': '03315d71-b943-330d-83b2-c4fab16f5135', 'correlation_id': '80656245-47a3-4fdb-9022-f3e1b3e21a30', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:30:44,792: DEBUG/MainProcess] Task accepted: app.celery_task[80656245-47a3-4fdb-9022-f3e1b3e21a30] pid:5700
+[2018-04-29 18:30:53,816: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:30:53,828: INFO/ForkPoolWorker-1] Task app.celery_task[80656245-47a3-4fdb-9022-f3e1b3e21a30] succeeded in 9.034762654919177s: '80656245-47a3-4fdb-9022-f3e1b3e21a30'
+[2018-04-29 18:31:27,563: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:31:27,563: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:31:27,563: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:31:27,564: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:31:27,564: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:31:27,564: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:31:27,564: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:31:27,565: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:31:27,569: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:31:27,569: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:31:27,569: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:31:27,571: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:31:27,574: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:31:27,574: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:31:27,574: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:31:27,575: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:31:27,741: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:31:27,976: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:31:27,977: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:31:27,977: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:31:27,978: WARNING/MainProcess] finalizer()
+[2018-04-29 18:31:27,978: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:31:27,978: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:31:27,979: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:31:27,980: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:31:27,980: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:31:27,982: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:31:27,982: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:31:27,982: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:31:27,982: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:31:27,983: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:31:27,983: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:31:27,983: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:31:27,984: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:31:27,984: WARNING/MainProcess] .
+[2018-04-29 18:31:27,984: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:31:27,984: WARNING/MainProcess] :
+[2018-04-29 18:31:27,984: WARNING/MainProcess] 1
+[2018-04-29 18:31:30,152: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:31:30,157: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:31:30,158: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2018-04-29 18:31:30,190: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:31:30,191: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:31:30,216: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Gossip, Heart, event loop}
+[2018-04-29 18:31:30,261: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:31:30,261: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:30,261: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:31:30,495: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:30,496: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:31:30,497: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:31:30,541: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:31:30,541: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:30,541: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:31:30,565: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:30,565: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:31:30,565: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:31:31,599: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:31:31,599: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:31,600: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:31:31,605: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:31,605: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:31:31,610: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:31,610: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:31:31,615: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:31,616: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:31:31,619: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:31:31,619: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:31:31,620: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:31:31,620: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:31:31,621: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:31:36,570: INFO/MainProcess] Received task: app.celery_task[b8922310-7421-4099-a9df-fe1e0988ec4b]  
+[2018-04-29 18:31:36,571: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8deae8> (args:('app.celery_task', 'b8922310-7421-4099-a9df-fe1e0988ec4b', {'lang': 'py', 'task': 'app.celery_task', 'id': 'b8922310-7421-4099-a9df-fe1e0988ec4b', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b8922310-7421-4099-a9df-fe1e0988ec4b', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5749@luke-mac', 'reply_to': '2f9d0537-0b9c-3921-aadc-c7fa79ec9cb5', 'correlation_id': 'b8922310-7421-4099-a9df-fe1e0988ec4b', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:31:36,573: DEBUG/MainProcess] Task accepted: app.celery_task[b8922310-7421-4099-a9df-fe1e0988ec4b] pid:5768
+[2018-04-29 18:31:50,592: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:31:50,600: INFO/ForkPoolWorker-1] Task app.celery_task[b8922310-7421-4099-a9df-fe1e0988ec4b] succeeded in 14.026044856058434s: 'b8922310-7421-4099-a9df-fe1e0988ec4b'
+[2018-04-29 18:35:20,323: DEBUG/MainProcess] | Worker: Closing Hub...
+[2018-04-29 18:35:20,323: DEBUG/MainProcess] | Worker: Closing Pool...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Consumer: Closing Events...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2018-04-29 18:35:20,324: DEBUG/MainProcess] | Consumer: Closing Control...
+[2018-04-29 18:35:20,325: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2018-04-29 18:35:20,325: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2018-04-29 18:35:20,325: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2018-04-29 18:35:20,325: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2018-04-29 18:35:20,325: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2018-04-29 18:35:20,326: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2018-04-29 18:35:20,329: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2018-04-29 18:35:20,331: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2018-04-29 18:35:20,331: DEBUG/MainProcess] Canceling task consumer...
+[2018-04-29 18:35:20,332: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2018-04-29 18:35:20,332: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2018-04-29 18:35:20,332: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2018-04-29 18:35:20,332: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2018-04-29 18:35:20,514: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2018-04-29 18:35:20,660: WARNING/MainProcess] Error in atexit._run_exitfuncs:
+[2018-04-29 18:35:20,660: WARNING/MainProcess] Traceback (most recent call last):
+[2018-04-29 18:35:20,660: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 254, in _run_finalizers
+[2018-04-29 18:35:20,661: WARNING/MainProcess] finalizer()
+[2018-04-29 18:35:20,661: WARNING/MainProcess] File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+[2018-04-29 18:35:20,661: WARNING/MainProcess] res = self._callback(*self._args, **self._kwargs)
+[2018-04-29 18:35:20,662: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+[2018-04-29 18:35:20,662: WARNING/MainProcess] cls._help_stuff_finish(*help_stuff_finish_args)
+[2018-04-29 18:35:20,663: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 1284, in _help_stuff_finish
+[2018-04-29 18:35:20,663: WARNING/MainProcess] readable, _, again = _select(inqR, timeout=0.5)
+[2018-04-29 18:35:20,663: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 181, in _select
+[2018-04-29 18:35:20,664: WARNING/MainProcess] return poll(readers, writers, err, timeout)
+[2018-04-29 18:35:20,664: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/concurrency/asynpool.py", line 137, in _select_imp
+[2018-04-29 18:35:20,664: WARNING/MainProcess] events = poller.poll(timeout)
+[2018-04-29 18:35:20,665: WARNING/MainProcess] File "/Users/lukerickard/repos/python_virtual_evn/apps_3_6/lib/python3.6/site-packages/celery/apps/worker.py", line 288, in _handle_request
+[2018-04-29 18:35:20,665: WARNING/MainProcess] raise exc(exitcode)
+[2018-04-29 18:35:20,665: WARNING/MainProcess] celery.exceptions
+[2018-04-29 18:35:20,665: WARNING/MainProcess] .
+[2018-04-29 18:35:20,665: WARNING/MainProcess] WorkerTerminate
+[2018-04-29 18:35:20,666: WARNING/MainProcess] :
+[2018-04-29 18:35:20,666: WARNING/MainProcess] 1
+[2018-04-29 18:35:22,458: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-04-29 18:35:22,460: DEBUG/MainProcess] | Worker: Building graph...
+[2018-04-29 18:35:22,460: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2018-04-29 18:35:22,477: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-04-29 18:35:22,478: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-04-29 18:35:22,501: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Tasks, Control, Gossip, Agent, event loop}
+[2018-04-29 18:35:22,535: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-04-29 18:35:22,535: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:22,535: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-04-29 18:35:22,764: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:22,765: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-04-29 18:35:22,767: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-04-29 18:35:22,808: INFO/MainProcess] Connected to redis://:**@localhost:6379/3
+[2018-04-29 18:35:22,809: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:22,809: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-04-29 18:35:22,823: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:22,823: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-04-29 18:35:22,827: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:22,827: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-04-29 18:35:22,828: INFO/MainProcess] mingle: searching for neighbors
+[2018-04-29 18:35:23,854: INFO/MainProcess] mingle: all alone
+[2018-04-29 18:35:23,854: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:23,855: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-04-29 18:35:23,859: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:23,860: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-04-29 18:35:23,866: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:23,866: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-04-29 18:35:23,871: DEBUG/MainProcess] ^-- substep ok
+[2018-04-29 18:35:23,871: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-04-29 18:35:23,871: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-04-29 18:35:23,872: INFO/MainProcess] celery@luke-mac ready.
+[2018-04-29 18:35:23,872: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2018-04-29 18:35:29,498: INFO/MainProcess] Received task: app.celery_task[6b40260b-2111-4b22-9162-274d931938a1]  
+[2018-04-29 18:35:29,500: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10d8e1ae8> (args:('app.celery_task', '6b40260b-2111-4b22-9162-274d931938a1', {'lang': 'py', 'task': 'app.celery_task', 'id': '6b40260b-2111-4b22-9162-274d931938a1', 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6b40260b-2111-4b22-9162-274d931938a1', 'parent_id': None, 'argsrepr': "('kiehls',)", 'kwargsrepr': "{'urls': ['bbc.co.uk', 'google.com']}", 'origin': 'gen5876@luke-mac', 'reply_to': 'e7c21f52-e35a-3682-93cd-19ea57fa3aef', 'correlation_id': '6b40260b-2111-4b22-9162-274d931938a1', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["kiehls"], {"urls": ["bbc.co.uk", "google.com"]}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-04-29 18:35:29,502: DEBUG/MainProcess] Task accepted: app.celery_task[6b40260b-2111-4b22-9162-274d931938a1] pid:5895
+[2018-04-29 18:35:38,519: WARNING/ForkPoolWorker-1] __init__
+[2018-04-29 18:35:38,520: INFO/ForkPoolWorker-1] search
+[2018-04-29 18:35:38,526: INFO/ForkPoolWorker-1] Task app.celery_task[6b40260b-2111-4b22-9162-274d931938a1] succeeded in 9.023348317947239s: '6b40260b-2111-4b22-9162-274d931938a1'
