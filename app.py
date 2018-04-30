@@ -59,9 +59,17 @@ def healthcheck():
 def conf():
     return jsonify(celery.control.inspect().conf())
 
+@app.route('/redis', methods=['GET'])
+def redis_conn():
+    return jsonify(str(redis_connection))
+
+@app.route('/redis/ping', methods=['GET'])
+def redis_ping():
+    return jsonify(redis_connection.ping())
+
 @app.route('/redis/flushall', methods=['POST'])
-def flushall():
-    return jsonify(redis_connection.flushall())
+def redis_flushall():
+    return jsonify(str(redis_connection.flushall()))
 
 @app.route('/domain', methods=['GET'])
 def domain():
@@ -128,7 +136,7 @@ def task_post():
                     'kwargs': kwargs,
                     'errors': '',
                     'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
-                    '_links': { 'href': '/task/{0}'.format(id) }
+                    '_links': { 'self': { 'href': '/task/{0}'.format(id) } }
                 }
 
         redis_connection.lpush(domain, id)
