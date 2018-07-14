@@ -17,6 +17,7 @@ from werkzeug.exceptions import InternalServerError, BadRequest
 from flask_cors import CORS
 from celery.task.control import revoke
 from domains.domain import Domain
+from elasticsearch import Elasticsearch
 
 app = Flask(__name__)
 CORS(app)
@@ -48,6 +49,7 @@ DOMAINS = 'domains'
 FLOWERS_API = app.config['FLOWERS_API']
 
 redis_connection = Redis._create_connection()
+elasticsearch = Elasticsearch(hosts=[{"host": "localhost", "port": 9200}])
 
 logger.info('Config object loaded {0}'.format(config_object))
 
@@ -63,6 +65,13 @@ def conf():
 def redis_conn():
     return jsonify(str(redis_connection))
 
+@app.route('/redis/keys', methods=['GET'])
+def redis_keys():
+    response = []
+    for key in redis_connection.scan_iter("*"):
+        response.append(str(key))
+    return jsonify(response)
+
 @app.route('/redis/ping', methods=['GET'])
 def redis_ping():
     return jsonify(redis_connection.ping())
@@ -71,12 +80,28 @@ def redis_ping():
 def redis_flushall():
     return jsonify(str(redis_connection.flushall()))
 
-@app.route('/domain', methods=['GET'])
-def domain():
-    return jsonify(_get_domains())
+@app.route('/elasticsearch/info', methods=['GET'])
+def elasticsearch_info():
+    return jsonify(elasticsearch.info())
+
+@app.route('/domain', defaults={'name': None}, methods=['GET'])
+@app.route('/domain/<name>', methods=['GET'])
+def domain(name):
+    if name:
+        total_products = elasticsearch.search(index="products", doc_type="skincare", body={"query": {"bool": {"filter": {"bool": {"must": [{"terms": {"brand": [name]}}]}}}}})['hits']['total']
+        return jsonify({'total_products': total_products})
+
+    domains = _get_domains()
+    total_domains = len(domains)
+    total_products = elasticsearch.search(index="products", body={"query": {"match_all": {}}})['hits']['total']
+    return jsonify({'domains': domains, 'total_domains': total_domains, 'total_products': total_products})
 
 def _get_domains():
-    return [domain for domain in redis_connection.lrange(DOMAINS, 0, -1)]
+    response = [domain for domain in redis_connection.lrange(DOMAINS, 0, -1)]
+    if not response:
+        raise InternalServerError()
+    else:
+        return response
 
 @app.route('/task', defaults={'id': None}, methods=['GET'])
 @app.route('/task/<id>', methods=['GET'])
@@ -119,7 +144,14 @@ def _get_task(id):
 @app.route('/task', methods=['POST'])
 def task_post():
     _type = request.args.get('type')
-    domains = request.args.get('domain').split(',') if request.args.get('domain') else _get_domains()
+    all_domains = _get_domains()
+    if request.args.get('domain'):
+        domains = request.args.get('domain').split(',')
+        for domain in domains:
+            if domain not in all_domains:
+                raise BadRequest()
+    else:
+        domains = all_domains
 
     try:
         kwargs = request.get_json(force=True)
