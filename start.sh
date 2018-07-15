@@ -21,12 +21,12 @@ set -euo pipefail
 systemctl enable gunicorn.socket
 systemctl start gunicorn.socket
 
-add --log-config FILE
+# add --log-config FILE
 
- curl -v --unix-socket /run/gunicorn/socket http://0.0.0.0:9000/healthcheck
+# curl -v --unix-socket /run/gunicorn/socket http://0.0.0.0:9000/healthcheck
 
 
- include /etc/nginx/conf.d/*.conf;
-        include /etc/nginx/sites-enabled/*;
+#  include /etc/nginx/conf.d/*.conf;
+#         include /etc/nginx/sites-enabled/*;
 
         
