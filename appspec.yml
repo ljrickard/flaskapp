@@ -7,6 +7,14 @@ files:
     destination: /home/ubuntu/deploy/flaskapp/app_redis
   - source: /app_redis/app_redis.py
     destination: /home/ubuntu/deploy/flaskapp/app_redis
+  - source: /domains/__init__.py
+    destination: /home/ubuntu/deploy/flaskapp/domains
+  - source: /domains/domain.py
+    destination: /home/ubuntu/deploy/flaskapp/domains
+  - source: /domains/kiehls.py
+    destination: /home/ubuntu/deploy/flaskapp/domains
+  - source: /domains/website.py
+    destination: /home/ubuntu/deploy/flaskapp/domains
   - source: /app.py
     destination: /home/ubuntu/deploy/flaskapp
   - source: /config.py
