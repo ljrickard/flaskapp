@@ -21,6 +21,9 @@ systemctl daemon-reload
 systemctl enable gunicorn.socket
 systemctl start gunicorn.socket
 
+systemctl enable gunicorn.service
+systemctl start gunicorn.service
+
 # add --log-config FILE
 
 # curl -v --unix-socket /run/gunicorn/socket http://0.0.0.0:9000/healthcheck
