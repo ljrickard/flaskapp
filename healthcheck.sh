@@ -1,5 +1,5 @@
 #!/bin/bash
-http_status=$(curl -sL -w "%{http_code}" "0.0.0.0:8000/healthcheck" -o /dev/null)
+http_status=$(curl -sL -w --unix-socket /run/gunicorn/socket "%{http_code}" "http:/healthcheck" -o /dev/null)
 if [ $http_status = "200" ]; then
    	echo "Endpoint point started successfully"
 else
