@@ -15,7 +15,9 @@ files:
     destination: /home/ubuntu/deploy/flaskapp/domains
   - source: /domains/website.py
     destination: /home/ubuntu/deploy/flaskapp/domains
-  - source: /app.py
+  - source: /flask_app.py
+    destination: /home/ubuntu/deploy/flaskapp
+  - source: /__init__.py
     destination: /home/ubuntu/deploy/flaskapp
   - source: /config.py
     destination: /home/ubuntu/deploy/flaskapp
