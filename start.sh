@@ -13,11 +13,11 @@ set -euo pipefail
 #    --workdir="/home/ubuntu/deploy/flaskapp"
     # -Ofair
 
-#systemctl daemon-reloadddddd 
+#systemctl daemon-reload
 #systemctl start flower
 #systemctl status flower
 
-
+systemctl daemon-reload
 systemctl enable gunicorn.socket
 systemctl start gunicorn.socket
 
