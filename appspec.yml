@@ -19,6 +19,8 @@ files:
     destination: /home/ubuntu/deploy/flaskapp
   - source: /__init__.py
     destination: /home/ubuntu/deploy/flaskapp
+  - source: /wsgi.py
+    destination: /home/ubuntu/deploy/flaskapp
   - source: /config.py
     destination: /home/ubuntu/deploy/flaskapp
   - source: /gunicorn.py
