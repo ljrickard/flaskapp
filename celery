@@ -5,14 +5,10 @@ CELERYD_NODES="w1"
 #CELERYD_NODES="w1 w2 w3"
 
 # Absolute or relative path to the 'celery' command:
-CELERY_BIN="/usr/local/bin/celery"
-#CELERY_BIN="/virtualenvs/def/bin/celery"
+CELERY_BIN="/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery"
 
 # App instance to use
-# comment out this line if you don't use an app
-CELERY_APP="proj"
-# or fully qualified:
-#CELERY_APP="proj.tasks:app"
+CELERY_APP="/home/ubuntu/deploy/flaskapp/flask_app"
 
 # How to call manage.py
 CELERYD_MULTI="multi"
