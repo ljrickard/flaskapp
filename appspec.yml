@@ -36,7 +36,7 @@ files:
   - source: /celery.service
     destination: /etc/systemd/system
   - source: /celery
-    destination: /home/ubuntu/deploy/flaskapp/celery
+    destination: /home/ubuntu/deploy/flaskapp
 
 hooks:
   ApplicationStop:
