@@ -33,6 +33,11 @@ files:
     destination: /etc/systemd/system
   - source: /gunicorn.socket
     destination: /etc/systemd/system
+  - source: /celery.service
+    destination: /etc/systemd/system
+  - source: /celery
+    destination: /home/ubuntu/deploy/flaskapp/celery
+
 hooks:
   ApplicationStop:
     - location: /stop.sh

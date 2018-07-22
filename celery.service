@@ -6,7 +6,7 @@ After=network.target
 Type=forking
 User=ubuntu
 Group=ubuntu
-EnvironmentFile=/etc/conf.d/celery
+EnvironmentFile=/home/ubuntu/deploy/flaskapp/celery
 WorkingDirectory=/opt/celery
 
 ExecStart=/bin/sh -c '${CELERY_BIN} multi start ${CELERYD_NODES} \

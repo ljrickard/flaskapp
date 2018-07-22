@@ -5,12 +5,12 @@ class Config(): pass
 class DevelopmentConfig(Config):
     DEBUG=True
     TESTING=True
-    REDIS_URI='localhost'
+    REDIS_URI='54.85.142.26'
     REDIS_PORT=6379
     REDIS_DB=3
     LOG_DIR='{0}/logs'.format(os.getcwd())
     FLOWERS_API='http://localhost:5555/api'
-    REDIS_PASSWORD=os.getenv('REDIS_PASSWORD', None)
+    REDIS_PASSWORD='0HijQIfIxJfWQ27v4yGsgJdySL9rTxc2wkzgZQRYHVvl6FkL6Hc0wjWB9NecCuXm'
     CELERY_BROKER='redis://:{0}@{1}:{2}/{3}'.format(REDIS_PASSWORD, REDIS_URI, REDIS_PORT, REDIS_DB)
 
 class ProductionConfig(Config):
