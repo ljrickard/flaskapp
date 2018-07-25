@@ -8,7 +8,7 @@ CELERYD_NODES="w1"
 CELERY_BIN="/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery"
 
 # App instance to use
-CELERY_APP="/home/ubuntu/deploy/flaskapp/flask_app"
+CELERY_APP="flask_app.celery"
 
 # How to call manage.py
 CELERYD_MULTI="multi"
@@ -19,6 +19,6 @@ CELERYD_OPTS="--time-limit=300 --concurrency=8"
 # - %n will be replaced with the first part of the nodename.
 # - %I will be replaced with the current child process index
 #   and is important when using the prefork pool to avoid race conditions.
-CELERYD_PID_FILE="/var/run/celery/%n.pid"
-CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
-CELERYD_LOG_LEVEL="INFO"
+CELERYD_PID_FILE="/home/ubuntu/deploy/flaskapp/run/celery/%n.pid"
+CELERYD_LOG_FILE="/home/ubuntu/deploy/flaskapp/logs/celery/%n%I.log"
+CELERYD_LOG_LEVEL="DEBUG"

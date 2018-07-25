@@ -8,12 +8,13 @@ PIDFile=/var/run/gunicorn.pid
 User=root
 Group=root
 WorkingDirectory=/home/ubuntu/deploy/flaskapp
+EnvironmentFile=/etc/environment
+
 ExecStart=/home/ubuntu/deploy/flaskapp/virtual_env/bin/gunicorn --config /home/ubuntu/deploy/flaskapp/gunicorn.py wsgi
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
 Restart=on-failure
 PrivateTmp=true
-EnvironmentFile=/etc/environment
 
 [Install]
 WantedBy=multi-user.target

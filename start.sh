@@ -19,4 +19,7 @@ systemctl start gunicorn.socket
 systemctl enable gunicorn.service
 systemctl start gunicorn.service
 
+
+systemctl enable celery.service
+systemctl start celery.service
         

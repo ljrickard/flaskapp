@@ -5,6 +5,7 @@ import json
 import config
 import logging
 import requests
+import werkzeug
 from time import sleep
 from celery import Celery
 from random import randint
@@ -14,13 +15,13 @@ from celery.task.control import inspect
 from flask import Flask, request, jsonify
 from logging.handlers import TimedRotatingFileHandler
 from werkzeug.exceptions import InternalServerError, BadRequest
-#from flask_cors import CORS
+from flask_cors import CORS
 from celery.task.control import revoke
 from domains.domain import Domain
 from elasticsearch import Elasticsearch
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))
 app.config.from_object(config_object)
 logger = logging.getLogger(__name__)
@@ -54,22 +55,27 @@ elasticsearch = Elasticsearch(hosts=[{"host": "localhost", "port": 9200}])
 logger.info('Config object loaded {0}'.format(config_object))
 
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/', methods=['GET'])
 def default():
     return jsonify('hello')
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
     return jsonify('ok')
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/celery/conf', methods=['GET'])
 def conf():
     return jsonify(celery.control.inspect().conf())
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/redis', methods=['GET'])
 def redis_conn():
     return jsonify(str(redis_connection))
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/redis/keys', methods=['GET'])
 def redis_keys():
     response = []
@@ -77,18 +83,22 @@ def redis_keys():
         response.append(str(key))
     return jsonify(response)
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/redis/ping', methods=['GET'])
 def redis_ping():
     return jsonify(redis_connection.ping())
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/redis/flushall', methods=['POST'])
 def redis_flushall():
     return jsonify(str(redis_connection.flushall()))
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/elasticsearch/info', methods=['GET'])
 def elasticsearch_info():
     return jsonify(elasticsearch.info())
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/domain', defaults={'name': None}, methods=['GET'])
 @app.route('/domain/<name>', methods=['GET'])
 def domain(name):
@@ -108,6 +118,7 @@ def _get_domains():
     else:
         return response
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/task', defaults={'id': None}, methods=['GET'])
 @app.route('/task/<id>', methods=['GET'])
 def task_get(id):
@@ -146,6 +157,7 @@ def _get_task(id):
     return task
 
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/task', methods=['POST'])
 def task_post():
     _type = request.args.get('type')
@@ -185,6 +197,7 @@ def task_post():
     return jsonify(response)
 
 
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/task/<id>', methods=['DELETE'])
 def task_delete(id):
     task = _get_task(id)
