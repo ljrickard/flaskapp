@@ -15,5 +15,3 @@ wget -O /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py https://s3.amazona
 chmod +x /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py
 python3 /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py -n -r us-east-1 -c s3://aws-codedeploy-us-east-1/cloudwatch/awslogs.conf
 mkdir -p /var/awslogs/etc/config
-cp codedeploy_logs.conf /var/awslogs/etc/config/
-
