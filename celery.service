@@ -9,9 +9,9 @@ Group=root
 WorkingDirectory=/home/ubuntu/deploy/flaskapp
 EnvironmentFile=/etc/environment
 
-ExecStart=/bin/sh -c '/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery multi start w1 -A flask_app.celery --pidfile=/home/ubuntu/deploy/flaskapp/run/celery/%n.pid --logfile=/home/ubuntu/deploy/flaskapp/logs/celery/%n%I.log --loglevel=DEBUG --time-limit=300 --concurrency=8'
+ExecStart=/bin/sh -c '/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery multi start w1 -A flask_app.celery --pidfile=/home/ubuntu/deploy/flaskapp/run/celery/%n.pid --logfile=/home/ubuntu/deploy/flaskapp/logs/%n%I.log --loglevel=DEBUG --time-limit=300 --concurrency=8'
 ExecStop=/bin/sh -c '/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery multi stopwait w1 w2 w3 --pidfile=/home/ubuntu/deploy/flaskapp/run/celery/%n.pid'
-ExecReload=/bin/sh -c '/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery multi restart w1 w2 w3 -A flask_app.celery --pidfile=/home/ubuntu/deploy/flaskapp/run/celery/%n.pid --logfile=/home/ubuntu/deploy/flaskapp/logs/celery/%n%I.log--loglevel=DEBUG --time-limit=300 --concurrency=8'
+ExecReload=/bin/sh -c '/home/ubuntu/deploy/flaskapp/virtual_env/bin/celery multi restart w1 w2 w3 -A flask_app.celery --pidfile=/home/ubuntu/deploy/flaskapp/run/celery/%n.pid --logfile=/home/ubuntu/deploy/flaskapp/logs/%n%I.log--loglevel=DEBUG --time-limit=300 --concurrency=8'
 
 [Install]
 WantedBy=multi-user.target
