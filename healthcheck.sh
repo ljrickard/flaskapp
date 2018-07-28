@@ -6,6 +6,3 @@ else
 	echo "Endpoint failed to start"
 	exit 1
 fi
-
-
-# check each service with -> systemctl is-failed application.service

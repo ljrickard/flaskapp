@@ -15,7 +15,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG=False
-    LOG_DIR='/home/ubuntu/deploy/flaskapp/logs/app'
+    LOG_DIR='/home/ubuntu/deploy/flaskapp/logs'
     FLOWERS_API='http://0.0.0.0:5555/api' 
     REDIS_URI=os.getenv('REDIS_URI', None)
     REDIS_PORT=os.getenv('REDIS_PORT', None)

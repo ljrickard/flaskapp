@@ -47,7 +47,6 @@ Redis.DB = app.config['REDIS_DB']
 Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
 DOMAINS = 'domains'
-FLOWERS_API = app.config['FLOWERS_API']
 
 redis_connection = Redis._create_connection()
 elasticsearch = Elasticsearch(hosts=[{"host": "localhost", "port": 9200}])

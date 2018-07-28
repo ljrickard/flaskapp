@@ -7,5 +7,5 @@ worker_connections=1000
 timeout=30
 user=None
 loglevel='debug'
-accesslog='/home/ubuntu/deploy/flaskapp/logs/gunicorn/gunicorn-access.log'
+accesslog='/home/ubuntu/deploy/flaskapp/logs/gunicorn-access.log'
 access_log_format='%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
