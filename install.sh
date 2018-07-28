@@ -10,9 +10,10 @@ python3.6 /home/ubuntu/deploy/flaskapp/virtualenv-15.1.0/virtualenv.py /home/ubu
 mkdir -p /home/ubuntu/deploy/flaskapp/logs
 
 # setup awslogs
-wget -O /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
-chmod +x /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py
-python3 /home/ubuntu/deploy/flaskapp/awslogs-agent-setup.py -n -r us-east-1 -c s3://aws-codedeploy-us-east-1/cloudwatch/awslogs.conf
+mkdir -p /home/ubuntu/deploy/codedeploy
+wget -O /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+chmod +x /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py
+python3 /home/ubuntu/deploy/codedeploy/awslogs-agent-setup.py -n -r us-east-1 -c s3://aws-codedeploy-us-east-1/cloudwatch/awslogs.conf
 mkdir -p /var/awslogs/etc/config
 cp codedeploy_logs.conf /var/awslogs/etc/config/
 
