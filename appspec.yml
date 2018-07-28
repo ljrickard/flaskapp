@@ -33,8 +33,6 @@ files:
     destination: /etc/systemd/system
   - source: /celery.service
     destination: /etc/systemd/system
-  - source: /logs.conf
-    destination: /var/awslogs/etc/config
 
 hooks:
   ApplicationStop:
