@@ -113,7 +113,7 @@ def domain(name):
 def _get_domains():
     response = [domain for domain in redis_connection.lrange(DOMAINS, 0, -1)]
     if not response:
-        raise InternalServerError()
+        raise InternalServerError("No domains found")
     else:
         return response
 
@@ -222,18 +222,19 @@ def celery_task(domain, **kwargs):
 
         task = redis_connection.hgetall(id)
         
-        Domain().factory(domain).search()
+        # Domain().factory(domain).search()
 
         task['result'] = 'i did my task in only {0} seconds'.format(random_number)  # this is where the action will take place
         redis_connection.hmset(id, task)
 
     except Exception as e:
+        print(e)
         task = redis_connection.hgetall(id)
         errors = task['errors'].split()
-        errors.append(e)
+        errors.append(str(e))
         task['errors'] = errors
         redis_connection.hmset(id, task)
-        logger.error(e)
+        logger.error(str(e))
         
     logger.info('end celery_task.....')
     return id
