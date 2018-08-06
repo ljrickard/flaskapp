@@ -1,0 +1,90 @@
+{
+    "properties":
+    {
+        "id":
+        {
+            "type": "text"
+        },
+        "name":
+        {
+            "type": "text"
+        },
+        "brand":
+        {
+            "type": "text",
+            "fields":
+            {
+                "keyword":
+                {
+                    "type": "keyword"
+                }
+            }
+        },
+        "tagline":
+        {
+            "type": "text"
+        },
+        "size":
+        {
+            "type": "text"
+        },
+        "source_images":
+        {
+            "type": "text",
+            "doc_values": false
+        },
+        "s3_images":
+        {
+            "type": "text",
+            "doc_values": false
+        },
+        "source_url":
+        {
+            "type": "text"
+        },
+        "description":
+        {
+            "type": "text",
+            "term_vector": "with_positions_offsets"
+        },
+        "created_on":
+        {
+            "type": "keyword"
+        },
+        "ingredients":
+        {
+            "properties":
+            {
+                "name":
+                {
+                    "type": "text"
+                },
+                "description":
+                {
+                    "type": "text"
+                }
+            }
+        },
+        "gender":
+        {
+            "type": "keyword"
+        },
+        "tags":
+        {
+            "type": "keyword"
+        },
+        "skin_type":
+        {
+            "type": "keyword"
+        },
+        "unique_id":
+        {
+            "type": "keyword"
+        },
+        "metadata":
+        {
+            "type": "keyword",
+            "doc_values": false
+        }
+    }
+}

@@ -6,6 +6,7 @@ import config
 import logging
 import requests
 import werkzeug
+import time
 from time import sleep
 from celery import Celery
 from random import randint
@@ -15,13 +16,13 @@ from celery.task.control import inspect
 from flask import Flask, request, jsonify
 from logging.handlers import TimedRotatingFileHandler
 from werkzeug.exceptions import InternalServerError, BadRequest
-# from flask_cors import CORS
+from flask_cors import CORS
 from celery.task.control import revoke
-from domains.domain import Domain
 from elasticsearch import Elasticsearch
+from sites.brand_factory import Brands
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 config_object = 'config.{0}'.format(os.getenv('FLASK_CONFIGURATION', 'DevelopmentConfig'))
 app.config.from_object(config_object)
 logger = logging.getLogger(__name__)
@@ -47,12 +48,12 @@ Redis.DB = app.config['REDIS_DB']
 Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
 DOMAINS = 'domains'
+TASK_TYPES = ['search', 'scrape']
 
 redis_connection = Redis._create_connection()
 elasticsearch = Elasticsearch(hosts=[{"host": "localhost", "port": 9200}])
 
 logger.info('Config object loaded {0}'.format(config_object))
-
 
 @app.errorhandler(werkzeug.exceptions.InternalServerError)
 @app.route('/', methods=['GET'])
@@ -129,7 +130,7 @@ def task_get(id):
         domains = request.args.get('domain').split(',')
         for domain in domains:
             if domain not in _get_domains():
-                raise BadRequest()
+                raise BadRequest('{0} is not a valid domain'.format(domain))
     else:
         domains = _get_domains()
 
@@ -152,6 +153,8 @@ def task_get(id):
 
 def _get_task(id):
     task = redis_connection.hgetall(id)
+    if not task:
+        raise BadRequest()
     task['status'] = celery_task.AsyncResult(id).state
     return task
 
@@ -160,38 +163,44 @@ def _get_task(id):
 @app.route('/task', methods=['POST'])
 def task_post():
     _type = request.args.get('type')
-    all_domains = _get_domains()
-    if request.args.get('domain'):
-        domains = request.args.get('domain').split(',')
-        for domain in domains:
-            if domain not in all_domains:
-                raise BadRequest()
-    else:
-        domains = all_domains
+    if not _type or _type not in TASK_TYPES:
+        raise BadRequest('type is a required parameter')
 
-    try:
-        kwargs = request.get_json(force=True)
-    except:
-        kwargs = {}
+    domain = request.args.get('domain')
+    if not domain or domain not in _get_domains():
+        raise BadRequest('domain is a required parameter')                
+
+    kwargs = request.get_json(silent=True) if request.get_json(silent=True) else {}
+
+    if not kwargs and _type == 'scrape':
+        raise BadRequest('url required for scrape task')    
+
+    if _type == 'scrape' and not kwargs['url']:
+        raise BadRequest('url required for scrape task')                 
+
+    tasks = redis_connection.lrange(domain, 0, -1)
+    for id in tasks:
+        if celery_task.AsyncResult(id).state in ['PENDING', 'STARTED']:
+            return jsonify(_get_task(id))
     
+    task_id = str(celery_task.delay(domain, _type, **kwargs))
+    task = {
+                'task_id': task_id, 
+                'type': _type,
+                'domain': domain,
+                'kwargs': kwargs,
+                'errors': None,
+                'runtime': None,
+                'result': None,
+                'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
+                '_links': { 'self': { 'href': '/task/{0}'.format(task_id) } }
+            }
+
+    redis_connection.lpush(domain, task_id)
+    redis_connection.hmset(task_id, task)
+    task['state'] = celery_task.AsyncResult(task_id).state
     response = {}
-    for domain in domains:
-        id = str(celery_task.delay(domain, **kwargs))
-        task = {
-                    'id': id, 
-                    'type': _type,
-                    'domain': domain,
-                    'kwargs': kwargs,
-                    'errors': '',
-                    'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), 
-                    '_links': { 'self': { 'href': '/task/{0}'.format(id) } }
-                }
-
-        redis_connection.lpush(domain, id)
-        redis_connection.hmset(id, task)
-
-        task['state'] = celery_task.AsyncResult(id).state
-        response[domain] = task
+    response[domain] = task
 
     return jsonify(response)
 
@@ -203,32 +212,30 @@ def task_delete(id):
 
     if task['status'] in ['PENDING', 'STARTED']:
         revoke(id, terminate=True)
-        while celery_task.AsyncResult(id).state != 'REVOKED':
-            sleep(0.1) 
-        task['status'] = celery_task.AsyncResult(id).state
+        # while celery_task.AsyncResult(id).state != 'REVOKED':
+            # sleep(0.1) 
+        # task['status'] = celery_task.AsyncResult(id).state
 
     return jsonify(task)
 
-
 @celery.task
-def celery_task(domain, **kwargs):
+def celery_task(domain, _type, **kwargs):
     logger.info('begin celery_task.....')
+    start_time = time.time()
     id = celery_task.request.id
-    random_number = randint(9, 19)
 
     try:
-        logger.info('celery_task sleeping for {0}'.format(random_number))
-        sleep(random_number)
-
         task = redis_connection.hgetall(id)
-        
-        # Domain().factory(domain).search()
+        print(task)
+        if _type == 'search':
+            task['result'] = Brands(False).factory('kiehls').find_urls(redis_connection)
+        elif _type == 'scrape':
+            task['result'] = Brands(False).factory('kiehls').scrape_url(kwargs['url'])
 
-        task['result'] = 'i did my task in only {0} seconds'.format(random_number)  # this is where the action will take place
+        task['runtime'] = calculate_run_time(start_time)
         redis_connection.hmset(id, task)
 
     except Exception as e:
-        print(e)
         task = redis_connection.hgetall(id)
         errors = task['errors'].split()
         errors.append(str(e))
@@ -239,7 +246,11 @@ def celery_task(domain, **kwargs):
     logger.info('end celery_task.....')
     return id
 
-
+def calculate_run_time(start_time):
+    seconds = time.time() - start_time
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    return "%d:%02d:%02d" % (h, m, s)
 
 
 
