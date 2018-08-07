@@ -151,11 +151,11 @@ def task_get(id):
     return jsonify(response)
 
 
-def _get_task(id):
-    task = redis_connection.hgetall(id)
+def _get_task(task_id):
+    task = redis_connection.hgetall(task_id)
     if not task:
         raise BadRequest()
-    task['status'] = celery_task.AsyncResult(id).state
+    task['status'] = celery_task.AsyncResult(task_id).state
     return task
 
 
@@ -168,27 +168,18 @@ def task_post():
 
     domain = request.args.get('domain')
     if not domain or domain not in _get_domains():
-        raise BadRequest('domain is a required parameter')                
-
-    kwargs = request.get_json(silent=True) if request.get_json(silent=True) else {}
-
-    if not kwargs and _type == 'scrape':
-        raise BadRequest('url required for scrape task')    
-
-    if _type == 'scrape' and not kwargs['url']:
-        raise BadRequest('url required for scrape task')                 
+        raise BadRequest('domain is a required parameter')                             
 
     tasks = redis_connection.lrange(domain, 0, -1)
-    for id in tasks:
-        if celery_task.AsyncResult(id).state in ['PENDING', 'STARTED']:
-            return jsonify(_get_task(id))
+    for task_id in tasks:
+        if celery_task.AsyncResult(task_id).state in ['PENDING', 'STARTED']:
+            return jsonify(_get_task(task_id))
     
     task_id = str(celery_task.delay(domain, _type, **kwargs))
     task = {
-                'task_id': task_id, 
+                'id': task_id, 
                 'type': _type,
                 'domain': domain,
-                'kwargs': kwargs,
                 'errors': None,
                 'runtime': None,
                 'result': None,
@@ -205,19 +196,6 @@ def task_post():
     return jsonify(response)
 
 
-@app.errorhandler(werkzeug.exceptions.InternalServerError)
-@app.route('/task/<id>', methods=['DELETE'])
-def task_delete(id):
-    task = _get_task(id)
-
-    if task['status'] in ['PENDING', 'STARTED']:
-        revoke(id, terminate=True)
-        # while celery_task.AsyncResult(id).state != 'REVOKED':
-            # sleep(0.1) 
-        # task['status'] = celery_task.AsyncResult(id).state
-
-    return jsonify(task)
-
 @celery.task
 def celery_task(domain, _type, **kwargs):
     logger.info('begin celery_task.....')
@@ -229,8 +207,6 @@ def celery_task(domain, _type, **kwargs):
         print(task)
         if _type == 'search':
             task['result'] = Brands(False).factory('kiehls').find_urls(redis_connection)
-        elif _type == 'scrape':
-            task['result'] = Brands(False).factory('kiehls').scrape_url(kwargs['url'])
 
         task['runtime'] = calculate_run_time(start_time)
         redis_connection.hmset(id, task)
@@ -245,6 +221,7 @@ def celery_task(domain, _type, **kwargs):
         
     logger.info('end celery_task.....')
     return id
+
 
 def calculate_run_time(start_time):
     seconds = time.time() - start_time

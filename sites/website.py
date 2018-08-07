@@ -18,26 +18,27 @@ class Website(object):
         for url in urls:
             if not redis_connection.get(url):
                 id = str(uuid.uuid4())
+                is_valid = self.is_valid(url)
+
+                # add state in here .... pushing to prod is pending... etc...
+
                 details = {
                     'id': id,
                     'domain': self.brand,
                     'url': url,
                     'created_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
                     'updated_on': datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
-                    'prod_on': None,
+                    'promoted_on': None,
                     'data': None, 
                     '_links': { 'self': 
                         { 
-                            'href': '/id/{0}'.format(id)
-                        },
-                        'scrape': 
-                        { 
-                            'href': '/id/{0}/{1}'.format(id, '?type=scrape')
-                        }  
+                            'href': '/{0}'.format(id)
+                        }
                     },
-                    'is_valid': self.is_valid(url),
-                    'in_prod': False
+                    'is_valid': is_valid
                 }
+                if is_valid:
+                    details['data'] = self.scrape_product_url([url])
                 response.append(details)
                 redis_connection.set(url, id)
                 redis_connection.hmset(id, details)
@@ -47,6 +48,4 @@ class Website(object):
         # return self.data_access.filter_existing_products(self.brand, product_urls)
 
 
-    def scrape_url(self, url):
-        return self.scrape_product_url([url])
 
