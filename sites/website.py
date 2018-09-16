@@ -13,6 +13,11 @@ class Website(object):
         self.product_template = self.data_access.get_product_template()
 
     def find_urls(self, redis_connection):
+        print('hello')
+        print(type(self.brand))
+        if redis_connection.get(self.brand) is None:
+            print('None')
+
         response = []
         urls = self.get_urls()
         for url in urls:

@@ -48,7 +48,7 @@ Redis.DB = app.config['REDIS_DB']
 Redis.PASSWORD = app.config['REDIS_PASSWORD']
 
 DOMAINS = 'domains'
-TASK_TYPES = ['search', 'scrape']
+TASK_TYPES = ['search']
 
 redis_connection = Redis._create_connection()
 elasticsearch = Elasticsearch(hosts=[{"host": "localhost", "port": 9200}])
@@ -175,7 +175,7 @@ def task_post():
         if celery_task.AsyncResult(task_id).state in ['PENDING', 'STARTED']:
             return jsonify(_get_task(task_id))
     
-    task_id = str(celery_task.delay(domain, _type, **kwargs))
+    task_id = str(celery_task.delay(domain, _type))
     task = {
                 'id': task_id, 
                 'type': _type,
@@ -197,7 +197,7 @@ def task_post():
 
 
 @celery.task
-def celery_task(domain, _type, **kwargs):
+def celery_task(domain, _type):
     logger.info('begin celery_task.....')
     start_time = time.time()
     id = celery_task.request.id

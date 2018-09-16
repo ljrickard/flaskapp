@@ -8,7 +8,7 @@ import uuid
 from sites.lib.utils import make_soup, format_url
 from sites.website import Website
 
-BRAND = "Kiehls"
+BRAND = "kiehls"
 BASE_URL = "http://www.kiehls.co.uk"
 SITE_MAP = "/site-map.html"
 SITE_MAP_KEYWORD = 'skin-care'  # create regex containing skin care + base url
